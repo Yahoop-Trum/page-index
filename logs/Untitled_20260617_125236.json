@@ -1,0 +1,53 @@
+[
+  {
+    "total_page_number": 26
+  },
+  {
+    "total_token": 438
+  },
+  {
+    "toc_content": "Manage\nCreateImproveWorkflows\nSearch\nAnalyze\nAirdropAI Knowledge GraphFoundational Services\n2-way sync\nApps and AI Agents",
+    "toc_page_list": [
+      16
+    ],
+    "page_index_given_in_toc": "no"
+  },
+  {
+    "message": "len(group_texts): 1"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'Why DevRev | Our Journey', 'physical_index': '<physical_index_2>'}, {'structure': '2', 'title': 'Team Intelligence', 'physical_index': '<physical_index_15>'}, {'structure': '3', 'title': 'DevRev Airdrop', 'physical_index': '<physical_index_16>'}, {'structure': '4', 'title': 'AI Agents Team Intelligence with', 'physical_index': '<physical_index_19>'}, {'structure': '5', 'title': 'DevRev customers are seeing benefits such as:', 'physical_index': '<physical_index_25>'}, {'structure': '6', 'title': 'Thank You', 'physical_index': '<physical_index_26>'}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'Why DevRev | Our Journey', 'physical_index': 2}, {'structure': '2', 'title': 'Team Intelligence', 'physical_index': 15}, {'structure': '3', 'title': 'DevRev Airdrop', 'physical_index': 16}, {'structure': '4', 'title': 'AI Agents Team Intelligence with', 'physical_index': 19}, {'structure': '5', 'title': 'DevRev customers are seeing benefits such as:', 'physical_index': 25}, {'structure': '6', 'title': 'Thank You', 'physical_index': 26}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 1.0,
+    "incorrect_results": []
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Preface' is not present anywhere in the given page_text '.', so it cannot start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title is 'Team Intelligence'. The given page text is 'Discovering knowledge already within the enterprise\\nTeam Intelligence.'. The first content in the page text is 'Discovering knowledge already within the enterprise'. The section title 'Team Intelligence' appears after this content. Therefore, the section does not start at the very beginning of the page text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title is 'AI Agents Team Intelligence with'. The page text is 'AI AgentsTeam Intelligence with'. When ignoring space inconsistencies, both strings become 'AIAgentsTeamIntelligencewith'. The page text starts directly with the section title (after normalization), so the section begins at the beginning of the page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title is 'Thank You.'. The page text is 'devrev.aiThank You.'. When we ignore spaces for fuzzy matching, the page text starts with 'devrev.ai' followed by 'Thank You'. Since 'devrev.ai' appears before 'Thank You', the current section does not start at the very beginning of the page text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The provided section title 'Why DevRev | Our Journey' is identical to the very beginning of the 'page_text'. There is no content preceding the section title in the page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title is 'DevRev Airdrop'. The current page text is 'DevRev Airdrop\\\\n'. After trimming any leading/trailing whitespace from both the title and the page text, the title is 'DevRev Airdrop' and the effective page content is 'DevRev Airdrop'. The page content exactly matches the section title and there is nothing before it. Therefore, the section starts at the beginning of the page.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The current section title is 'DevRev customers are seeing benefits such as:'. The page text starts with '150% ROI Average return from increase in employee productivity...'. The section title 'DevRev customers are seeing benefits such as:' appears later in the page_text, not at the very beginning. Therefore, there are other contents before the current section title.\", 'start_begin': 'no'}"
+  }
+]

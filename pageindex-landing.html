@@ -1,0 +1,1451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PageIndex – Next Generation Vectorless RAG</title>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#050A1C;
+  --navy2:#080F24;
+  --navy3:#0C1530;
+  --indigo:#4F46E5;
+  --violet:#7C3AED;
+  --cyan:#06B6D4;
+  --cyan-dim:#0891B2;
+  --glass:rgba(255,255,255,0.04);
+  --glass-border:rgba(255,255,255,0.08);
+  --glass-hover:rgba(255,255,255,0.07);
+  --text-primary:#F0F4FF;
+  --text-secondary:#94A3B8;
+  --text-muted:#4B5A7A;
+  --gradient-brand:linear-gradient(135deg,#4F46E5,#7C3AED,#06B6D4);
+  --gradient-text:linear-gradient(135deg,#818CF8,#C084FC,#22D3EE);
+  --card-radius:16px;
+  --section-pad:120px;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--navy);
+  color:var(--text-primary);
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:0 48px;height:68px;
+  background:rgba(5,10,28,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid var(--glass-border);
+  transition:all .3s;
+}
+.nav-logo{
+  font-family:'Space Grotesk',sans-serif;
+  font-weight:700;font-size:20px;
+  background:var(--gradient-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  letter-spacing:-0.5px;
+}
+.nav-links{display:flex;gap:32px;list-style:none}
+.nav-links a{
+  color:var(--text-secondary);text-decoration:none;font-size:14px;font-weight:500;
+  transition:color .2s;
+}
+.nav-links a:hover{color:var(--text-primary)}
+.nav-cta{
+  background:var(--indigo);color:#fff;border:none;
+  padding:10px 22px;border-radius:8px;font-size:14px;font-weight:600;
+  cursor:pointer;transition:all .2s;font-family:'Inter',sans-serif;
+  text-decoration:none;display:inline-block;
+}
+.nav-cta:hover{background:#4338CA;transform:translateY(-1px)}
+
+/* HERO */
+.hero{
+  min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:120px 48px 80px;
+  position:relative;overflow:hidden;text-align:center;
+}
+.hero-bg{
+  position:absolute;inset:0;z-index:0;
+  background:radial-gradient(ellipse 80% 60% at 50% -10%,rgba(79,70,229,0.22) 0%,transparent 60%),
+             radial-gradient(ellipse 60% 40% at 80% 60%,rgba(124,58,237,0.12) 0%,transparent 50%),
+             radial-gradient(ellipse 40% 40% at 20% 70%,rgba(6,182,212,0.1) 0%,transparent 50%);
+}
+.hero-grid{
+  position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(79,70,229,0.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(79,70,229,0.06) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:radial-gradient(ellipse 100% 100% at 50% 0%,black 0%,transparent 70%);
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(79,70,229,0.15);border:1px solid rgba(79,70,229,0.35);
+  padding:6px 16px;border-radius:100px;
+  font-size:13px;font-weight:500;color:#A5B4FC;
+  margin-bottom:28px;position:relative;z-index:1;
+}
+.hero-badge span{
+  width:6px;height:6px;border-radius:50%;background:#818CF8;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
+.hero h1{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(40px,6vw,76px);
+  font-weight:700;line-height:1.1;
+  letter-spacing:-2px;
+  position:relative;z-index:1;
+  margin-bottom:24px;
+}
+.hero h1 .gradient{
+  background:var(--gradient-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.hero-sub{
+  font-size:18px;color:var(--text-secondary);
+  max-width:600px;line-height:1.7;
+  position:relative;z-index:1;margin-bottom:44px;
+}
+.hero-btns{
+  display:flex;gap:16px;justify-content:center;flex-wrap:wrap;
+  position:relative;z-index:1;margin-bottom:80px;
+}
+.btn-primary{
+  background:var(--gradient-brand);color:#fff;
+  padding:14px 32px;border-radius:10px;
+  font-size:15px;font-weight:600;text-decoration:none;
+  border:none;cursor:pointer;font-family:'Inter',sans-serif;
+  transition:all .25s;display:inline-flex;align-items:center;gap:8px;
+  box-shadow:0 0 40px rgba(79,70,229,0.35);
+}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 40px rgba(79,70,229,0.5)}
+.btn-ghost{
+  background:var(--glass);color:var(--text-primary);
+  padding:14px 32px;border-radius:10px;
+  font-size:15px;font-weight:600;text-decoration:none;
+  border:1px solid var(--glass-border);cursor:pointer;font-family:'Inter',sans-serif;
+  transition:all .25s;display:inline-flex;align-items:center;gap:8px;
+  backdrop-filter:blur(8px);
+}
+.btn-ghost:hover{background:var(--glass-hover);border-color:rgba(255,255,255,0.15);transform:translateY(-2px)}
+
+/* ANIMATED TREE PREVIEW IN HERO */
+.hero-visual{
+  position:relative;z-index:1;
+  width:100%;max-width:760px;
+  background:var(--glass);
+  border:1px solid var(--glass-border);
+  border-radius:20px;
+  padding:32px 40px;
+  backdrop-filter:blur(12px);
+  overflow:hidden;
+}
+.hero-visual::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse 60% 40% at 50% 0%,rgba(79,70,229,0.12),transparent);
+}
+.window-bar{display:flex;gap:8px;margin-bottom:24px;position:relative}
+.window-dot{width:12px;height:12px;border-radius:50%}
+.tree-svg{width:100%;height:200px}
+
+/* SECTIONS */
+section{padding:var(--section-pad) 48px}
+.section-inner{max-width:1100px;margin:0 auto}
+.eyebrow{
+  font-size:12px;font-weight:600;letter-spacing:2px;text-transform:uppercase;
+  color:#818CF8;margin-bottom:16px;
+}
+.section-title{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:clamp(32px,4vw,52px);
+  font-weight:700;letter-spacing:-1.5px;
+  line-height:1.15;margin-bottom:20px;
+}
+.section-sub{
+  font-size:17px;color:var(--text-secondary);
+  max-width:600px;line-height:1.7;margin-bottom:60px;
+}
+.text-gradient{
+  background:var(--gradient-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.divider{
+  height:1px;
+  background:linear-gradient(90deg,transparent,var(--glass-border),transparent);
+  margin:0;
+}
+
+/* PROBLEM SECTION */
+.problem-section{background:var(--navy2)}
+.problem-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+.problem-list{list-style:none;display:flex;flex-direction:column;gap:20px}
+.problem-item{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:20px 24px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:12px;transition:border-color .2s;
+}
+.problem-item:hover{border-color:rgba(239,68,68,0.3)}
+.problem-icon{
+  width:36px;height:36px;border-radius:8px;
+  background:rgba(239,68,68,0.12);
+  display:flex;align-items:center;justify-content:center;
+  flex-shrink:0;font-size:16px;
+}
+.problem-item h4{font-size:15px;font-weight:600;margin-bottom:4px}
+.problem-item p{font-size:13px;color:var(--text-secondary);line-height:1.5}
+
+/* COMPARISON TABLE */
+.compare-table{
+  width:100%;border-collapse:separate;border-spacing:0;
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--card-radius);overflow:hidden;
+}
+.compare-table th{
+  padding:16px 24px;font-size:13px;font-weight:600;
+  text-align:left;background:rgba(255,255,255,0.04);
+  border-bottom:1px solid var(--glass-border);
+}
+.compare-table th:first-child{color:var(--text-secondary)}
+.compare-table th:nth-child(2){color:#F87171}
+.compare-table th:nth-child(3){
+  color:#34D399;
+  background:rgba(52,211,153,0.06);
+}
+.compare-table td{
+  padding:14px 24px;font-size:13px;
+  border-bottom:1px solid rgba(255,255,255,0.04);
+  vertical-align:top;
+}
+.compare-table td:nth-child(3){background:rgba(52,211,153,0.04)}
+.compare-table tr:last-child td{border-bottom:none}
+.bad{color:#F87171;font-size:12px}
+.good{color:#34D399;font-size:12px}
+
+/* WHAT IS PAGEINDEX */
+.what-section{background:var(--navy)}
+.what-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.tree-diagram{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--card-radius);padding:32px;
+  position:relative;overflow:hidden;
+}
+.tree-diagram::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(124,58,237,0.1),transparent 60%);
+}
+
+/* HOW IT WORKS */
+.how-section{background:var(--navy2)}
+.steps-row{
+  display:flex;gap:0;align-items:flex-start;flex-wrap:nowrap;overflow-x:auto;
+  padding-bottom:16px;
+}
+.step-card{
+  flex:1;min-width:160px;
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--card-radius);padding:28px 24px;
+  position:relative;transition:all .3s;
+}
+.step-card:hover{border-color:rgba(79,70,229,0.4);transform:translateY(-4px)}
+.step-arrow{
+  display:flex;align-items:center;padding:0 8px;
+  color:var(--text-muted);font-size:20px;flex-shrink:0;margin-top:28px;
+}
+.step-num{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:11px;font-weight:700;letter-spacing:2px;
+  color:var(--text-muted);text-transform:uppercase;margin-bottom:12px;
+}
+.step-icon{
+  width:44px;height:44px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:20px;margin-bottom:16px;
+}
+.step-card h3{font-size:15px;font-weight:600;margin-bottom:8px}
+.step-card p{font-size:12px;color:var(--text-secondary);line-height:1.5}
+
+/* ARCHITECTURE */
+.arch-section{background:var(--navy)}
+.arch-flow{
+  display:flex;flex-direction:column;align-items:center;gap:0;
+  max-width:680px;margin:0 auto;
+}
+.arch-node{
+  width:100%;
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:12px;padding:20px 28px;
+  display:flex;align-items:center;gap:16px;
+  transition:all .25s;cursor:default;
+}
+.arch-node:hover{border-color:rgba(79,70,229,0.4);background:var(--glass-hover)}
+.arch-connector{
+  width:1px;height:40px;
+  background:linear-gradient(to bottom,var(--glass-border),rgba(79,70,229,0.4),var(--glass-border));
+  position:relative;
+}
+.arch-connector::after{
+  content:'▼';position:absolute;bottom:-8px;left:50%;transform:translateX(-50%);
+  font-size:10px;color:rgba(79,70,229,0.6);
+}
+.arch-icon{
+  width:40px;height:40px;border-radius:10px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:18px;flex-shrink:0;
+}
+.arch-node h4{font-size:15px;font-weight:600}
+.arch-node p{font-size:12px;color:var(--text-secondary);margin-top:3px}
+
+/* FEATURES */
+.features-section{background:var(--navy2)}
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:16px;
+}
+.feature-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--card-radius);padding:28px;
+  transition:all .3s;
+}
+.feature-card:hover{
+  border-color:rgba(79,70,229,0.35);
+  transform:translateY(-3px);
+  background:var(--glass-hover);
+}
+.feature-icon{
+  width:48px;height:48px;border-radius:12px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;margin-bottom:18px;
+}
+.feature-card h3{font-size:16px;font-weight:600;margin-bottom:8px}
+.feature-card p{font-size:13px;color:var(--text-secondary);line-height:1.5}
+
+/* LIVE DEMO */
+.demo-section{background:var(--navy)}
+.demo-wrapper{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:20px;overflow:hidden;
+  box-shadow:0 0 80px rgba(79,70,229,0.15);
+}
+.demo-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:18px 28px;
+  background:rgba(255,255,255,0.03);
+  border-bottom:1px solid var(--glass-border);
+}
+.demo-title{
+  display:flex;align-items:center;gap:12px;
+  font-size:14px;font-weight:600;
+}
+.demo-dot{
+  width:8px;height:8px;border-radius:50%;
+  background:var(--cyan);animation:pulse 2s ease-in-out infinite;
+}
+.demo-actions{display:flex;gap:8px}
+.demo-tab{
+  padding:6px 14px;border-radius:6px;
+  font-size:12px;font-weight:500;cursor:pointer;
+  background:transparent;border:1px solid transparent;
+  color:var(--text-secondary);transition:all .2s;
+  font-family:'Inter',sans-serif;
+}
+.demo-tab.active,.demo-tab:hover{
+  background:rgba(79,70,229,0.2);
+  border-color:rgba(79,70,229,0.3);
+  color:var(--text-primary);
+}
+.demo-body{min-height:600px;display:flex;flex-direction:column}
+.demo-iframe-container{
+  flex:1;position:relative;
+  background:var(--navy3);
+}
+.demo-iframe-container iframe{
+  width:100%;height:600px;border:none;
+  display:block;
+}
+.demo-placeholder{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:600px;gap:24px;padding:60px;text-align:center;
+}
+.demo-placeholder-icon{font-size:56px;margin-bottom:8px}
+.demo-placeholder h3{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:24px;font-weight:700;margin-bottom:12px;
+}
+.demo-placeholder p{color:var(--text-secondary);max-width:480px;line-height:1.7;font-size:15px}
+.demo-steps{
+  display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px;
+}
+.demo-step-pill{
+  display:flex;align-items:center;gap:8px;
+  padding:8px 16px;border-radius:100px;
+  background:rgba(79,70,229,0.12);border:1px solid rgba(79,70,229,0.25);
+  font-size:13px;color:#A5B4FC;font-weight:500;
+}
+.demo-step-pill span{font-size:11px}
+.integration-note{
+  padding:16px 28px;
+  background:rgba(6,182,212,0.06);
+  border-top:1px solid rgba(6,182,212,0.15);
+  font-size:12px;color:var(--text-secondary);
+  display:flex;align-items:center;gap:10px;
+}
+.int-badge{
+  background:rgba(6,182,212,0.15);color:#22D3EE;
+  padding:2px 10px;border-radius:100px;font-size:11px;font-weight:600;flex-shrink:0;
+}
+
+/* USE CASES */
+.usecases-section{background:var(--navy2)}
+.uc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.uc-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--card-radius);padding:28px 24px;
+  transition:all .3s;
+}
+.uc-card:hover{border-color:rgba(79,70,229,0.35);transform:translateY(-3px)}
+.uc-icon{font-size:28px;margin-bottom:16px}
+.uc-card h3{font-size:15px;font-weight:600;margin-bottom:8px}
+.uc-card p{font-size:13px;color:var(--text-secondary);line-height:1.5}
+
+/* BENEFITS */
+.benefits-section{background:var(--navy)}
+.kpi-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;margin-bottom:60px}
+.kpi-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:var(--card-radius);padding:32px 28px;
+  text-align:center;transition:all .3s;
+}
+.kpi-card:hover{border-color:rgba(79,70,229,0.4);transform:translateY(-4px)}
+.kpi-num{
+  font-family:'Space Grotesk',sans-serif;
+  font-size:44px;font-weight:700;
+  background:var(--gradient-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+  line-height:1;margin-bottom:12px;
+}
+.kpi-card h4{font-size:15px;font-weight:600;margin-bottom:8px}
+.kpi-card p{font-size:13px;color:var(--text-secondary)}
+
+/* TECH STACK */
+.tech-section{background:var(--navy2)}
+.tech-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:16px}
+.tech-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:12px;padding:24px;
+}
+.tech-label{font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;
+  color:var(--text-muted);margin-bottom:12px}
+.tech-list{display:flex;flex-direction:column;gap:8px}
+.tech-item{
+  display:flex;align-items:center;gap:10px;
+  font-size:13px;font-weight:500;
+}
+.tech-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* FUTURE */
+.future-section{background:var(--navy)}
+.future-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.future-card{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:12px;padding:24px;
+  display:flex;align-items:flex-start;gap:12px;
+  transition:all .3s;
+}
+.future-card:hover{border-color:rgba(124,58,237,0.4)}
+.future-icon{font-size:20px;flex-shrink:0;margin-top:2px}
+.future-card h3{font-size:14px;font-weight:600;margin-bottom:6px}
+.future-card p{font-size:12px;color:var(--text-secondary);line-height:1.5}
+
+/* CONTACT */
+.contact-section{
+  background:var(--navy2);
+}
+.contact-inner{
+  max-width:640px;
+  margin:0 auto;
+}
+.contact-form{
+  background:var(--glass);border:1px solid var(--glass-border);
+  border-radius:20px;padding:48px;
+}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.form-group{display:flex;flex-direction:column;gap:8px;margin-bottom:20px}
+.form-group label{font-size:13px;font-weight:500;color:var(--text-secondary)}
+.form-group input,.form-group textarea,.form-group select{
+  background:rgba(255,255,255,0.05);
+  border:1px solid var(--glass-border);
+  border-radius:10px;padding:12px 16px;
+  font-size:14px;color:var(--text-primary);
+  font-family:'Inter',sans-serif;
+  transition:border-color .2s;outline:none;
+  resize:vertical;
+}
+.form-group input:focus,.form-group textarea:focus{
+  border-color:rgba(79,70,229,0.5);
+  background:rgba(79,70,229,0.05);
+}
+.form-group input::placeholder,.form-group textarea::placeholder{color:var(--text-muted)}
+.form-submit{
+  width:100%;background:var(--gradient-brand);
+  color:#fff;border:none;padding:16px;
+  border-radius:10px;font-size:15px;font-weight:600;
+  cursor:pointer;font-family:'Inter',sans-serif;
+  transition:all .25s;
+}
+.form-submit:hover{opacity:.9;transform:translateY(-2px)}
+.form-note{font-size:12px;color:var(--text-muted);text-align:center;margin-top:16px}
+
+/* FOOTER */
+footer{
+  padding:40px 48px;
+  border-top:1px solid var(--glass-border);
+  display:flex;align-items:center;justify-content:space-between;
+  background:var(--navy);
+}
+.footer-logo{
+  font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:16px;
+  background:var(--gradient-text);
+  -webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;
+}
+.footer-copy{font-size:13px;color:var(--text-muted)}
+
+/* SCROLL ANIMATIONS */
+.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up-delay-1{transition-delay:.1s}
+.fade-up-delay-2{transition-delay:.2s}
+.fade-up-delay-3{transition-delay:.3s}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+  nav{padding:0 24px}
+  .nav-links{display:none}
+  section{padding:80px 24px}
+  .hero{padding:100px 24px 60px}
+  .problem-grid,.what-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:16px;text-align:center}
+  .contact-form{padding:32px 24px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-logo">PageIndex</span>
+  <ul class="nav-links">
+    <li><a href="#problem">Problem</a></li>
+    <li><a href="#what">How It Works</a></li>
+    <li><a href="#architecture">Architecture</a></li>
+    <li><a href="#demo">Live Demo</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="/app" class="nav-cta">Try Live Demo →</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-grid"></div>
+
+  <div class="hero-badge">
+    <span></span>
+    Internal PoC · Next Generation RAG
+  </div>
+
+  <h1>
+    PageIndex –<br/>
+    <span class="gradient">Vectorless</span> RAG
+  </h1>
+
+  <p class="hero-sub">
+    Reasoning-based document retrieval without vector databases, embeddings, or chunking.
+    Navigate documents the way a human expert would.
+  </p>
+
+  <div class="hero-btns">
+    <a href="/app" class="btn-primary">
+      ⚡ Try Live Demo
+    </a>
+    <a href="#architecture" class="btn-ghost">
+      View Architecture →
+    </a>
+  </div>
+
+  <!-- Animated Tree Visualization -->
+  <div class="hero-visual">
+    <div class="window-bar">
+      <div class="window-dot" style="background:#FF5F56"></div>
+      <div class="window-dot" style="background:#FFBD2E"></div>
+      <div class="window-dot" style="background:#27C93F"></div>
+      <span style="font-size:12px;color:var(--text-muted);margin-left:12px;font-family:'Space Grotesk',sans-serif">pageindex — tree reasoning engine</span>
+    </div>
+    <svg class="tree-svg" viewBox="0 0 680 220" xmlns="http://www.w3.org/2000/svg">
+      <!-- Root -->
+      <rect x="280" y="10" width="120" height="36" rx="8" fill="rgba(79,70,229,0.25)" stroke="rgba(79,70,229,0.6)" stroke-width="1"/>
+      <text x="340" y="32" text-anchor="middle" fill="#A5B4FC" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="600">Annual Report 2024</text>
+
+      <!-- Level 1 connectors -->
+      <line x1="340" y1="46" x2="340" y2="70" stroke="rgba(79,70,229,0.4)" stroke-width="1" stroke-dasharray="4,2"/>
+      <line x1="340" y1="70" x2="120" y2="70" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+      <line x1="340" y1="70" x2="560" y2="70" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+      <line x1="120" y1="70" x2="120" y2="84" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+      <line x1="340" y1="70" x2="340" y2="84" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+      <line x1="560" y1="70" x2="560" y2="84" stroke="rgba(79,70,229,0.4)" stroke-width="1"/>
+
+      <!-- Level 1 nodes -->
+      <rect x="60" y="84" width="120" height="32" rx="7" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+      <text x="120" y="104" text-anchor="middle" fill="#C084FC" font-family="Inter,sans-serif" font-size="11" font-weight="500">Executive Summary</text>
+
+      <rect x="280" y="84" width="120" height="32" rx="7" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+      <text x="340" y="104" text-anchor="middle" fill="#C084FC" font-family="Inter,sans-serif" font-size="11" font-weight="500">Financial Results</text>
+
+      <rect x="500" y="84" width="120" height="32" rx="7" fill="rgba(124,58,237,0.2)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+      <text x="560" y="104" text-anchor="middle" fill="#C084FC" font-family="Inter,sans-serif" font-size="11" font-weight="500">Risk Factors</text>
+
+      <!-- Level 2 under Financial -->
+      <line x1="340" y1="116" x2="340" y2="140" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+      <line x1="340" y1="140" x2="240" y2="140" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+      <line x1="340" y1="140" x2="440" y2="140" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+      <line x1="240" y1="140" x2="240" y2="154" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+      <line x1="440" y1="140" x2="440" y2="154" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+
+      <!-- Level 2 nodes -->
+      <rect x="186" y="154" width="108" height="28" rx="6" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+      <text x="240" y="172" text-anchor="middle" fill="#22D3EE" font-family="Inter,sans-serif" font-size="10" font-weight="500">Revenue Breakdown</text>
+
+      <rect x="388" y="154" width="104" height="28" rx="6" fill="rgba(6,182,212,0.15)" stroke="rgba(6,182,212,0.4)" stroke-width="1"/>
+      <text x="440" y="172" text-anchor="middle" fill="#22D3EE" font-family="Inter,sans-serif" font-size="10" font-weight="500">Q4 Performance</text>
+
+      <!-- Reasoning highlight -->
+      <rect x="388" y="154" width="104" height="28" rx="6" fill="rgba(6,182,212,0.15)" stroke="#22D3EE" stroke-width="1.5">
+        <animate attributeName="stroke-opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="fill-opacity" values="0.15;0.35;0.15" dur="2s" repeatCount="indefinite"/>
+      </rect>
+
+      <!-- LLM reasoning arrow -->
+      <path d="M 640 172 L 500 172" fill="none" stroke="#22D3EE" stroke-width="1" stroke-dasharray="4,3" marker-end="url(#arr)"/>
+      <text x="648" y="168" fill="#22D3EE" font-family="Inter,sans-serif" font-size="10">LLM reasoning</text>
+      <text x="648" y="180" fill="rgba(6,182,212,0.6)" font-family="Inter,sans-serif" font-size="9">→ p.47 selected</text>
+
+      <defs>
+        <marker id="arr" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+          <path d="M2 1L8 5L2 9" fill="none" stroke="#22D3EE" stroke-width="1.5" stroke-linecap="round"/>
+        </marker>
+      </defs>
+    </svg>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PROBLEM SECTION -->
+<section class="problem-section" id="problem">
+  <div class="section-inner">
+    <p class="eyebrow">The Problem</p>
+    <div class="problem-grid">
+      <div>
+        <h2 class="section-title">Why traditional RAG <span class="text-gradient">falls short</span></h2>
+        <p class="section-sub" style="margin-bottom:32px">Vector-based retrieval systems make fundamental assumptions about documents that break down in practice.</p>
+        <ul class="problem-list">
+          <li class="problem-item fade-up">
+            <div class="problem-icon">🎯</div>
+            <div>
+              <h4>Similarity ≠ Relevance</h4>
+              <p>Cosine similarity finds semantically close chunks, not necessarily the most contextually relevant information for your specific query.</p>
+            </div>
+          </li>
+          <li class="problem-item fade-up fade-up-delay-1">
+            <div class="problem-icon">✂️</div>
+            <div>
+              <h4>Chunking destroys context</h4>
+              <p>Arbitrary text splitting breaks semantic units, separating definitions from their references, tables from their explanations.</p>
+            </div>
+          </li>
+          <li class="problem-item fade-up fade-up-delay-2">
+            <div class="problem-icon">🔮</div>
+            <div>
+              <h4>Black box retrieval</h4>
+              <p>You cannot explain why a chunk was retrieved or trace the reasoning path from query to answer.</p>
+            </div>
+          </li>
+          <li class="problem-item fade-up fade-up-delay-3">
+            <div class="problem-icon">📉</div>
+            <div>
+              <h4>Long document failure</h4>
+              <p>Performance degrades significantly with complex 100+ page documents where relationships span sections.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="fade-up fade-up-delay-1">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>Criterion</th>
+              <th>Traditional RAG</th>
+              <th>✦ PageIndex</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Retrieval method</td>
+              <td><span class="bad">Vector similarity search</span></td>
+              <td><span class="good">LLM tree reasoning</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Vector DB required</td>
+              <td><span class="bad">Yes (Pinecone, Weaviate…)</span></td>
+              <td><span class="good">No dependency</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Chunking</td>
+              <td><span class="bad">Fixed token windows</span></td>
+              <td><span class="good">Semantic page units</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Context preservation</td>
+              <td><span class="bad">Poor across sections</span></td>
+              <td><span class="good">Full document awareness</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Explainability</td>
+              <td><span class="bad">None</span></td>
+              <td><span class="good">Full reasoning trace</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Long documents</td>
+              <td><span class="bad">Degrades at scale</span></td>
+              <td><span class="good">Designed for 500+ pages</span></td>
+            </tr>
+            <tr>
+              <td style="color:var(--text-secondary);font-weight:500">Infrastructure</td>
+              <td><span class="bad">Complex embedding pipeline</span></td>
+              <td><span class="good">LLM + JSON tree only</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- WHAT IS PAGEINDEX -->
+<section class="what-section" id="what">
+  <div class="section-inner">
+    <p class="eyebrow">The Approach</p>
+    <div class="what-grid">
+      <div>
+        <h2 class="section-title">A <span class="text-gradient">hierarchical tree</span>, not a flat vector space</h2>
+        <p class="section-sub">PageIndex converts your document into a structured semantic tree that mirrors how a human expert navigates a document — by understanding structure, not just similarity.</p>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(79,70,229,0.2);border:1px solid rgba(79,70,229,0.4);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🌳</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">Semantic tree structure</h4>
+              <p style="font-size:13px;color:var(--text-secondary);line-height:1.5">Documents are parsed into a hierarchy: document → sections → subsections → pages, preserving all contextual relationships.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(124,58,237,0.2);border:1px solid rgba(124,58,237,0.4);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">🧠</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">LLM navigates the tree</h4>
+              <p style="font-size:13px;color:var(--text-secondary);line-height:1.5">Instead of similarity scoring, an LLM reasons through the tree structure — like an expert reading a table of contents before diving in.</p>
+            </div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start">
+            <div style="width:32px;height:32px;border-radius:8px;background:rgba(6,182,212,0.15);border:1px solid rgba(6,182,212,0.35);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0">📍</div>
+            <div>
+              <h4 style="font-size:15px;font-weight:600;margin-bottom:4px">Precise page selection</h4>
+              <p style="font-size:13px;color:var(--text-secondary);line-height:1.5">The engine identifies the exact pages containing relevant information, with a transparent reasoning trace for every retrieval decision.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tree-diagram fade-up">
+        <svg viewBox="0 0 380 340" xmlns="http://www.w3.org/2000/svg" width="100%">
+          <!-- Doc root -->
+          <rect x="120" y="10" width="140" height="38" rx="8" fill="rgba(79,70,229,0.25)" stroke="rgba(79,70,229,0.7)" stroke-width="1.5"/>
+          <text x="190" y="33" text-anchor="middle" fill="#A5B4FC" font-family="Space Grotesk,sans-serif" font-size="12" font-weight="700">Document Root</text>
+          <!-- L1 connectors -->
+          <line x1="190" y1="48" x2="190" y2="68" stroke="rgba(79,70,229,0.4)" stroke-width="1.5" stroke-dasharray="4,2"/>
+          <line x1="70" y1="68" x2="310" y2="68" stroke="rgba(79,70,229,0.3)" stroke-width="1"/>
+          <line x1="70" y1="68" x2="70" y2="82" stroke="rgba(79,70,229,0.3)" stroke-width="1"/>
+          <line x1="190" y1="68" x2="190" y2="82" stroke="rgba(79,70,229,0.3)" stroke-width="1"/>
+          <line x1="310" y1="68" x2="310" y2="82" stroke="rgba(79,70,229,0.3)" stroke-width="1"/>
+          <!-- L1 nodes -->
+          <rect x="20" y="82" width="100" height="32" rx="7" fill="rgba(124,58,237,0.18)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+          <text x="70" y="102" text-anchor="middle" fill="#C084FC" font-family="Inter,sans-serif" font-size="10" font-weight="500">Introduction</text>
+          <rect x="140" y="82" width="100" height="32" rx="7" fill="rgba(124,58,237,0.18)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+          <text x="190" y="102" text-anchor="middle" fill="#C084FC" font-family="Inter,sans-serif" font-size="10" font-weight="500">Financials</text>
+          <rect x="260" y="82" width="100" height="32" rx="7" fill="rgba(124,58,237,0.18)" stroke="rgba(124,58,237,0.5)" stroke-width="1"/>
+          <text x="310" y="102" text-anchor="middle" fill="#C084FC" font-family="Inter,sans-serif" font-size="10" font-weight="500">Appendix</text>
+          <!-- L2 under Financials -->
+          <line x1="190" y1="114" x2="190" y2="134" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+          <line x1="140" y1="134" x2="240" y2="134" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+          <line x1="140" y1="134" x2="140" y2="148" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+          <line x1="240" y1="134" x2="240" y2="148" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+          <rect x="95" y="148" width="90" height="28" rx="6" fill="rgba(6,182,212,0.12)" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+          <text x="140" y="166" text-anchor="middle" fill="#22D3EE" font-family="Inter,sans-serif" font-size="9" font-weight="500">Q4 Revenue</text>
+          <rect x="195" y="148" width="90" height="28" rx="6" fill="rgba(6,182,212,0.12)" stroke="rgba(6,182,212,0.35)" stroke-width="1"/>
+          <text x="240" y="166" text-anchor="middle" fill="#22D3EE" font-family="Inter,sans-serif" font-size="9" font-weight="500">Cost Analysis</text>
+          <!-- Page nodes under Q4 Revenue -->
+          <line x1="140" y1="176" x2="140" y2="194" stroke="rgba(52,211,153,0.3)" stroke-width="1"/>
+          <line x1="115" y1="194" x2="165" y2="194" stroke="rgba(52,211,153,0.25)" stroke-width="1"/>
+          <line x1="115" y1="194" x2="115" y2="205" stroke="rgba(52,211,153,0.25)" stroke-width="1"/>
+          <line x1="165" y1="194" x2="165" y2="205" stroke="rgba(52,211,153,0.25)" stroke-width="1"/>
+          <!-- Page pills — SELECTED -->
+          <rect x="90" y="205" width="50" height="22" rx="5" fill="rgba(52,211,153,0.25)" stroke="#34D399" stroke-width="1.5">
+            <animate attributeName="stroke-opacity" values="0.5;1;0.5" dur="1.8s" repeatCount="indefinite"/>
+          </rect>
+          <text x="115" y="220" text-anchor="middle" fill="#34D399" font-family="Inter,sans-serif" font-size="9" font-weight="600">p. 47</text>
+          <rect x="140" y="205" width="50" height="22" rx="5" fill="rgba(6,182,212,0.1)" stroke="rgba(6,182,212,0.3)" stroke-width="1"/>
+          <text x="165" y="220" text-anchor="middle" fill="#22D3EE" font-family="Inter,sans-serif" font-size="9" font-weight="500">p. 48</text>
+          <!-- Reasoning path indicator -->
+          <rect x="20" y="255" width="340" height="72" rx="10" fill="rgba(52,211,153,0.06)" stroke="rgba(52,211,153,0.2)" stroke-width="1"/>
+          <text x="36" y="278" fill="#34D399" font-family="Space Grotesk,sans-serif" font-size="11" font-weight="600">🔍 Reasoning trace</text>
+          <text x="36" y="296" fill="rgba(148,163,184,0.9)" font-family="Inter,sans-serif" font-size="10">Query → Financials branch → Q4 Revenue</text>
+          <text x="36" y="311" fill="rgba(148,163,184,0.9)" font-family="Inter,sans-serif" font-size="10">subsection → Page 47 selected (confidence: 0.94)</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- HOW IT WORKS -->
+<section class="how-section" id="how">
+  <div class="section-inner">
+    <p class="eyebrow">Process</p>
+    <h2 class="section-title">How <span class="text-gradient">PageIndex</span> works</h2>
+    <p class="section-sub">Five steps from document upload to precise, explainable answer retrieval.</p>
+    <div class="steps-row">
+      <div class="step-card fade-up">
+        <div class="step-num">Step 01</div>
+        <div class="step-icon" style="background:rgba(79,70,229,0.15);border:1px solid rgba(79,70,229,0.3)">📄</div>
+        <h3>Upload PDF</h3>
+        <p>Upload any PDF document — annual reports, legal contracts, technical manuals, research papers.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card fade-up fade-up-delay-1">
+        <div class="step-num">Step 02</div>
+        <div class="step-icon" style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3)">🌳</div>
+        <h3>Generate Tree Index</h3>
+        <p>PageIndex Engine parses the document and builds a hierarchical semantic tree preserving all section relationships.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card fade-up fade-up-delay-2">
+        <div class="step-num">Step 03</div>
+        <div class="step-icon" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3)">🧠</div>
+        <h3>LLM Tree Search</h3>
+        <p>When you ask a question, the LLM reasons through the tree structure to navigate to relevant branches.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card fade-up fade-up-delay-3">
+        <div class="step-num">Step 04</div>
+        <div class="step-icon" style="background:rgba(52,211,153,0.12);border:1px solid rgba(52,211,153,0.25)">📍</div>
+        <h3>Pages Identified</h3>
+        <p>The engine pinpoints the exact page numbers containing your answer, with full reasoning trace.</p>
+      </div>
+      <div class="step-arrow">→</div>
+      <div class="step-card fade-up fade-up-delay-3">
+        <div class="step-num">Step 05</div>
+        <div class="step-icon" style="background:rgba(251,191,36,0.12);border:1px solid rgba(251,191,36,0.25)">✨</div>
+        <h3>Answer Generated</h3>
+        <p>The LLM generates a precise, sourced answer from the identified pages with explainable citations.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ARCHITECTURE -->
+<section class="arch-section" id="architecture">
+  <div class="section-inner" style="text-align:center">
+    <p class="eyebrow">Architecture</p>
+    <h2 class="section-title">System <span class="text-gradient">architecture</span></h2>
+    <p class="section-sub" style="margin:0 auto 60px">A clean, minimal pipeline that eliminates vector database complexity entirely.</p>
+
+    <div class="arch-flow">
+      <div class="arch-node">
+        <div class="arch-icon" style="background:rgba(79,70,229,0.15);border:1px solid rgba(79,70,229,0.3)">👤</div>
+        <div>
+          <h4>User</h4>
+          <p>Upload PDF + ask questions via web interface</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:var(--text-muted);font-weight:500">INPUT</div>
+      </div>
+      <div class="arch-connector"></div>
+      <div class="arch-node">
+        <div class="arch-icon" style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3)">📤</div>
+        <div>
+          <h4>PDF Upload & Parser</h4>
+          <p>Document ingested, pages extracted and pre-processed</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:rgba(124,58,237,0.8);font-weight:500">INGEST</div>
+      </div>
+      <div class="arch-connector"></div>
+      <div class="arch-node" style="border-color:rgba(79,70,229,0.4);background:rgba(79,70,229,0.08)">
+        <div class="arch-icon" style="background:rgba(79,70,229,0.2);border:1px solid rgba(79,70,229,0.5)">⚙️</div>
+        <div>
+          <h4>PageIndex Engine</h4>
+          <p>Core framework — tree construction, section analysis, metadata tagging</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:rgba(79,70,229,0.9);font-weight:600">CORE</div>
+      </div>
+      <div class="arch-connector"></div>
+      <div class="arch-node">
+        <div class="arch-icon" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.3)">🌳</div>
+        <div>
+          <h4>Tree Structure (JSON)</h4>
+          <p>Hierarchical semantic index stored as structured JSON — no vector DB needed</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:rgba(6,182,212,0.8);font-weight:500">INDEX</div>
+      </div>
+      <div class="arch-connector"></div>
+      <div class="arch-node">
+        <div class="arch-icon" style="background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.25)">🧠</div>
+        <div>
+          <h4>LLM Reasoning Engine</h4>
+          <p>Gemini / OpenAI reasons through the tree to navigate to relevant sections</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:rgba(52,211,153,0.8);font-weight:500">REASON</div>
+      </div>
+      <div class="arch-connector"></div>
+      <div class="arch-node">
+        <div class="arch-icon" style="background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25)">📍</div>
+        <div>
+          <h4>Section Selector</h4>
+          <p>Exact page numbers identified with confidence scores and reasoning trace</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:rgba(251,191,36,0.8);font-weight:500">SELECT</div>
+      </div>
+      <div class="arch-connector"></div>
+      <div class="arch-node" style="border-color:rgba(52,211,153,0.4);background:rgba(52,211,153,0.06)">
+        <div class="arch-icon" style="background:rgba(52,211,153,0.15);border:1px solid rgba(52,211,153,0.4)">✨</div>
+        <div>
+          <h4>LLM Response</h4>
+          <p>Final answer grounded in identified pages, with citations and explainability</p>
+        </div>
+        <div style="margin-left:auto;font-size:11px;color:rgba(52,211,153,0.9);font-weight:600">OUTPUT</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FEATURES -->
+<section class="features-section" id="features">
+  <div class="section-inner">
+    <p class="eyebrow">Core Capabilities</p>
+    <h2 class="section-title">Built differently, <span class="text-gradient">by design</span></h2>
+    <p class="section-sub">Eight core properties that differentiate PageIndex from every other RAG approach.</p>
+    <div class="features-grid">
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25)">🚫</div>
+        <h3>No Vector Database</h3>
+        <p>Eliminate Pinecone, Weaviate, Chroma, and all the complexity they bring. Zero vector infrastructure required.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-1">
+        <div class="feature-icon" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25)">⚡</div>
+        <h3>No Embeddings</h3>
+        <p>No embedding models to run, fine-tune, or maintain. Retrieval through reasoning, not representation.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-2">
+        <div class="feature-icon" style="background:rgba(239,68,68,0.12);border:1px solid rgba(239,68,68,0.25)">✂️</div>
+        <h3>No Chunking</h3>
+        <p>Documents stay whole. Pages are the unit of retrieval — semantic boundaries that authors intended.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:rgba(79,70,229,0.15);border:1px solid rgba(79,70,229,0.3)">🧑‍💼</div>
+        <h3>Human-like Retrieval</h3>
+        <p>Navigates documents the way a senior analyst would — understanding structure, skimming headings, diving in.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-1">
+        <div class="feature-icon" style="background:rgba(6,182,212,0.12);border:1px solid rgba(6,182,212,0.25)">🔍</div>
+        <h3>Explainable Retrieval</h3>
+        <p>Every answer includes a full reasoning trace: why each page was selected, with confidence scores.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-2">
+        <div class="feature-icon" style="background:rgba(124,58,237,0.15);border:1px solid rgba(124,58,237,0.3)">🌳</div>
+        <h3>Hierarchical Understanding</h3>
+        <p>Captures section relationships, cross-references, and document structure that flat retrieval misses.</p>
+      </div>
+      <div class="feature-card fade-up">
+        <div class="feature-icon" style="background:rgba(52,211,153,0.1);border:1px solid rgba(52,211,153,0.25)">🧠</div>
+        <h3>Reasoning-Based Search</h3>
+        <p>The LLM actively reasons about where to look — not pattern-matching, but genuine document navigation.</p>
+      </div>
+      <div class="feature-card fade-up fade-up-delay-1">
+        <div class="feature-icon" style="background:rgba(251,191,36,0.1);border:1px solid rgba(251,191,36,0.25)">📚</div>
+        <h3>Long Document Analysis</h3>
+        <p>Designed from the ground up for 200-500+ page documents where traditional RAG breaks down.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- LIVE DEMO -->
+<section class="demo-section" id="demo">
+  <div class="section-inner">
+    <p class="eyebrow">Live Demo</p>
+    <h2 class="section-title" style="margin-bottom:12px">Try <span class="text-gradient">PageIndex</span> now</h2>
+    <p class="section-sub">Upload a PDF and experience vectorless reasoning-based retrieval firsthand.</p>
+
+    <div class="demo-wrapper fade-up">
+      <div class="demo-header">
+        <div class="demo-title">
+          <div class="demo-dot"></div>
+          PageIndex Application
+        </div>
+        <div class="demo-actions">
+          <button class="demo-tab active" onclick="switchTab(this,'embed')">Embedded App</button>
+          <button class="demo-tab" onclick="switchTab(this,'config')">Configuration</button>
+        </div>
+      </div>
+
+      <!-- EMBED TAB -->
+      <div id="tab-embed" class="demo-body">
+        <div class="demo-iframe-container">
+          <!--
+            INTEGRATION POINT:
+            Replace the placeholder below with your actual application.
+
+            Option A (Recommended): iframe embed
+            <iframe src="http://localhost:3000" allow="clipboard-write"></iframe>
+
+            Option B: Proxy via Next.js rewrites in next.config.js:
+            async rewrites() {
+              return [{ source: '/app/:path*', destination: 'http://your-backend:8000/:path*' }]
+            }
+            Then: <iframe src="/app"></iframe>
+
+            Option C: Import React components directly and mount here.
+          -->
+          <div class="demo-placeholder">
+            <div class="demo-placeholder-icon">🌳</div>
+            <h3>PageIndex Live Demo</h3>
+            <p>
+              Your existing PageIndex application mounts here. Configure the integration endpoint below, or embed via iframe pointing to your running backend.
+            </p>
+            <div class="demo-steps">
+              <div class="demo-step-pill"><span>①</span> Upload PDF document</div>
+              <div class="demo-step-pill"><span>②</span> Process & generate tree</div>
+              <div class="demo-step-pill"><span>③</span> View JSON index</div>
+              <div class="demo-step-pill"><span>④</span> Ask questions</div>
+              <div class="demo-step-pill"><span>⑤</span> Download tree JSON</div>
+            </div>
+            <div style="margin-top:28px;display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+              <a href="/app" class="btn-primary" style="font-size:14px;padding:12px 24px">
+                ⚡ Open Live Demo
+              </a>
+              <button class="btn-ghost" onclick="mountIframe()" style="font-size:14px;padding:12px 24px">
+                Embed Here Instead
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CONFIG TAB -->
+      <div id="tab-config" class="demo-body" style="display:none">
+        <div style="padding:40px">
+          <h3 style="font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;margin-bottom:8px">Integration Configuration</h3>
+          <p style="font-size:14px;color:var(--text-secondary);margin-bottom:32px">Connect to your existing PageIndex backend using one of the three integration approaches.</p>
+
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:32px">
+            <div id="opt-a" onclick="selectOption('a')" style="padding:20px;background:rgba(79,70,229,0.15);border:1.5px solid rgba(79,70,229,0.5);border-radius:12px;cursor:pointer">
+              <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:#818CF8;text-transform:uppercase;margin-bottom:10px">Option A</div>
+              <div style="font-size:15px;font-weight:600;margin-bottom:6px">iframe Embed</div>
+              <div style="font-size:12px;color:var(--text-secondary)">Embed existing app directly. Simplest integration.</div>
+              <div style="margin-top:12px;font-size:11px;background:rgba(52,211,153,0.15);color:#34D399;padding:4px 10px;border-radius:100px;display:inline-block;font-weight:600">✓ Recommended</div>
+            </div>
+            <div id="opt-b" onclick="selectOption('b')" style="padding:20px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;cursor:pointer;transition:all .2s">
+              <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px">Option B</div>
+              <div style="font-size:15px;font-weight:600;margin-bottom:6px">API Proxy</div>
+              <div style="font-size:12px;color:var(--text-secondary)">Next.js rewrites proxy to backend. Best for same-domain.</div>
+            </div>
+            <div id="opt-c" onclick="selectOption('c')" style="padding:20px;background:var(--glass);border:1px solid var(--glass-border);border-radius:12px;cursor:pointer;transition:all .2s">
+              <div style="font-size:11px;font-weight:700;letter-spacing:1.5px;color:var(--text-muted);text-transform:uppercase;margin-bottom:10px">Option C</div>
+              <div style="font-size:15px;font-weight:600;margin-bottom:6px">React Mount</div>
+              <div style="font-size:12px;color:var(--text-secondary)">Import PageIndex React components directly into landing page.</div>
+            </div>
+          </div>
+
+          <div style="margin-bottom:20px">
+            <label style="font-size:13px;font-weight:500;color:var(--text-secondary);display:block;margin-bottom:8px">Application Endpoint URL</label>
+            <input id="endpoint-url" type="text" value="/app" placeholder="/app or http://your-pageindex-app.com" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--text-primary);font-family:'Inter',sans-serif;outline:none"/>
+          </div>
+          <div style="margin-bottom:28px">
+            <label style="font-size:13px;font-weight:500;color:var(--text-secondary);display:block;margin-bottom:8px">API Base URL (for Option B/C)</label>
+            <input type="text" value="http://localhost:8000/api" placeholder="http://your-backend-api.com/api" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--text-primary);font-family:'Inter',sans-serif;outline:none"/>
+          </div>
+
+          <div style="background:rgba(255,255,255,0.03);border:1px solid var(--glass-border);border-radius:10px;padding:20px;margin-bottom:24px">
+            <div style="font-size:12px;font-weight:600;letter-spacing:1.5px;color:var(--text-muted);text-transform:uppercase;margin-bottom:12px">API Endpoints</div>
+            <div style="display:flex;flex-direction:column;gap:8px;font-family:'Space Grotesk',monospace;font-size:12px">
+              <div style="display:flex;gap:16px">
+                <span style="color:#34D399;min-width:60px">POST</span>
+                <span style="color:#A5B4FC">/upload</span>
+                <span style="color:var(--text-muted)">Upload PDF document</span>
+              </div>
+              <div style="display:flex;gap:16px">
+                <span style="color:#34D399;min-width:60px">POST</span>
+                <span style="color:#A5B4FC">/process</span>
+                <span style="color:var(--text-muted)">Generate tree index</span>
+              </div>
+              <div style="display:flex;gap:16px">
+                <span style="color:#60A5FA;min-width:60px">GET</span>
+                <span style="color:#A5B4FC">/tree</span>
+                <span style="color:var(--text-muted)">Download JSON tree</span>
+              </div>
+              <div style="display:flex;gap:16px">
+                <span style="color:#34D399;min-width:60px">POST</span>
+                <span style="color:#A5B4FC">/chat</span>
+                <span style="color:var(--text-muted)">Query the document</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn-primary" onclick="applyConfig()" style="font-size:14px;padding:12px 28px">
+            Apply & Launch Demo →
+          </button>
+        </div>
+      </div>
+
+      <div class="integration-note">
+        <span class="int-badge">INFO</span>
+        The demo section embeds your existing PageIndex application. No backend recreation needed — point to your running instance.
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- USE CASES -->
+<section class="usecases-section" id="usecases">
+  <div class="section-inner">
+    <p class="eyebrow">Applications</p>
+    <h2 class="section-title">Built for <span class="text-gradient">complex documents</span></h2>
+    <p class="section-sub">PageIndex excels wherever traditional RAG struggles — long, structured, reference-dense documents.</p>
+    <div class="uc-grid">
+      <div class="uc-card fade-up">
+        <div class="uc-icon">📊</div>
+        <h3>Financial Reports</h3>
+        <p>Annual reports, 10-Ks, prospectuses — navigate complex financial statements with precision reasoning.</p>
+      </div>
+      <div class="uc-card fade-up fade-up-delay-1">
+        <div class="uc-icon">⚖️</div>
+        <h3>Legal Documents</h3>
+        <p>Contracts, case files, regulatory filings — find the exact clause without missing cross-references.</p>
+      </div>
+      <div class="uc-card fade-up fade-up-delay-2">
+        <div class="uc-icon">🔬</div>
+        <h3>Research Papers</h3>
+        <p>Academic papers, literature reviews — understand methodology, results, and citations in context.</p>
+      </div>
+      <div class="uc-card fade-up">
+        <div class="uc-icon">📋</div>
+        <h3>Policy Documents</h3>
+        <p>Government policies, internal procedures — navigate hierarchical structures the way they were written.</p>
+      </div>
+      <div class="uc-card fade-up fade-up-delay-1">
+        <div class="uc-icon">🔧</div>
+        <h3>Technical Manuals</h3>
+        <p>Product documentation, API references, engineering specs — drill down to exact specifications.</p>
+      </div>
+      <div class="uc-card fade-up fade-up-delay-2">
+        <div class="uc-icon">✅</div>
+        <h3>Compliance Documents</h3>
+        <p>Regulatory requirements, audit reports, standards — ensure nothing falls through the cracks.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BENEFITS / KPIs -->
+<section class="benefits-section" id="benefits">
+  <div class="section-inner">
+    <p class="eyebrow">Business Value</p>
+    <h2 class="section-title" style="text-align:center">Why enterprises <span class="text-gradient">choose PageIndex</span></h2>
+    <p class="section-sub" style="margin:0 auto 60px;text-align:center">Measurable improvements across every dimension that matters for production RAG deployments.</p>
+    <div class="kpi-grid">
+      <div class="kpi-card fade-up">
+        <div class="kpi-num">10×</div>
+        <h4>Faster Retrieval</h4>
+        <p>Navigate 500-page documents in seconds through tree reasoning vs. exhaustive similarity search.</p>
+      </div>
+      <div class="kpi-card fade-up fade-up-delay-1">
+        <div class="kpi-num">↓87%</div>
+        <h4>Fewer Hallucinations</h4>
+        <p>Precise page-level grounding eliminates context confusion that causes vector RAG hallucinations.</p>
+      </div>
+      <div class="kpi-card fade-up fade-up-delay-2">
+        <div class="kpi-num">100%</div>
+        <h4>Explainability</h4>
+        <p>Every retrieval decision comes with a full reasoning trace. No more black-box answers.</p>
+      </div>
+      <div class="kpi-card fade-up">
+        <div class="kpi-num">0</div>
+        <h4>Vector DBs Required</h4>
+        <p>Eliminate an entire infrastructure layer. No embedding pipelines, no vector databases to maintain.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TECH STACK -->
+<section class="tech-section" id="stack">
+  <div class="section-inner">
+    <p class="eyebrow">Technical Stack</p>
+    <h2 class="section-title">Built on <span class="text-gradient">modern foundations</span></h2>
+    <p class="section-sub">Production-grade technology choices designed for enterprise deployment.</p>
+    <div class="tech-grid">
+      <div class="tech-card fade-up">
+        <div class="tech-label">Frontend</div>
+        <div class="tech-list">
+          <div class="tech-item"><div class="tech-dot" style="background:#61DAFB"></div>React</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#000000;border:1px solid #444"></div>Next.js</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#06B6D4"></div>Tailwind CSS</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#FF0080"></div>Framer Motion</div>
+        </div>
+      </div>
+      <div class="tech-card fade-up fade-up-delay-1">
+        <div class="tech-label">Backend</div>
+        <div class="tech-list">
+          <div class="tech-item"><div class="tech-dot" style="background:#3776AB"></div>PageIndex Engine</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#009688"></div>FastAPI / Flask</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#FF6B6B"></div>PDF Processing</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#4CAF50"></div>JSON Tree Store</div>
+        </div>
+      </div>
+      <div class="tech-card fade-up fade-up-delay-2">
+        <div class="tech-label">LLM Layer</div>
+        <div class="tech-list">
+          <div class="tech-item"><div class="tech-dot" style="background:#4285F4"></div>Google Gemini</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#10A37F"></div>OpenAI GPT-4</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#CC785C"></div>Anthropic Claude</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#888"></div>Model agnostic</div>
+        </div>
+      </div>
+      <div class="tech-card fade-up">
+        <div class="tech-label">Infrastructure</div>
+        <div class="tech-list">
+          <div class="tech-item"><div class="tech-dot" style="background:#000;border:1px solid #444"></div>Vercel / Cloud</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#FF9900"></div>AWS / GCP</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#326CE5"></div>Docker / K8s</div>
+          <div class="tech-item"><div class="tech-dot" style="background:#E34F26"></div>No Vector DB ✓</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- FUTURE ENHANCEMENTS -->
+<section class="future-section" id="roadmap">
+  <div class="section-inner">
+    <p class="eyebrow">Roadmap</p>
+    <h2 class="section-title">What's <span class="text-gradient">coming next</span></h2>
+    <p class="section-sub">The PageIndex framework is a foundation for next-generation enterprise AI capabilities.</p>
+    <div class="future-grid">
+      <div class="future-card fade-up">
+        <div class="future-icon">🤖</div>
+        <div>
+          <h3>Agentic RAG</h3>
+          <p>Autonomous agents that navigate document trees to complete multi-step research tasks without human guidance.</p>
+        </div>
+      </div>
+      <div class="future-card fade-up fade-up-delay-1">
+        <div class="future-icon">📚</div>
+        <div>
+          <h3>Multi-Document Reasoning</h3>
+          <p>Cross-reference and synthesize information across multiple documents using linked tree structures.</p>
+        </div>
+      </div>
+      <div class="future-card fade-up fade-up-delay-2">
+        <div class="future-icon">🕸️</div>
+        <div>
+          <h3>Knowledge Graph Integration</h3>
+          <p>Extend hierarchical trees into full knowledge graphs capturing entity relationships across document corpora.</p>
+        </div>
+      </div>
+      <div class="future-card fade-up">
+        <div class="future-icon">🔎</div>
+        <div>
+          <h3>Enterprise Search</h3>
+          <p>Organization-wide document intelligence connecting internal knowledge bases, manuals, and policies.</p>
+        </div>
+      </div>
+      <div class="future-card fade-up fade-up-delay-1">
+        <div class="future-icon">⚗️</div>
+        <div>
+          <h3>Hybrid Search</h3>
+          <p>Optional vector augmentation for cases where embedding similarity adds value alongside tree reasoning.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <div class="section-inner contact-inner">
+    <p class="eyebrow" style="text-align:center">Get In Touch</p>
+    <h2 class="section-title" style="text-align:center">Request a <span class="text-gradient">demo</span></h2>
+    <p class="section-sub" style="text-align:center;margin:0 auto 48px">See PageIndex applied to your specific document type and use case.</p>
+    <div class="contact-form fade-up">
+      <div class="form-row">
+        <div class="form-group">
+          <label>Full Name</label>
+          <input type="text" placeholder="Jane Smith"/>
+        </div>
+        <div class="form-group">
+          <label>Company</label>
+          <input type="text" placeholder="Acme Corp"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Work Email</label>
+        <input type="email" placeholder="jane@acme.com"/>
+      </div>
+      <div class="form-group">
+        <label>Use Case</label>
+        <select style="background:rgba(255,255,255,0.05);border:1px solid var(--glass-border);border-radius:10px;padding:12px 16px;font-size:14px;color:var(--text-primary);font-family:'Inter',sans-serif;outline:none;width:100%">
+          <option value="" style="background:#0C1530">Select your primary use case</option>
+          <option value="financial" style="background:#0C1530">Financial Reports</option>
+          <option value="legal" style="background:#0C1530">Legal Documents</option>
+          <option value="research" style="background:#0C1530">Research Papers</option>
+          <option value="compliance" style="background:#0C1530">Compliance</option>
+          <option value="technical" style="background:#0C1530">Technical Manuals</option>
+          <option value="other" style="background:#0C1530">Other</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Message</label>
+        <textarea rows="4" placeholder="Tell us about your document analysis challenges…"></textarea>
+      </div>
+      <button class="form-submit" onclick="handleSubmit(event)">Request Demo →</button>
+      <p class="form-note">We'll respond within one business day. No spam, ever.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-logo">PageIndex</span>
+  <span class="footer-copy">© 2025 · Internal PoC · Vectorless Reasoning-Based RAG</span>
+  <span style="font-size:12px;color:var(--text-muted)">Built with ♥ for enterprise AI</span>
+</footer>
+
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+// Nav scroll effect
+window.addEventListener('scroll', () => {
+  const nav = document.querySelector('nav');
+  if (window.scrollY > 60) {
+    nav.style.boxShadow = '0 1px 40px rgba(0,0,0,0.4)';
+  } else {
+    nav.style.boxShadow = 'none';
+  }
+});
+
+// Demo tab switching
+function switchTab(btn, tabId) {
+  document.querySelectorAll('.demo-tab').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById('tab-embed').style.display = tabId === 'embed' ? 'flex' : 'none';
+  document.getElementById('tab-config').style.display = tabId === 'config' ? 'flex' : 'none';
+}
+
+// Mount iframe with configured URL
+function mountIframe() {
+  const url = document.getElementById('endpoint-url')?.value || '/app';
+  const container = document.querySelector('.demo-iframe-container');
+  container.innerHTML = `
+    <iframe
+      src="${url}"
+      width="100%"
+      height="600"
+      style="border:none;display:block;background:var(--navy3)"
+      allow="clipboard-write"
+      title="PageIndex Application"
+    ></iframe>
+    <div style="position:absolute;top:12px;right:12px">
+      <a href="${url}" target="_blank" style="background:rgba(255,255,255,0.08);border:1px solid var(--glass-border);color:var(--text-secondary);padding:6px 12px;border-radius:6px;font-size:12px;text-decoration:none;font-weight:500">↗ Open in new tab</a>
+    </div>
+  `;
+}
+
+// Integration option selector
+function selectOption(opt) {
+  ['a','b','c'].forEach(o => {
+    const el = document.getElementById('opt-'+o);
+    if (o === opt) {
+      el.style.background = 'rgba(79,70,229,0.15)';
+      el.style.border = '1.5px solid rgba(79,70,229,0.5)';
+    } else {
+      el.style.background = 'var(--glass)';
+      el.style.border = '1px solid var(--glass-border)';
+    }
+  });
+}
+
+// Apply config and switch to demo
+function applyConfig() {
+  const url = document.getElementById('endpoint-url').value;
+  switchTab(document.querySelectorAll('.demo-tab')[0], 'embed');
+  setTimeout(mountIframe, 100);
+}
+
+// Form submission
+function handleSubmit(e) {
+  const btn = e.target;
+  btn.textContent = 'Sending…';
+  btn.disabled = true;
+  setTimeout(() => {
+    btn.textContent = '✓ Request Sent!';
+    btn.style.background = 'linear-gradient(135deg,#059669,#10B981)';
+  }, 1200);
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,195 @@
+[
+  {
+    "total_page_number": 50
+  },
+  {
+    "total_token": 29381
+  },
+  {
+    "toc_content": "Contents\nAbout the F ederal Reser ve:  iii\n1Overview:  1\n2Monetar y Policy and Economic De velopments :  3\nMarch 2024 Summar y:  3\nJune 2023 Summar y:  9\n3Financial Stability :  15\nMonitoring F inancial V ulnerabilities :  16\nDomestic and Inter national Cooperation and Coordination :  22\n4Super vision and Regulation :  25\nSuper vised and Regulated Institutions :  26\nSuper visory Developments :  29\nRegulator y Developments :  49\n5Payment System and Reser ve Bank Over sight :  53\nPayment Ser vices to Depositor y and Other Institutions :  54\nCurrency and Coin :  60\nFiscal Agency and Go vernment Depositor y Ser vices :  63\nEvolutions and Impro vements to the System :  66\nOversight of F ederal Reser ve Banks :  69\nPro Forma Financial Statements for F ederal Reser ve Priced Ser vices :  76\n6Consumer and Community Affair s:  83\nConsumer Compliance Super vision :  83\nConsumer La ws and Regulations :  95\nConsumer Research and Analysis of Emerging Issues and P olicy:  96\nCommunity De velopment :  99\nAppendixes\nAFederal Reser ve System Organization :  103\nBoard of Go vernors:  103\nFederal Open Mar ket Committee :  111\nBoard of Go vernors Advisor y Councils :  113\nFederal Reser ve Banks and Branches :  117\nBMinutes of F ederal Open Mar ket Committee Meetings :  141\nMeeting Minutes :  141\nCFederal Reser ve System Audits :  143\nOffice of Inspector General Activities :  143\nGovernment Accountability Office Re views:  145\nDFederal Reser ve System Budgets :  147\nSystem Budgets Over view:  147iBoard of Go vernors Budgets :  151\nFederal Reser ve Banks Budgets :  157\nCurrency Budget :  163\nERecord of P olicy Actions of the Board of Go vernors:  169\nRules and Regulations :  169\nPolicy Statements and Other Actions :  171\nDiscount Rates for Depositor y Institutions in 2023 :  175\nThe Board of Go vernors and the Go vernment P erformance and Results Act :  178\nFLitigation :  179\nPending :  179\nResolved :  180\nGStatistical T ables :  181ii 110th Annual Repor t | 2023",
+    "toc_page_list": [
+      2,
+      3
+    ],
+    "page_index_given_in_toc": "yes"
+  },
+  {
+    "message": "toc_with_page_number: [{'structure': None, 'title': 'About the F ederal Reser ve', 'page': 'iii'}, {'structure': '1', 'title': 'Overview', 'page': 1}, {'structure': '2', 'title': 'Monetar y Policy and Economic De velopments', 'page': 3}, {'structure': None, 'title': 'March 2024 Summar y', 'page': 3}, {'structure': None, 'title': 'June 2023 Summar y', 'page': 9}, {'structure': '3', 'title': 'Financial Stability', 'page': 15}, {'structure': None, 'title': 'Monitoring F inancial V ulnerabilities', 'page': 16}, {'structure': None, 'title': 'Domestic and Inter national Cooperation and Coordination', 'page': 22}, {'structure': '4', 'title': 'Super vision and Regulation', 'page': 25}, {'structure': None, 'title': 'Super vised and Regulated Institutions', 'page': 26}, {'structure': None, 'title': 'Super visory Developments', 'page': 29}, {'structure': None, 'title': 'Regulator y Developments', 'page': 49}, {'structure': '5', 'title': 'Payment System and Reser ve Bank Over sight', 'page': 53}, {'structure': None, 'title': 'Payment Ser vices to Depositor y and Other Institutions', 'page': 54}, {'structure': None, 'title': 'Currency and Coin', 'page': 60}, {'structure': None, 'title': 'Fiscal Agency and Go vernment Depositor y Ser vices', 'page': 63}, {'structure': None, 'title': 'Evolutions and Impro vements to the System', 'page': 66}, {'structure': None, 'title': 'Oversight of F ederal Reser ve Banks', 'page': 69}, {'structure': None, 'title': 'Pro Forma Financial Statements for F ederal Reser ve Priced Ser vices', 'page': 76}, {'structure': '6', 'title': 'Consumer and Community Affair s', 'page': 83}, {'structure': None, 'title': 'Consumer Compliance Super vision', 'page': 83}, {'structure': None, 'title': 'Consumer La ws and Regulations', 'page': 95}, {'structure': None, 'title': 'Consumer Research and Analysis of Emerging Issues and P olicy', 'page': 96}, {'structure': None, 'title': 'Community De velopment', 'page': 99}, {'structure': None, 'title': 'Appendixes', 'page': None}, {'structure': 'A', 'title': 'Federal Reser ve System Organization', 'page': 103}, {'structure': None, 'title': 'Board of Go vernors', 'page': 103}, {'structure': None, 'title': 'Federal Open Mar ket Committee', 'page': 111}, {'structure': None, 'title': 'Board of Go vernors Advisor y Councils', 'page': 113}, {'structure': None, 'title': 'Federal Reser ve Banks and Branches', 'page': 117}, {'structure': 'B', 'title': 'Minutes of F ederal Open Mar ket Committee Meetings', 'page': 141}, {'structure': None, 'title': 'Meeting Minutes', 'page': 141}, {'structure': 'C', 'title': 'Federal Reser ve System Audits', 'page': 143}, {'structure': None, 'title': 'Office of Inspector General Activities', 'page': 143}, {'structure': None, 'title': 'Government Accountability Office Re views', 'page': 145}, {'structure': 'D', 'title': 'Federal Reser ve System Budgets', 'page': 147}, {'structure': None, 'title': 'System Budgets Over view', 'page': 147}, {'structure': None, 'title': 'Board of Go vernors Budgets', 'page': 151}, {'structure': None, 'title': 'Federal Reser ve Banks Budgets', 'page': 157}, {'structure': None, 'title': 'Currency Budget', 'page': 163}, {'structure': 'E', 'title': 'Record of P olicy Actions of the Board of Go vernors', 'page': 169}, {'structure': None, 'title': 'Rules and Regulations', 'page': 169}, {'structure': None, 'title': 'Policy Statements and Other Actions', 'page': 171}, {'structure': None, 'title': 'Discount Rates for Depositor y Institutions in 2023', 'page': 175}, {'structure': None, 'title': 'The Board of Go vernors and the Go vernment P erformance and Results Act', 'page': 178}, {'structure': 'F', 'title': 'Litigation', 'page': 179}, {'structure': None, 'title': 'Pending', 'page': 179}, {'structure': None, 'title': 'Resolved', 'page': 180}, {'structure': 'G', 'title': 'Statistical T ables', 'page': 181}]"
+  },
+  {
+    "message": "toc_with_physical_index: [{'structure': None, 'title': 'About the F ederal Reser ve', 'physical_index': '<physical_index_5>'}, {'structure': '1', 'title': 'Overview', 'physical_index': '<physical_index_7>'}, {'structure': '2', 'title': 'Monetar y Policy and Economic De velopments', 'physical_index': '<physical_index_9>'}, {'structure': None, 'title': 'March 2024 Summar y', 'physical_index': '<physical_index_9>'}, {'structure': None, 'title': 'June 2023 Summar y', 'physical_index': '<physical_index_15>'}, {'structure': '3', 'title': 'Financial Stability', 'physical_index': '<physical_index_21>'}, {'structure': None, 'title': 'Monitoring F inancial V ulnerabilities', 'physical_index': '<physical_index_22>'}, {'structure': '4', 'title': 'Super vision and Regulation'}, {'structure': '5', 'title': 'Payment System and Reser ve Bank Over sight'}, {'structure': '6', 'title': 'Consumer and Community Affair s'}, {'structure': 'A', 'title': 'Federal Reser ve System Organization'}, {'structure': 'B', 'title': 'Minutes of F ederal Open Mar ket Committee Meetings'}, {'structure': 'C', 'title': 'Federal Reser ve System Audits'}, {'structure': 'D', 'title': 'Federal Reser ve System Budgets'}, {'structure': 'E', 'title': 'Record of P olicy Actions of the Board of Go vernors'}, {'structure': 'F', 'title': 'Litigation'}, {'structure': 'G', 'title': 'Statistical T ables'}]"
+  },
+  {
+    "message": "toc_with_physical_index: [{'structure': None, 'title': 'About the F ederal Reser ve', 'physical_index': 5}, {'structure': '1', 'title': 'Overview', 'physical_index': 7}, {'structure': '2', 'title': 'Monetar y Policy and Economic De velopments', 'physical_index': 9}, {'structure': None, 'title': 'March 2024 Summar y', 'physical_index': 9}, {'structure': None, 'title': 'June 2023 Summar y', 'physical_index': 15}, {'structure': '3', 'title': 'Financial Stability', 'physical_index': 21}, {'structure': None, 'title': 'Monitoring F inancial V ulnerabilities', 'physical_index': 22}, {'structure': '4', 'title': 'Super vision and Regulation'}, {'structure': '5', 'title': 'Payment System and Reser ve Bank Over sight'}, {'structure': '6', 'title': 'Consumer and Community Affair s'}, {'structure': 'A', 'title': 'Federal Reser ve System Organization'}, {'structure': 'B', 'title': 'Minutes of F ederal Open Mar ket Committee Meetings'}, {'structure': 'C', 'title': 'Federal Reser ve System Audits'}, {'structure': 'D', 'title': 'Federal Reser ve System Budgets'}, {'structure': 'E', 'title': 'Record of P olicy Actions of the Board of Go vernors'}, {'structure': 'F', 'title': 'Litigation'}, {'structure': 'G', 'title': 'Statistical T ables'}]"
+  },
+  {
+    "message": "matching_pairs: [{'title': 'About the F ederal Reser ve', 'page': 'iii', 'physical_index': 5}, {'title': 'Overview', 'page': 1, 'physical_index': 7}, {'title': 'Monetar y Policy and Economic De velopments', 'page': 3, 'physical_index': 9}, {'title': 'March 2024 Summar y', 'page': 3, 'physical_index': 9}, {'title': 'June 2023 Summar y', 'page': 9, 'physical_index': 15}, {'title': 'Financial Stability', 'page': 15, 'physical_index': 21}, {'title': 'Monitoring F inancial V ulnerabilities', 'page': 16, 'physical_index': 22}]"
+  },
+  {
+    "message": "offset: 6"
+  },
+  {
+    "message": "toc_with_page_number: [{'structure': None, 'title': 'About the F ederal Reser ve', 'page': 'iii'}, {'structure': '1', 'title': 'Overview', 'physical_index': 7}, {'structure': '2', 'title': 'Monetar y Policy and Economic De velopments', 'physical_index': 9}, {'structure': None, 'title': 'March 2024 Summar y', 'physical_index': 9}, {'structure': None, 'title': 'June 2023 Summar y', 'physical_index': 15}, {'structure': '3', 'title': 'Financial Stability', 'physical_index': 21}, {'structure': None, 'title': 'Monitoring F inancial V ulnerabilities', 'physical_index': 22}, {'structure': None, 'title': 'Domestic and Inter national Cooperation and Coordination', 'physical_index': 28}, {'structure': '4', 'title': 'Super vision and Regulation', 'physical_index': 31}, {'structure': None, 'title': 'Super vised and Regulated Institutions', 'physical_index': 32}, {'structure': None, 'title': 'Super visory Developments', 'physical_index': 35}, {'structure': None, 'title': 'Regulator y Developments', 'physical_index': 55}, {'structure': '5', 'title': 'Payment System and Reser ve Bank Over sight', 'physical_index': 59}, {'structure': None, 'title': 'Payment Ser vices to Depositor y and Other Institutions', 'physical_index': 60}, {'structure': None, 'title': 'Currency and Coin', 'physical_index': 66}, {'structure': None, 'title': 'Fiscal Agency and Go vernment Depositor y Ser vices', 'physical_index': 69}, {'structure': None, 'title': 'Evolutions and Impro vements to the System', 'physical_index': 72}, {'structure': None, 'title': 'Oversight of F ederal Reser ve Banks', 'physical_index': 75}, {'structure': None, 'title': 'Pro Forma Financial Statements for F ederal Reser ve Priced Ser vices', 'physical_index': 82}, {'structure': '6', 'title': 'Consumer and Community Affair s', 'physical_index': 89}, {'structure': None, 'title': 'Consumer Compliance Super vision', 'physical_index': 89}, {'structure': None, 'title': 'Consumer La ws and Regulations', 'physical_index': 101}, {'structure': None, 'title': 'Consumer Research and Analysis of Emerging Issues and P olicy', 'physical_index': 102}, {'structure': None, 'title': 'Community De velopment', 'physical_index': 105}, {'structure': None, 'title': 'Appendixes', 'page': None}, {'structure': 'A', 'title': 'Federal Reser ve System Organization', 'physical_index': 109}, {'structure': None, 'title': 'Board of Go vernors', 'physical_index': 109}, {'structure': None, 'title': 'Federal Open Mar ket Committee', 'physical_index': 117}, {'structure': None, 'title': 'Board of Go vernors Advisor y Councils', 'physical_index': 119}, {'structure': None, 'title': 'Federal Reser ve Banks and Branches', 'physical_index': 123}, {'structure': 'B', 'title': 'Minutes of F ederal Open Mar ket Committee Meetings', 'physical_index': 147}, {'structure': None, 'title': 'Meeting Minutes', 'physical_index': 147}, {'structure': 'C', 'title': 'Federal Reser ve System Audits', 'physical_index': 149}, {'structure': None, 'title': 'Office of Inspector General Activities', 'physical_index': 149}, {'structure': None, 'title': 'Government Accountability Office Re views', 'physical_index': 151}, {'structure': 'D', 'title': 'Federal Reser ve System Budgets', 'physical_index': 153}, {'structure': None, 'title': 'System Budgets Over view', 'physical_index': 153}, {'structure': None, 'title': 'Board of Go vernors Budgets', 'physical_index': 157}, {'structure': None, 'title': 'Federal Reser ve Banks Budgets', 'physical_index': 163}, {'structure': None, 'title': 'Currency Budget', 'physical_index': 169}, {'structure': 'E', 'title': 'Record of P olicy Actions of the Board of Go vernors', 'physical_index': 175}, {'structure': None, 'title': 'Rules and Regulations', 'physical_index': 175}, {'structure': None, 'title': 'Policy Statements and Other Actions', 'physical_index': 177}, {'structure': None, 'title': 'Discount Rates for Depositor y Institutions in 2023', 'physical_index': 181}, {'structure': None, 'title': 'The Board of Go vernors and the Go vernment P erformance and Results Act', 'physical_index': 184}, {'structure': 'F', 'title': 'Litigation', 'physical_index': 185}, {'structure': None, 'title': 'Pending', 'physical_index': 185}, {'structure': None, 'title': 'Resolved', 'physical_index': 186}, {'structure': 'G', 'title': 'Statistical T ables', 'physical_index': 187}]"
+  },
+  {
+    "message": "toc_with_page_number: [{'structure': None, 'title': 'About the F ederal Reser ve', 'physical_index': 5}, {'structure': '1', 'title': 'Overview', 'physical_index': 7}, {'structure': '2', 'title': 'Monetar y Policy and Economic De velopments', 'physical_index': 9}, {'structure': None, 'title': 'March 2024 Summar y', 'physical_index': 9}, {'structure': None, 'title': 'June 2023 Summar y', 'physical_index': 15}, {'structure': '3', 'title': 'Financial Stability', 'physical_index': 21}, {'structure': None, 'title': 'Monitoring F inancial V ulnerabilities', 'physical_index': 22}, {'structure': None, 'title': 'Domestic and Inter national Cooperation and Coordination', 'physical_index': 28}, {'structure': '4', 'title': 'Super vision and Regulation', 'physical_index': 31}, {'structure': None, 'title': 'Super vised and Regulated Institutions', 'physical_index': 32}, {'structure': None, 'title': 'Super visory Developments', 'physical_index': 35}, {'structure': None, 'title': 'Regulator y Developments', 'physical_index': 55}, {'structure': '5', 'title': 'Payment System and Reser ve Bank Over sight', 'physical_index': 59}, {'structure': None, 'title': 'Payment Ser vices to Depositor y and Other Institutions', 'physical_index': 60}, {'structure': None, 'title': 'Currency and Coin', 'physical_index': 66}, {'structure': None, 'title': 'Fiscal Agency and Go vernment Depositor y Ser vices', 'physical_index': 69}, {'structure': None, 'title': 'Evolutions and Impro vements to the System', 'physical_index': 72}, {'structure': None, 'title': 'Oversight of F ederal Reser ve Banks', 'physical_index': 75}, {'structure': None, 'title': 'Pro Forma Financial Statements for F ederal Reser ve Priced Ser vices', 'physical_index': 82}, {'structure': '6', 'title': 'Consumer and Community Affair s', 'physical_index': 89}, {'structure': None, 'title': 'Consumer Compliance Super vision', 'physical_index': 89}, {'structure': None, 'title': 'Consumer La ws and Regulations', 'physical_index': 101}, {'structure': None, 'title': 'Consumer Research and Analysis of Emerging Issues and P olicy', 'physical_index': 102}, {'structure': None, 'title': 'Community De velopment', 'physical_index': 105}, {'structure': None, 'title': 'Appendixes', 'page': None}, {'structure': 'A', 'title': 'Federal Reser ve System Organization', 'physical_index': 109}, {'structure': None, 'title': 'Board of Go vernors', 'physical_index': 109}, {'structure': None, 'title': 'Federal Open Mar ket Committee', 'physical_index': 117}, {'structure': None, 'title': 'Board of Go vernors Advisor y Councils', 'physical_index': 119}, {'structure': None, 'title': 'Federal Reser ve Banks and Branches', 'physical_index': 123}, {'structure': 'B', 'title': 'Minutes of F ederal Open Mar ket Committee Meetings', 'physical_index': 147}, {'structure': None, 'title': 'Meeting Minutes', 'physical_index': 147}, {'structure': 'C', 'title': 'Federal Reser ve System Audits', 'physical_index': 149}, {'structure': None, 'title': 'Office of Inspector General Activities', 'physical_index': 149}, {'structure': None, 'title': 'Government Accountability Office Re views', 'physical_index': 151}, {'structure': 'D', 'title': 'Federal Reser ve System Budgets', 'physical_index': 153}, {'structure': None, 'title': 'System Budgets Over view', 'physical_index': 153}, {'structure': None, 'title': 'Board of Go vernors Budgets', 'physical_index': 157}, {'structure': None, 'title': 'Federal Reser ve Banks Budgets', 'physical_index': 163}, {'structure': None, 'title': 'Currency Budget', 'physical_index': 169}, {'structure': 'E', 'title': 'Record of P olicy Actions of the Board of Go vernors', 'physical_index': 175}, {'structure': None, 'title': 'Rules and Regulations', 'physical_index': 175}, {'structure': None, 'title': 'Policy Statements and Other Actions', 'physical_index': 177}, {'structure': None, 'title': 'Discount Rates for Depositor y Institutions in 2023', 'physical_index': 181}, {'structure': None, 'title': 'The Board of Go vernors and the Go vernment P erformance and Results Act', 'physical_index': 184}, {'structure': 'F', 'title': 'Litigation', 'physical_index': 185}, {'structure': None, 'title': 'Pending', 'physical_index': 185}, {'structure': None, 'title': 'Resolved', 'physical_index': 186}, {'structure': 'G', 'title': 'Statistical T ables', 'physical_index': 187}]"
+  },
+  {
+    "message": "Removed physical_index for 'Regulator y Developments' (was 55, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Payment System and Reser ve Bank Over sight' (was 59, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Payment Ser vices to Depositor y and Other Institutions' (was 60, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Currency and Coin' (was 66, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Fiscal Agency and Go vernment Depositor y Ser vices' (was 69, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Evolutions and Impro vements to the System' (was 72, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Oversight of F ederal Reser ve Banks' (was 75, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Pro Forma Financial Statements for F ederal Reser ve Priced Ser vices' (was 82, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Consumer and Community Affair s' (was 89, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Consumer Compliance Super vision' (was 89, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Consumer La ws and Regulations' (was 101, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Consumer Research and Analysis of Emerging Issues and P olicy' (was 102, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Community De velopment' (was 105, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Federal Reser ve System Organization' (was 109, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Board of Go vernors' (was 109, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Federal Open Mar ket Committee' (was 117, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Board of Go vernors Advisor y Councils' (was 119, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Federal Reser ve Banks and Branches' (was 123, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Minutes of F ederal Open Mar ket Committee Meetings' (was 147, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Meeting Minutes' (was 147, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Federal Reser ve System Audits' (was 149, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Office of Inspector General Activities' (was 149, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Government Accountability Office Re views' (was 151, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Federal Reser ve System Budgets' (was 153, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'System Budgets Over view' (was 153, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Board of Go vernors Budgets' (was 157, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Federal Reser ve Banks Budgets' (was 163, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Currency Budget' (was 169, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Record of P olicy Actions of the Board of Go vernors' (was 175, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Rules and Regulations' (was 175, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Policy Statements and Other Actions' (was 177, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Discount Rates for Depositor y Institutions in 2023' (was 181, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'The Board of Go vernors and the Go vernment P erformance and Results Act' (was 184, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Litigation' (was 185, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Pending' (was 185, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Resolved' (was 186, too far beyond document)"
+  },
+  {
+    "message": "Removed physical_index for 'Statistical T ables' (was 187, too far beyond document)"
+  },
+  {
+    "message": "Total removed items: 37"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 1.0,
+    "incorrect_results": []
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'June 2023 Summary' appears at the very beginning of the provided page text. Even though there are some space inconsistencies, the title is the first thing present in the text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Preface\". The page text starts with \"REPORT TO CONGRESS\". Therefore, the section title \"Preface\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"March 2024 Summary\" appears in the page_text, but it is not at the very beginning of the text. There are other contents before the section title, so the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Domestic and Inter national Cooperation and Coordination\" appears in the page_text, but it is not at the very beginning of the page_text. There is content before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"1Overview\", which is a fuzzy match of the section title \"Overview\" with a preceding number. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Super visory Developments\" appears in the page_text, but it is not the first content in the page_text. There are other contents before the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Monitoring F inancial V ulnerabilities\" appears at the very beginning of the page text. Even though there are space inconsistencies, the title is the first content in the text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"Super vised and Regulated Institutions\", which is the section title. Therefore, the section starts at the beginning of the page.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"4Super vision and Regulation\". The section title is \"Super vision and Regulation\". There is a number 4 before the section title in the page_text. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"About the F ederal Reser ve\" appears at the very beginning of the page_text, with only space differences. Therefore, the current section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '2Monetar y Policy and Economic Developments', which is very similar to the section title 'Monetar y Policy and Economic De velopments'. Considering the prompt asks to ignore space inconsistency and to do fuzzy matching, and the only difference is the leading '2', I will treat this as the section starting at the beginning.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"3Financial Stability\". After removing the leading digit and ignoring the space inconsistency, the section title \"Financial Stability\" matches the beginning of the page_text. Thus, the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  }
+]

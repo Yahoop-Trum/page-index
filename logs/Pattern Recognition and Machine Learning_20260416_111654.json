@@ -1,0 +1,1189 @@
+[
+  {
+    "total_page_number": 758
+  },
+  {
+    "total_token": 479639
+  },
+  {
+    "toc_content": "PREFACE ix\nMany people have helped by proofreading draft material and providing com-\nments and suggestions, including Shivani Agarwal, C \u00b4edric Archambeau, Arik Azran,\nAndrew Blake, Hakan Cevikalp, Michael Fourman, Brendan Frey, Zoubin Ghahra-\nmani, Thore Graepel, Katherine Heller, Ralf Herbrich, Geoffrey Hinton, Adam Jo-\nhansen, Matthew Johnson, Michael Jordan, Eva Kalyvianaki, Anitha Kannan, JuliaLasserre, David Liu, Tom Minka, Ian Nabney, Tonatiuh Pena, Y uan Qi, Sam Roweis,\nBalaji Sanjiya, Toby Sharp, Ana Costa e Silva, David Spiegelhalter, Jay Stokes, Tara\nSymeonides, Martin Szummer, Marshall Tappen, Ilkay Ulusoy, Chris Williams, JohnWinn, and Andrew Zisserman.\nFinally, I would like to thank my wife Jenna who has been hugely supportive\nthroughout the several years it has taken to write this book.\nChris Bishop\nCambridge\nFebruary 2006",
+    "toc_page_list": [
+      8
+    ],
+    "page_index_given_in_toc": "yes"
+  },
+  {
+    "message": "toc_with_page_number: []"
+  },
+  {
+    "message": "toc_with_physical_index: [{'structure': None, 'title': 'Mathematical notation', 'physical_index': '<physical_index_11>'}, {'structure': None, 'title': 'Contents', 'physical_index': '<physical_index_13>'}, {'structure': None, 'title': 'Introduction', 'physical_index': '<physical_index_21>'}]"
+  },
+  {
+    "message": "toc_with_physical_index: [{'structure': None, 'title': 'Mathematical notation', 'physical_index': 11}, {'structure': None, 'title': 'Contents', 'physical_index': 13}, {'structure': None, 'title': 'Introduction', 'physical_index': 21}]"
+  },
+  {
+    "message": "matching_pairs: []"
+  },
+  {
+    "message": "offset: None"
+  },
+  {
+    "message": "toc_with_page_number: []"
+  },
+  {
+    "message": "toc_with_page_number: []"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0,
+    "incorrect_results": []
+  },
+  {
+    "message": "toc_transformer: [{'structure': None, 'title': 'PREFACE', 'page': 'ix'}, {'structure': None, 'title': 'Many people have helped by proofreading draft material and providing comments and suggestions, including Shivani Agarwal, C \u00b4edric Archambeau, Arik Azran, Andrew Blake, Hakan Cevikalp, Michael Fourman, Brendan Frey, Zoubin Ghahra-mani, Thore Graepel, Katherine Heller, Ralf Herbrich, Geoffrey Hinton, Adam Jo-hansen, Matthew Johnson, Michael Jordan, Eva Kalyvianaki, Anitha Kannan, JuliaLasserre, David Liu, Tom Minka, Ian Nabney, Tonatiuh Pena, Y uan Qi, Sam Roweis, Balaji Sanjiya, Toby Sharp, Ana Costa e Silva, David Spiegelhalter, Jay Stokes, Tara Symeonides, Martin Szummer, Marshall Tappen, Ilkay Ulusoy, Chris Williams, JohnWinn, and Andrew Zisserman.', 'page': None}, {'structure': None, 'title': 'Finally, I would like to thank my wife Jenna who has been hugely supportive throughout the several years it has taken to write this book.', 'page': None}, {'structure': None, 'title': 'Chris Bishop', 'page': None}, {'structure': None, 'title': 'Cambridge', 'page': None}, {'structure': None, 'title': 'February 2006', 'page': None}]"
+  },
+  {
+    "message": "len(group_texts): 26"
+  },
+  {
+    "message": "add_page_number_to_toc: [{'structure': None, 'title': 'PREFACE', 'physical_index': None}, {'structure': None, 'title': 'Many people have helped by proofreading draft material and providing comments and suggestions, including Shivani Agarwal, C \u00b4edric Archambeau, Arik Azran, Andrew Blake, Hakan Cevikalp, Michael Fourman, Brendan Frey, Zoubin Ghahra-mani, Thore Graepel, Katherine Heller, Ralf Herbrich, Geoffrey Hinton, Adam Jo-hansen, Matthew Johnson, Michael Jordan, Eva Kalyvianaki, Anitha Kannan, JuliaLasserre, David Liu, Tom Minka, Ian Nabney, Tonatiuh Pena, Y uan Qi, Sam Roweis, Balaji Sanjiya, Toby Sharp, Ana Costa e Silva, David Spiegelhalter, Jay Stokes, Tara Symeonides, Martin Szummer, Marshall Tappen, Ilkay Ulusoy, Chris Williams, JohnWinn, and Andrew Zisserman.', 'physical_index': None}, {'structure': None, 'title': 'Finally, I would like to thank my wife Jenna who has been hugely supportive throughout the several years it has taken to write this book.', 'physical_index': None}, {'structure': None, 'title': 'Chris Bishop', 'physical_index': None}, {'structure': None, 'title': 'Cambridge', 'physical_index': None}, {'structure': None, 'title': 'February 2006', 'physical_index': None}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': None, 'title': 'PREFACE', 'physical_index': None}, {'structure': None, 'title': 'Many people have helped by proofreading draft material and providing comments and suggestions, including Shivani Agarwal, C \u00b4edric Archambeau, Arik Azran, Andrew Blake, Hakan Cevikalp, Michael Fourman, Brendan Frey, Zoubin Ghahra-mani, Thore Graepel, Katherine Heller, Ralf Herbrich, Geoffrey Hinton, Adam Jo-hansen, Matthew Johnson, Michael Jordan, Eva Kalyvianaki, Anitha Kannan, JuliaLasserre, David Liu, Tom Minka, Ian Nabney, Tonatiuh Pena, Y uan Qi, Sam Roweis, Balaji Sanjiya, Toby Sharp, Ana Costa e Silva, David Spiegelhalter, Jay Stokes, Tara Symeonides, Martin Szummer, Marshall Tappen, Ilkay Ulusoy, Chris Williams, JohnWinn, and Andrew Zisserman.', 'physical_index': None}, {'structure': None, 'title': 'Finally, I would like to thank my wife Jenna who has been hugely supportive throughout the several years it has taken to write this book.', 'physical_index': None}, {'structure': None, 'title': 'Chris Bishop', 'physical_index': None}, {'structure': None, 'title': 'Cambridge', 'physical_index': None}, {'structure': None, 'title': 'February 2006', 'physical_index': None}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0,
+    "incorrect_results": []
+  },
+  {
+    "message": "len(group_texts): 26"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'Introduction', 'physical_index': '<physical_index_21>'}, {'structure': '1.1', 'title': 'Example: Polynomial Curve Fitting', 'physical_index': '<physical_index_24>'}, {'structure': '1.2', 'title': 'Probability Theory', 'physical_index': '<physical_index_32>'}, {'structure': '1.2.1', 'title': 'Probability densities', 'physical_index': '<physical_index_37>'}, {'structure': '1.2.2', 'title': 'Expectations and covariances', 'physical_index': '<physical_index_39>'}, {'structure': '1.2.3', 'title': 'Bayesian probabilities', 'physical_index': '<physical_index_41>'}, {'structure': '1.2.4', 'title': 'The Gaussian distribution', 'physical_index': '<physical_index_42>'}, {'structure': '1.2.5', 'title': 'Curve fitting re-visited', 'physical_index': '<physical_index_44>'}, {'structure': '1.2.6', 'title': 'Bayesian curve fitting', 'physical_index': '<physical_index_45>'}, {'structure': '1.3', 'title': 'Model Selection', 'physical_index': '<physical_index_31>'}, {'structure': '1.4', 'title': 'The Curse of Dimensionality', 'physical_index': '<physical_index_33>'}, {'structure': '1.5', 'title': 'Decision Theory', 'physical_index': '<physical_index_38>'}, {'structure': '1.5.1', 'title': 'Minimizing the misclassification rate', 'physical_index': '<physical_index_39>'}, {'structure': '1.5.2', 'title': 'Minimizing the expected loss', 'physical_index': '<physical_index_41>'}, {'structure': '1.5.3', 'title': 'The reject option', 'physical_index': '<physical_index_42>'}, {'structure': '1.5.4', 'title': 'Inference and decision', 'physical_index': '<physical_index_42>'}, {'structure': '1.5.5', 'title': 'Loss functions for regression', 'physical_index': '<physical_index_46>'}, {'structure': '1.6', 'title': 'Information Theory', 'physical_index': '<physical_index_48>'}, {'structure': '1.6.1', 'title': 'Relative entropy and mutual information', 'physical_index': '<physical_index_55>'}, {'structure': '1.6', 'title': 'Information Theory', 'physical_index': '<physical_index_67>'}, {'structure': '1.6.1', 'title': 'Relative entropy and mutual information', 'physical_index': '<physical_index_72>'}, {'structure': '2', 'title': 'Probability Distributions', 'physical_index': '<physical_index_87>'}, {'structure': '2.1', 'title': 'Binary Variables', 'physical_index': '<physical_index_88>'}, {'structure': '2.1.1', 'title': 'The beta distribution', 'physical_index': '<physical_index_91>'}, {'structure': '2.2', 'title': 'Multinomial Variables', 'physical_index': '<physical_index_94>'}, {'structure': '2.2.1', 'title': 'The Dirichlet distribution', 'physical_index': '<physical_index_96>'}, {'structure': '2.3.', 'title': 'The Gaussian Distribution', 'physical_index': '<physical_index_98>'}, {'structure': '2.3.1', 'title': 'Conditional Gaussian distributions', 'physical_index': '<physical_index_105>'}, {'structure': '2.3.2', 'title': 'Marginal Gaussian distributions', 'physical_index': '<physical_index_88>'}, {'structure': '2.3.3', 'title': 'Bayes\u2019 theorem for Gaussian variables', 'physical_index': '<physical_index_110>'}, {'structure': '2.3.4', 'title': 'Maximum likelihood for the Gaussian', 'physical_index': '<physical_index_113>'}, {'structure': '2.3.5', 'title': 'Sequential estimation', 'physical_index': '<physical_index_114>'}, {'structure': '2.3.6', 'title': 'Bayesian inference for the Gaussian', 'physical_index': '<physical_index_117>'}, {'structure': '2.3.7', 'title': 'Student\u2019s t-distribution', 'physical_index': '<physical_index_122>'}, {'structure': '2.3.8', 'title': 'Periodic variables', 'physical_index': '<physical_index_125>'}, {'structure': '2.3.9', 'title': 'Mixtures of Gaussians', 'physical_index': '<physical_index_130>'}, {'structure': '2.4', 'title': 'The Exponential Family', 'physical_index': '<physical_index_133>'}, {'structure': '2.4.1', 'title': 'Maximum likelihood and sufficient statistics', 'physical_index': '<physical_index_136>'}, {'structure': '2.4.2', 'title': 'Conjugate priors', 'physical_index': '<physical_index_137>'}, {'structure': '2.4.3', 'title': 'Noninformative priors', 'physical_index': '<physical_index_137>'}, {'structure': '2.5', 'title': 'Nonparametric Methods', 'physical_index': '<physical_index_140>'}, {'structure': '2.5.1', 'title': 'Kernel density estimators', 'physical_index': '<physical_index_142>'}, {'structure': '2.5.2', 'title': 'Nearest-neighbour methods', 'physical_index': '<physical_index_144>'}, {'structure': '2.6', 'title': 'Exercises', 'physical_index': '<physical_index_152>'}, {'structure': '3', 'title': 'Linear Models for Regression', 'physical_index': '<physical_index_157>'}, {'structure': '3.1', 'title': 'Linear Basis Function Models', 'physical_index': '<physical_index_158>'}, {'structure': '3.1.1', 'title': 'Maximum likelihood and least squares', 'physical_index': '<physical_index_160>'}, {'structure': '3.1.2', 'title': 'Geometry of least squares', 'physical_index': '<physical_index_163>'}, {'structure': '3.1.3', 'title': 'Sequential learning', 'physical_index': '<physical_index_163>'}, {'structure': '3.1.4', 'title': 'Regularized least squares', 'physical_index': '<physical_index_164>'}, {'structure': '3.1.5', 'title': 'Multiple outputs', 'physical_index': '<physical_index_166>'}, {'structure': '3.2', 'title': 'The Bias-Variance Decomposition', 'physical_index': '<physical_index_167>'}, {'structure': '3.3', 'title': 'Bayesian Linear Regression', 'physical_index': '<physical_index_172>'}, {'structure': '3.3.1', 'title': 'Parameter distribution', 'physical_index': '<physical_index_172>'}, {'structure': '3.3.2', 'title': 'Predictive distribution', 'physical_index': '<physical_index_176>'}, {'structure': '3.3.3', 'title': 'Equivalent kernel', 'physical_index': '<physical_index_179>'}, {'structure': '3.4', 'title': 'Bayesian Model Comparison', 'physical_index': '<physical_index_181>'}, {'structure': '3.5', 'title': 'The Evidence Approximation', 'physical_index': '<physical_index_185>'}, {'structure': '3.5.1', 'title': 'Evaluation of the evidence function', 'physical_index': '<physical_index_186>'}, {'structure': '3.5.2', 'title': 'Maximizing the evidence function', 'physical_index': '<physical_index_188>'}, {'structure': '3.5.3', 'title': 'Effective number of parameters', 'physical_index': '<physical_index_190>'}, {'structure': '3.6', 'title': 'Limitations of Fixed Basis Functions', 'physical_index': '<physical_index_192>'}, {'structure': '3.7', 'title': 'Exercises', 'physical_index': '<physical_index_193>'}, {'structure': '4', 'title': 'Linear Models for Classi\ufb01cation', 'physical_index': '<physical_index_199>'}, {'structure': '4.1', 'title': 'Discriminant Functions', 'physical_index': '<physical_index_201>'}, {'structure': '4.1.1', 'title': 'Two classes', 'physical_index': '<physical_index_201>'}, {'structure': '4.1.2', 'title': 'Multiple classes', 'physical_index': '<physical_index_202>'}, {'structure': '4.1.3', 'title': 'Least squares for classi\ufb01cation', 'physical_index': '<physical_index_204>'}, {'structure': '4.1.4', 'title': 'Fisher\u2019s linear discriminant', 'physical_index': '<physical_index_206>'}, {'structure': '4.1.5', 'title': 'Relation to least squares', 'physical_index': '<physical_index_209>'}, {'structure': '4.1.6', 'title': 'Fisher\u2019s discriminant for multiple classes', 'physical_index': '<physical_index_211>'}, {'structure': '4.1.7', 'title': 'The perceptron algorithm', 'physical_index': '<physical_index_212>'}, {'structure': '4.2', 'title': 'Probabilistic Generative Models', 'physical_index': '<physical_index_216>'}, {'structure': '4.2.1', 'title': 'Continuous inputs', 'physical_index': '<physical_index_218>'}, {'structure': '4.2.2', 'title': 'Maximum likelihood solution', 'physical_index': '<physical_index_220>'}, {'structure': '4.2.3', 'title': 'Discrete features', 'physical_index': '<physical_index_222>'}, {'structure': '4.2.4', 'title': 'Exponential family', 'physical_index': '<physical_index_222>'}, {'structure': '4.3', 'title': 'Probabilistic Discriminative Models', 'physical_index': '<physical_index_223>'}, {'structure': '4.3.1', 'title': 'Fixed basis functions', 'physical_index': '<physical_index_224>'}, {'structure': '4.3.2', 'title': 'Logistic regression', 'physical_index': '<physical_index_225>'}, {'structure': '4.3.3', 'title': 'Iterative reweighted least squares', 'physical_index': '<physical_index_227>'}, {'structure': '4.3.4', 'title': 'Multiclass logistic regression', 'physical_index': '<physical_index_229>'}, {'structure': '4.3.5', 'title': 'Probit regression', 'physical_index': '<physical_index_230>'}, {'structure': '4.3.6', 'title': 'Canonical link functions', 'physical_index': '<physical_index_232>'}, {'structure': '4.4', 'title': 'The Laplace Approximation', 'physical_index': '<physical_index_233>'}, {'structure': '4.4.1', 'title': 'Model comparison and BIC', 'physical_index': '<physical_index_236>'}, {'structure': '4.5', 'title': 'Bayesian Logistic Regression', 'physical_index': '<physical_index_237>'}, {'structure': '4.5.1', 'title': 'Laplace approximation', 'physical_index': '<physical_index_237>'}, {'structure': '4.5.2', 'title': 'Predictive distribution', 'physical_index': '<physical_index_238>'}, {'structure': '4.6', 'title': 'Exercises', 'physical_index': '<physical_index_240>'}, {'structure': '5', 'title': 'Neural Networks', 'physical_index': '<physical_index_245>'}, {'structure': '5.1', 'title': 'Feed-forward Network Functions', 'physical_index': '<physical_index_247>'}, {'structure': '5.1.1', 'title': 'Weight-space symmetries', 'physical_index': '<physical_index_251>'}, {'structure': '5.2', 'title': 'Network Training', 'physical_index': '<physical_index_252>'}, {'structure': '5.2.1', 'title': 'Parameter optimization', 'physical_index': '<physical_index_256>'}, {'structure': '5.2.2', 'title': 'Local quadratic approximation', 'physical_index': '<physical_index_257>'}, {'structure': '5.2.3', 'title': 'Use of gradient information', 'physical_index': '<physical_index_259>'}, {'structure': '5.2.4', 'title': 'Gradient descent optimization', 'physical_index': '<physical_index_260>'}, {'structure': '5.3', 'title': 'Error Backpropagation', 'physical_index': '<physical_index_261>'}, {'structure': '5.3.1', 'title': 'Evaluation of error-function derivatives', 'physical_index': '<physical_index_262>'}, {'structure': '5.3.2', 'title': 'A simple example', 'physical_index': '<physical_index_265>'}, {'structure': '5.3.3', 'title': 'Efficiency of backpropagation', 'physical_index': '<physical_index_266>'}, {'structure': '5.3.4', 'title': 'The Jacobian matrix', 'physical_index': '<physical_index_267>'}, {'structure': '5.4', 'title': 'The Hessian Matrix', 'physical_index': '<physical_index_269>'}, {'structure': '5.4.1', 'title': 'Diagonal approximation', 'physical_index': '<physical_index_270>'}, {'structure': '5.4.2', 'title': 'Outer product approximation', 'physical_index': '<physical_index_271>'}, {'structure': '5.4.3', 'title': 'Inverse Hessian', 'physical_index': '<physical_index_272>'}, {'structure': '5.4.4', 'title': 'Finite differences', 'physical_index': '<physical_index_272>'}, {'structure': '5.4.5', 'title': 'Exact evaluation of the Hessian', 'physical_index': '<physical_index_273>'}, {'structure': '5.4.6', 'title': 'Fast multiplication by the Hessian', 'physical_index': '<physical_index_274>'}, {'structure': '5.5', 'title': 'Regularization in Neural Networks', 'physical_index': '<physical_index_276>'}, {'structure': '5.5.1', 'title': 'Consistent Gaussian priors', 'physical_index': '<physical_index_277>'}, {'structure': '5.5.2', 'title': 'Early stopping', 'physical_index': '<physical_index_279>'}, {'structure': '5.5.3', 'title': 'Invariances', 'physical_index': '<physical_index_281>'}, {'structure': '5.5.4', 'title': 'Tangent propagation', 'physical_index': '<physical_index_283>'}, {'structure': '5.5.5', 'title': 'Training with transformed data', 'physical_index': '<physical_index_285>'}, {'structure': '5.5.6', 'title': 'Convolutional networks', 'physical_index': '<physical_index_287>'}, {'structure': '5.5.7', 'title': 'Soft weight sharing', 'physical_index': '<physical_index_289>'}, {'structure': '5.6', 'title': 'Mixture Density Networks', 'physical_index': '<physical_index_292>'}, {'structure': '5.7', 'title': 'Bayesian Neural Networks', 'physical_index': '<physical_index_297>'}, {'structure': '5.7.1', 'title': 'Posterior parameter distribution', 'physical_index': '<physical_index_298>'}, {'structure': '5.7.2', 'title': 'Hyperparameter optimization', 'physical_index': '<physical_index_300>'}, {'structure': '5.7.3', 'title': 'Bayesian neural networks for classification', 'physical_index': '<physical_index_301>'}, {'structure': '5.8', 'title': 'Exercises', 'physical_index': '<physical_index_304>'}, {'structure': '6', 'title': 'Kernel Methods', 'physical_index': '<physical_index_311>'}, {'structure': '6.1', 'title': 'Dual Representations', 'physical_index': '<physical_index_313>'}, {'structure': '6.2', 'title': 'Constructing Kernels', 'physical_index': '<physical_index_314>'}, {'structure': '6.3', 'title': 'Radial Basis Function Networks', 'physical_index': '<physical_index_319>'}, {'structure': '6.3.1', 'title': 'Nadaraya-Watson model', 'physical_index': '<physical_index_321>'}, {'structure': '6.4', 'title': 'Gaussian Processes', 'physical_index': '<physical_index_323>'}, {'structure': '6.4.1', 'title': 'Linear regression revisited', 'physical_index': '<physical_index_324>'}, {'structure': '6.4.2', 'title': 'Gaussian processes for regression', 'physical_index': '<physical_index_326>'}, {'structure': '6.4.3', 'title': 'Learning the hyperparameters', 'physical_index': '<physical_index_331>'}, {'structure': '6.4.4', 'title': 'Automatic relevance determination', 'physical_index': '<physical_index_332>'}, {'structure': '6.4.5', 'title': 'Gaussian processes for classi\ufb01cation', 'physical_index': '<physical_index_333>'}, {'structure': '6.4.6', 'title': 'Laplace approximation', 'physical_index': '<physical_index_335>'}, {'structure': '6.4.7', 'title': 'Connection to neural networks', 'physical_index': '<physical_index_339>'}, {'structure': '6.5', 'title': 'Exercises', 'physical_index': '<physical_index_340>'}, {'structure': '7', 'title': 'Sparse Kernel Machines', 'physical_index': '<physical_index_345>'}, {'structure': '7.1', 'title': 'Maximum Margin Classi\ufb01ers', 'physical_index': '<physical_index_346>'}, {'structure': '7.1.1', 'title': 'Overlapping class distributions', 'physical_index': '<physical_index_351>'}, {'structure': '7.1.2', 'title': 'Relation to logistic regression', 'physical_index': '<physical_index_356>'}, {'structure': '7.1.3', 'title': 'Multiclass SVMs', 'physical_index': '<physical_index_358>'}, {'structure': '7.1.4', 'title': 'SVMs for regression', 'physical_index': '<physical_index_359>'}, {'structure': '7.1.5', 'title': 'Computational learning theory', 'physical_index': '<physical_index_364>'}, {'structure': '7.2', 'title': 'Relevance Vector Machines', 'physical_index': '<physical_index_365>'}, {'structure': '7.2.1', 'title': 'RVM for regression', 'physical_index': '<physical_index_365>'}, {'structure': '7.2.2', 'title': 'Analysis of sparsity', 'physical_index': '<physical_index_369>'}, {'structure': '7.2.3', 'title': 'RVM for classi\ufb01cation', 'physical_index': '<physical_index_373>'}, {'structure': '7.3', 'title': 'Exercises', 'physical_index': '<physical_index_377>'}, {'structure': '8', 'title': 'Graphical Models', 'physical_index': '<physical_index_379>'}, {'structure': '8.1', 'title': 'Bayesian Networks', 'physical_index': '<physical_index_380>'}, {'structure': '8.1.1', 'title': 'Example: Polynomial regression', 'physical_index': '<physical_index_382>'}, {'structure': '8.1.2', 'title': 'Generative models', 'physical_index': '<physical_index_385>'}, {'structure': '8.1.3', 'title': 'Discrete variables', 'physical_index': '<physical_index_386>'}, {'structure': '8.1.4', 'title': 'Linear-Gaussian models', 'physical_index': '<physical_index_390>'}, {'structure': '8.2', 'title': 'Conditional Independence', 'physical_index': '<physical_index_392>'}, {'structure': '8.2.1', 'title': 'Three example graphs', 'physical_index': '<physical_index_393>'}, {'structure': '8.2.2', 'title': 'D-separation', 'physical_index': '<physical_index_398>'}, {'structure': '8.3', 'title': 'Markov Random Fields', 'physical_index': '<physical_index_403>'}, {'structure': '8.3.1', 'title': 'Conditional independence properties', 'physical_index': '<physical_index_403>'}, {'structure': '8.3.2', 'title': 'Factorization properties', 'physical_index': '<physical_index_404>'}, {'structure': '8.3.3', 'title': 'Illustration: Image de-noising', 'physical_index': '<physical_index_407>'}, {'structure': '8.3.4', 'title': 'Relation to directed graphs', 'physical_index': '<physical_index_410>'}, {'structure': '8.4', 'title': 'Inference in Graphical Models', 'physical_index': '<physical_index_413>'}, {'structure': '8.4.1', 'title': 'Inference on a chain', 'physical_index': '<physical_index_414>'}, {'structure': '8.4.2', 'title': 'Trees', 'physical_index': '<physical_index_417>'}, {'structure': '8.4.3', 'title': 'Factor graphs', 'physical_index': '<physical_index_419>'}, {'structure': '8.4.4', 'title': 'The sum-product algorithm', 'physical_index': '<physical_index_422>'}, {'structure': '8.4.5', 'title': 'The max-sum algorithm', 'physical_index': '<physical_index_431>'}, {'structure': '8.4.6', 'title': 'Exact inference in general graphs', 'physical_index': '<physical_index_436>'}, {'structure': '8.4.7', 'title': 'Loopy belief propagation', 'physical_index': '<physical_index_437>'}, {'structure': '8.4.8', 'title': 'Learning the graph structure', 'physical_index': '<physical_index_438>'}, {'structure': '8.5', 'title': 'Exercises', 'physical_index': '<physical_index_438>'}, {'structure': '9', 'title': 'Mixture Models and EM', 'physical_index': '<physical_index_443>'}, {'structure': '9.1', 'title': 'K-means Clustering', 'physical_index': '<physical_index_444>'}, {'structure': '9.1.1', 'title': 'Image segmentation and compression', 'physical_index': '<physical_index_448>'}, {'structure': '9.2', 'title': 'Mixtures of Gaussians', 'physical_index': '<physical_index_450>'}, {'structure': '9.2.1', 'title': 'Maximum likelihood', 'physical_index': '<physical_index_452>'}, {'structure': '9.2.2', 'title': 'EM for Gaussian mixtures', 'physical_index': '<physical_index_455>'}, {'structure': '9.3', 'title': 'An Alternative View of EM', 'physical_index': '<physical_index_459>'}, {'structure': '9.3.1', 'title': 'Gaussian mixtures revisited', 'physical_index': '<physical_index_461>'}, {'structure': '9.3.2', 'title': 'Relation to K-means', 'physical_index': '<physical_index_463>'}, {'structure': '9.3.3', 'title': 'Mixtures of Bernoulli distributions', 'physical_index': '<physical_index_464>'}, {'structure': '9.3.4', 'title': 'EM for Bayesian linear regression', 'physical_index': '<physical_index_468>'}, {'structure': '9.4', 'title': 'The EM Algorithm in General', 'physical_index': '<physical_index_470>'}, {'structure': '9.5', 'title': 'Exercises', 'physical_index': '<physical_index_475>'}, {'structure': '9.6', 'title': 'Exercises', 'physical_index': '<physical_index_476>'}, {'structure': '10', 'title': 'Approximate Inference', 'physical_index': '<physical_index_481>'}, {'structure': '10.1', 'title': 'Variational Inference', 'physical_index': '<physical_index_482>'}, {'structure': '10.1.1', 'title': 'Factorized distributions', 'physical_index': '<physical_index_484>'}, {'structure': '10.1.2', 'title': 'Properties of factorized approximations', 'physical_index': '<physical_index_486>'}, {'structure': '10.1.3', 'title': 'Example: The univariate Gaussian', 'physical_index': '<physical_index_490>'}, {'structure': '10.1.4', 'title': 'Model comparison', 'physical_index': '<physical_index_493>'}, {'structure': '10.2', 'title': 'Illustration: Variational Mixture of Gaussians', 'physical_index': '<physical_index_494>'}, {'structure': '10.2.1', 'title': 'Variational distribution', 'physical_index': '<physical_index_495>'}, {'structure': '10.2.2', 'title': 'Variational lower bound', 'physical_index': '<physical_index_501>'}, {'structure': '10.2.3', 'title': 'Predictive density', 'physical_index': '<physical_index_502>'}, {'structure': '10.2.4', 'title': 'Determining the number of components', 'physical_index': '<physical_index_503>'}, {'structure': '10.2.5', 'title': 'Induced factorizations', 'physical_index': '<physical_index_505>'}, {'structure': '10.3', 'title': 'Variational Linear Regression', 'physical_index': '<physical_index_506>'}, {'structure': '10.3.1', 'title': 'Variational distribution', 'physical_index': '<physical_index_506>'}, {'structure': '10.3.2', 'title': 'Predictive distribution', 'physical_index': '<physical_index_508>'}, {'structure': '10.3.3', 'title': 'Lower bound', 'physical_index': '<physical_index_509>'}, {'structure': '10.4', 'title': 'Exponential Family Distributions', 'physical_index': '<physical_index_510>'}, {'structure': '10.4.1', 'title': 'Variational message passing', 'physical_index': '<physical_index_511>'}, {'structure': '10.5', 'title': 'Local Variational Methods', 'physical_index': '<physical_index_513>'}, {'structure': '10.6', 'title': 'Variational Logistic Regression', 'physical_index': '<physical_index_518>'}, {'structure': '10.6.1', 'title': 'Variational posterior distribution', 'physical_index': '<physical_index_518>'}, {'structure': '10.6.2', 'title': 'Optimizing the variational parameters', 'physical_index': '<physical_index_520>'}, {'structure': '10.6.3', 'title': 'Inference of hyperparameters', 'physical_index': '<physical_index_522>'}, {'structure': '10.7', 'title': 'Expectation Propagation', 'physical_index': '<physical_index_525>'}, {'structure': '10.7.1', 'title': 'Example: The clutter problem', 'physical_index': '<physical_index_531>'}, {'structure': '10.7.2', 'title': 'Expectation propagation on graphs', 'physical_index': '<physical_index_532>'}, {'structure': '10.8', 'title': 'Exercises', 'physical_index': '<physical_index_537>'}, {'structure': '11', 'title': 'Sampling Methods', 'physical_index': '<physical_index_543>'}, {'structure': '11.1', 'title': 'Basic Sampling Algorithms', 'physical_index': '<physical_index_546>'}, {'structure': '11.1.1', 'title': 'Standard distributions', 'physical_index': '<physical_index_546>'}, {'structure': '11.1.2', 'title': 'Rejection sampling', 'physical_index': '<physical_index_548>'}, {'structure': '11.1.3', 'title': 'Adaptive rejection sampling', 'physical_index': '<physical_index_550>'}, {'structure': '11.1.4', 'title': 'Importance sampling', 'physical_index': '<physical_index_552>'}, {'structure': '11.1.5', 'title': 'Sampling-importance-resampling', 'physical_index': '<physical_index_554>'}, {'structure': '11.1.6', 'title': 'Sampling and the EM algorithm', 'physical_index': '<physical_index_556>'}, {'structure': '11.2', 'title': 'Markov Chain Monte Carlo', 'physical_index': '<physical_index_537>'}, {'structure': '11.2.1', 'title': 'Markov chains', 'physical_index': '<physical_index_559>'}, {'structure': '11.2.2', 'title': 'The Metropolis-Hastings algorithm', 'physical_index': '<physical_index_561>'}, {'structure': '11.3', 'title': 'Gibbs Sampling', 'physical_index': '<physical_index_562>'}, {'structure': '11.4', 'title': 'Slice Sampling', 'physical_index': '<physical_index_566>'}, {'structure': '11.5', 'title': 'The Hybrid Monte Carlo Algorithm', 'physical_index': '<physical_index_568>'}, {'structure': '11.5.1', 'title': 'Dynamical systems', 'physical_index': '<physical_index_568>'}, {'structure': '11.5.2', 'title': 'Hybrid Monte Carlo', 'physical_index': '<physical_index_572>'}, {'structure': '11.6', 'title': 'Estimating the Partition Function', 'physical_index': '<physical_index_574>'}, {'structure': '11.7', 'title': 'Exercises', 'physical_index': '<physical_index_576>'}, {'structure': '12', 'title': 'Continuous Latent Variables', 'physical_index': '<physical_index_579>'}, {'structure': '12.1', 'title': 'Principal Component Analysis', 'physical_index': '<physical_index_581>'}, {'structure': '12.1.1', 'title': 'Maximum variance formulation', 'physical_index': '<physical_index_581>'}, {'structure': '12.1.2', 'title': 'Minimum-error formulation', 'physical_index': '<physical_index_583>'}, {'structure': '12.1.3', 'title': 'Applications of PCA', 'physical_index': '<physical_index_585>'}, {'structure': '12.1.4', 'title': 'PCA for high-dimensional data', 'physical_index': '<physical_index_589>'}, {'structure': '12.2', 'title': 'Probabilistic PCA', 'physical_index': '<physical_index_590>'}, {'structure': '12.2.1', 'title': 'Maximum likelihood PCA', 'physical_index': '<physical_index_594>'}, {'structure': '12.2.2', 'title': 'EM algorithm for PCA', 'physical_index': '<physical_index_597>'}, {'structure': '12.2.3', 'title': 'Bayesian PCA', 'physical_index': '<physical_index_601>'}, {'structure': '12.2.4', 'title': 'Factor analysis', 'physical_index': '<physical_index_603>'}, {'structure': '12.3', 'title': 'Kernel PCA', 'physical_index': '<physical_index_606>'}, {'structure': '12.4', 'title': 'Nonlinear Latent Variable Models', 'physical_index': '<physical_index_611>'}, {'structure': '12.4.1', 'title': 'Independent component analysis', 'physical_index': '<physical_index_611>'}, {'structure': '12.4.2', 'title': 'Autoassociative neural networks', 'physical_index': '<physical_index_612>'}, {'structure': '12.4.3', 'title': 'Modelling nonlinear manifolds', 'physical_index': '<physical_index_615>'}, {'structure': '13', 'title': 'Sequential Data', 'physical_index': '<physical_index_625>'}, {'structure': '13.1', 'title': 'Markov Models', 'physical_index': '<physical_index_627>'}, {'structure': '13.2', 'title': 'Hidden Markov Models', 'physical_index': '<physical_index_630>'}, {'structure': '13.2.1', 'title': 'Maximum likelihood for the HMM', 'physical_index': '<physical_index_635>'}, {'structure': '13.2.2', 'title': 'The forward-backward algorithm', 'physical_index': '<physical_index_638>'}, {'structure': '13.2.3', 'title': 'The sum-product algorithm for the HMM', 'physical_index': '<physical_index_645>'}, {'structure': '13.2.4', 'title': 'Scaling factors', 'physical_index': '<physical_index_647>'}, {'structure': '13.2.5', 'title': 'The Viterbi algorithm', 'physical_index': '<physical_index_649>'}, {'structure': '13.2.6', 'title': 'Extensions of the hidden Markov model', 'physical_index': '<physical_index_651>'}, {'structure': '13.3', 'title': 'Linear Dynamical Systems', 'physical_index': '<physical_index_655>'}, {'structure': '13.3.1', 'title': 'Inference in LDS', 'physical_index': '<physical_index_658>'}, {'structure': '13.3.2', 'title': 'Learning in LDS', 'physical_index': '<physical_index_662>'}, {'structure': '13.3.3', 'title': 'Extensions of LDS', 'physical_index': '<physical_index_664>'}, {'structure': '13.3.4', 'title': 'Particle filters', 'physical_index': '<physical_index_665>'}, {'structure': '13.7', 'title': 'Exercises', 'physical_index': '<physical_index_666>'}, {'structure': '14', 'title': 'Combining Models', 'physical_index': '<physical_index_673>'}, {'structure': '14.1', 'title': 'Bayesian Model Averaging', 'physical_index': '<physical_index_674>'}, {'structure': '14.2', 'title': 'Committees', 'physical_index': '<physical_index_675>'}, {'structure': '14.3', 'title': 'Boosting', 'physical_index': '<physical_index_677>'}, {'structure': '14.3.1', 'title': 'Minimizing exponential error', 'physical_index': '<physical_index_679>'}, {'structure': '14.3.2', 'title': 'Error functions for boosting', 'physical_index': '<physical_index_681>'}, {'structure': '14.4', 'title': 'Tree-based Models', 'physical_index': '<physical_index_683>'}, {'structure': '14.5', 'title': 'Conditional Mixture Models', 'physical_index': '<physical_index_686>'}, {'structure': '14.5.1', 'title': 'Mixtures of linear regression models', 'physical_index': '<physical_index_687>'}, {'structure': '14.5.2', 'title': 'Mixtures of logistic models', 'physical_index': '<physical_index_690>'}, {'structure': '14.5.3', 'title': 'Mixtures of experts', 'physical_index': '<physical_index_692>'}, {'structure': '14.6', 'title': 'Exercises', 'physical_index': '<physical_index_694>'}, {'structure': 'A', 'title': 'Appendix A. Data Sets', 'physical_index': '<physical_index_697>'}, {'structure': 'B', 'title': 'Appendix B. Probability Distributions', 'physical_index': '<physical_index_705>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_707>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_707>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_708>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_709>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_710>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_711>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_712>'}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': '<physical_index_713>'}, {'structure': 'C', 'title': 'Appendix C. Properties of Matrices', 'physical_index': '<physical_index_715>'}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': '<physical_index_716>'}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': '<physical_index_717>'}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': '<physical_index_718>'}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': '<physical_index_719>'}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': '<physical_index_720>'}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': '<physical_index_721>'}, {'structure': 'D', 'title': 'Appendix D. Calculus of Variations', 'physical_index': '<physical_index_723>'}, {'structure': 'D', 'title': 'D. CALCULUS OF VARIATIONS', 'physical_index': '<physical_index_724>'}, {'structure': 'D', 'title': 'D. CALCULUS OF VARIATIONS', 'physical_index': '<physical_index_725>'}, {'structure': 'E', 'title': 'Appendix E. Lagrange Multipliers', 'physical_index': '<physical_index_727>'}, {'structure': 'E', 'title': 'E. LAGRANGE MULTIPLIERS', 'physical_index': '<physical_index_728>'}, {'structure': 'E', 'title': 'E. LAGRANGE MULTIPLIERS', 'physical_index': '<physical_index_729>'}, {'structure': 'E', 'title': 'E. LAGRANGE MULTIPLIERS', 'physical_index': '<physical_index_730>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_731>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_737>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_738>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_739>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_740>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_741>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_742>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_743>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_744>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_745>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_746>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_747>'}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': '<physical_index_748>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_749>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_750>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_751>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_752>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_753>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_754>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_755>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_756>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_757>'}, {'structure': ' ', 'title': 'INDEX', 'physical_index': '<physical_index_758>'}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'Introduction', 'physical_index': 21}, {'structure': '1.1', 'title': 'Example: Polynomial Curve Fitting', 'physical_index': 24}, {'structure': '1.2', 'title': 'Probability Theory', 'physical_index': 32}, {'structure': '1.2.1', 'title': 'Probability densities', 'physical_index': 37}, {'structure': '1.2.2', 'title': 'Expectations and covariances', 'physical_index': 39}, {'structure': '1.2.3', 'title': 'Bayesian probabilities', 'physical_index': 41}, {'structure': '1.2.4', 'title': 'The Gaussian distribution', 'physical_index': 42}, {'structure': '1.2.5', 'title': 'Curve fitting re-visited', 'physical_index': 44}, {'structure': '1.2.6', 'title': 'Bayesian curve fitting', 'physical_index': 45}, {'structure': '1.3', 'title': 'Model Selection', 'physical_index': 31}, {'structure': '1.4', 'title': 'The Curse of Dimensionality', 'physical_index': 33}, {'structure': '1.5', 'title': 'Decision Theory', 'physical_index': 38}, {'structure': '1.5.1', 'title': 'Minimizing the misclassification rate', 'physical_index': 39}, {'structure': '1.5.2', 'title': 'Minimizing the expected loss', 'physical_index': 41}, {'structure': '1.5.3', 'title': 'The reject option', 'physical_index': 42}, {'structure': '1.5.4', 'title': 'Inference and decision', 'physical_index': 42}, {'structure': '1.5.5', 'title': 'Loss functions for regression', 'physical_index': 46}, {'structure': '1.6', 'title': 'Information Theory', 'physical_index': 48}, {'structure': '1.6.1', 'title': 'Relative entropy and mutual information', 'physical_index': 55}, {'structure': '1.6', 'title': 'Information Theory', 'physical_index': 67}, {'structure': '1.6.1', 'title': 'Relative entropy and mutual information', 'physical_index': 72}, {'structure': '2', 'title': 'Probability Distributions', 'physical_index': 87}, {'structure': '2.1', 'title': 'Binary Variables', 'physical_index': 88}, {'structure': '2.1.1', 'title': 'The beta distribution', 'physical_index': 91}, {'structure': '2.2', 'title': 'Multinomial Variables', 'physical_index': 94}, {'structure': '2.2.1', 'title': 'The Dirichlet distribution', 'physical_index': 96}, {'structure': '2.3.', 'title': 'The Gaussian Distribution', 'physical_index': 98}, {'structure': '2.3.1', 'title': 'Conditional Gaussian distributions', 'physical_index': 105}, {'structure': '2.3.2', 'title': 'Marginal Gaussian distributions', 'physical_index': 88}, {'structure': '2.3.3', 'title': 'Bayes\u2019 theorem for Gaussian variables', 'physical_index': 110}, {'structure': '2.3.4', 'title': 'Maximum likelihood for the Gaussian', 'physical_index': 113}, {'structure': '2.3.5', 'title': 'Sequential estimation', 'physical_index': 114}, {'structure': '2.3.6', 'title': 'Bayesian inference for the Gaussian', 'physical_index': 117}, {'structure': '2.3.7', 'title': 'Student\u2019s t-distribution', 'physical_index': 122}, {'structure': '2.3.8', 'title': 'Periodic variables', 'physical_index': 125}, {'structure': '2.3.9', 'title': 'Mixtures of Gaussians', 'physical_index': 130}, {'structure': '2.4', 'title': 'The Exponential Family', 'physical_index': 133}, {'structure': '2.4.1', 'title': 'Maximum likelihood and sufficient statistics', 'physical_index': 136}, {'structure': '2.4.2', 'title': 'Conjugate priors', 'physical_index': 137}, {'structure': '2.4.3', 'title': 'Noninformative priors', 'physical_index': 137}, {'structure': '2.5', 'title': 'Nonparametric Methods', 'physical_index': 140}, {'structure': '2.5.1', 'title': 'Kernel density estimators', 'physical_index': 142}, {'structure': '2.5.2', 'title': 'Nearest-neighbour methods', 'physical_index': 144}, {'structure': '2.6', 'title': 'Exercises', 'physical_index': 152}, {'structure': '3', 'title': 'Linear Models for Regression', 'physical_index': 157}, {'structure': '3.1', 'title': 'Linear Basis Function Models', 'physical_index': 158}, {'structure': '3.1.1', 'title': 'Maximum likelihood and least squares', 'physical_index': 160}, {'structure': '3.1.2', 'title': 'Geometry of least squares', 'physical_index': 163}, {'structure': '3.1.3', 'title': 'Sequential learning', 'physical_index': 163}, {'structure': '3.1.4', 'title': 'Regularized least squares', 'physical_index': 164}, {'structure': '3.1.5', 'title': 'Multiple outputs', 'physical_index': 166}, {'structure': '3.2', 'title': 'The Bias-Variance Decomposition', 'physical_index': 167}, {'structure': '3.3', 'title': 'Bayesian Linear Regression', 'physical_index': 172}, {'structure': '3.3.1', 'title': 'Parameter distribution', 'physical_index': 172}, {'structure': '3.3.2', 'title': 'Predictive distribution', 'physical_index': 176}, {'structure': '3.3.3', 'title': 'Equivalent kernel', 'physical_index': 179}, {'structure': '3.4', 'title': 'Bayesian Model Comparison', 'physical_index': 181}, {'structure': '3.5', 'title': 'The Evidence Approximation', 'physical_index': 185}, {'structure': '3.5.1', 'title': 'Evaluation of the evidence function', 'physical_index': 186}, {'structure': '3.5.2', 'title': 'Maximizing the evidence function', 'physical_index': 188}, {'structure': '3.5.3', 'title': 'Effective number of parameters', 'physical_index': 190}, {'structure': '3.6', 'title': 'Limitations of Fixed Basis Functions', 'physical_index': 192}, {'structure': '3.7', 'title': 'Exercises', 'physical_index': 193}, {'structure': '4', 'title': 'Linear Models for Classi\ufb01cation', 'physical_index': 199}, {'structure': '4.1', 'title': 'Discriminant Functions', 'physical_index': 201}, {'structure': '4.1.1', 'title': 'Two classes', 'physical_index': 201}, {'structure': '4.1.2', 'title': 'Multiple classes', 'physical_index': 202}, {'structure': '4.1.3', 'title': 'Least squares for classi\ufb01cation', 'physical_index': 204}, {'structure': '4.1.4', 'title': 'Fisher\u2019s linear discriminant', 'physical_index': 206}, {'structure': '4.1.5', 'title': 'Relation to least squares', 'physical_index': 209}, {'structure': '4.1.6', 'title': 'Fisher\u2019s discriminant for multiple classes', 'physical_index': 211}, {'structure': '4.1.7', 'title': 'The perceptron algorithm', 'physical_index': 212}, {'structure': '4.2', 'title': 'Probabilistic Generative Models', 'physical_index': 216}, {'structure': '4.2.1', 'title': 'Continuous inputs', 'physical_index': 218}, {'structure': '4.2.2', 'title': 'Maximum likelihood solution', 'physical_index': 220}, {'structure': '4.2.3', 'title': 'Discrete features', 'physical_index': 222}, {'structure': '4.2.4', 'title': 'Exponential family', 'physical_index': 222}, {'structure': '4.3', 'title': 'Probabilistic Discriminative Models', 'physical_index': 223}, {'structure': '4.3.1', 'title': 'Fixed basis functions', 'physical_index': 224}, {'structure': '4.3.2', 'title': 'Logistic regression', 'physical_index': 225}, {'structure': '4.3.3', 'title': 'Iterative reweighted least squares', 'physical_index': 227}, {'structure': '4.3.4', 'title': 'Multiclass logistic regression', 'physical_index': 229}, {'structure': '4.3.5', 'title': 'Probit regression', 'physical_index': 230}, {'structure': '4.3.6', 'title': 'Canonical link functions', 'physical_index': 232}, {'structure': '4.4', 'title': 'The Laplace Approximation', 'physical_index': 233}, {'structure': '4.4.1', 'title': 'Model comparison and BIC', 'physical_index': 236}, {'structure': '4.5', 'title': 'Bayesian Logistic Regression', 'physical_index': 237}, {'structure': '4.5.1', 'title': 'Laplace approximation', 'physical_index': 237}, {'structure': '4.5.2', 'title': 'Predictive distribution', 'physical_index': 238}, {'structure': '4.6', 'title': 'Exercises', 'physical_index': 240}, {'structure': '5', 'title': 'Neural Networks', 'physical_index': 245}, {'structure': '5.1', 'title': 'Feed-forward Network Functions', 'physical_index': 247}, {'structure': '5.1.1', 'title': 'Weight-space symmetries', 'physical_index': 251}, {'structure': '5.2', 'title': 'Network Training', 'physical_index': 252}, {'structure': '5.2.1', 'title': 'Parameter optimization', 'physical_index': 256}, {'structure': '5.2.2', 'title': 'Local quadratic approximation', 'physical_index': 257}, {'structure': '5.2.3', 'title': 'Use of gradient information', 'physical_index': 259}, {'structure': '5.2.4', 'title': 'Gradient descent optimization', 'physical_index': 260}, {'structure': '5.3', 'title': 'Error Backpropagation', 'physical_index': 261}, {'structure': '5.3.1', 'title': 'Evaluation of error-function derivatives', 'physical_index': 262}, {'structure': '5.3.2', 'title': 'A simple example', 'physical_index': 265}, {'structure': '5.3.3', 'title': 'Efficiency of backpropagation', 'physical_index': 266}, {'structure': '5.3.4', 'title': 'The Jacobian matrix', 'physical_index': 267}, {'structure': '5.4', 'title': 'The Hessian Matrix', 'physical_index': 269}, {'structure': '5.4.1', 'title': 'Diagonal approximation', 'physical_index': 270}, {'structure': '5.4.2', 'title': 'Outer product approximation', 'physical_index': 271}, {'structure': '5.4.3', 'title': 'Inverse Hessian', 'physical_index': 272}, {'structure': '5.4.4', 'title': 'Finite differences', 'physical_index': 272}, {'structure': '5.4.5', 'title': 'Exact evaluation of the Hessian', 'physical_index': 273}, {'structure': '5.4.6', 'title': 'Fast multiplication by the Hessian', 'physical_index': 274}, {'structure': '5.5', 'title': 'Regularization in Neural Networks', 'physical_index': 276}, {'structure': '5.5.1', 'title': 'Consistent Gaussian priors', 'physical_index': 277}, {'structure': '5.5.2', 'title': 'Early stopping', 'physical_index': 279}, {'structure': '5.5.3', 'title': 'Invariances', 'physical_index': 281}, {'structure': '5.5.4', 'title': 'Tangent propagation', 'physical_index': 283}, {'structure': '5.5.5', 'title': 'Training with transformed data', 'physical_index': 285}, {'structure': '5.5.6', 'title': 'Convolutional networks', 'physical_index': 287}, {'structure': '5.5.7', 'title': 'Soft weight sharing', 'physical_index': 289}, {'structure': '5.6', 'title': 'Mixture Density Networks', 'physical_index': 292}, {'structure': '5.7', 'title': 'Bayesian Neural Networks', 'physical_index': 297}, {'structure': '5.7.1', 'title': 'Posterior parameter distribution', 'physical_index': 298}, {'structure': '5.7.2', 'title': 'Hyperparameter optimization', 'physical_index': 300}, {'structure': '5.7.3', 'title': 'Bayesian neural networks for classification', 'physical_index': 301}, {'structure': '5.8', 'title': 'Exercises', 'physical_index': 304}, {'structure': '6', 'title': 'Kernel Methods', 'physical_index': 311}, {'structure': '6.1', 'title': 'Dual Representations', 'physical_index': 313}, {'structure': '6.2', 'title': 'Constructing Kernels', 'physical_index': 314}, {'structure': '6.3', 'title': 'Radial Basis Function Networks', 'physical_index': 319}, {'structure': '6.3.1', 'title': 'Nadaraya-Watson model', 'physical_index': 321}, {'structure': '6.4', 'title': 'Gaussian Processes', 'physical_index': 323}, {'structure': '6.4.1', 'title': 'Linear regression revisited', 'physical_index': 324}, {'structure': '6.4.2', 'title': 'Gaussian processes for regression', 'physical_index': 326}, {'structure': '6.4.3', 'title': 'Learning the hyperparameters', 'physical_index': 331}, {'structure': '6.4.4', 'title': 'Automatic relevance determination', 'physical_index': 332}, {'structure': '6.4.5', 'title': 'Gaussian processes for classi\ufb01cation', 'physical_index': 333}, {'structure': '6.4.6', 'title': 'Laplace approximation', 'physical_index': 335}, {'structure': '6.4.7', 'title': 'Connection to neural networks', 'physical_index': 339}, {'structure': '6.5', 'title': 'Exercises', 'physical_index': 340}, {'structure': '7', 'title': 'Sparse Kernel Machines', 'physical_index': 345}, {'structure': '7.1', 'title': 'Maximum Margin Classi\ufb01ers', 'physical_index': 346}, {'structure': '7.1.1', 'title': 'Overlapping class distributions', 'physical_index': 351}, {'structure': '7.1.2', 'title': 'Relation to logistic regression', 'physical_index': 356}, {'structure': '7.1.3', 'title': 'Multiclass SVMs', 'physical_index': 358}, {'structure': '7.1.4', 'title': 'SVMs for regression', 'physical_index': 359}, {'structure': '7.1.5', 'title': 'Computational learning theory', 'physical_index': 364}, {'structure': '7.2', 'title': 'Relevance Vector Machines', 'physical_index': 365}, {'structure': '7.2.1', 'title': 'RVM for regression', 'physical_index': 365}, {'structure': '7.2.2', 'title': 'Analysis of sparsity', 'physical_index': 369}, {'structure': '7.2.3', 'title': 'RVM for classi\ufb01cation', 'physical_index': 373}, {'structure': '7.3', 'title': 'Exercises', 'physical_index': 377}, {'structure': '8', 'title': 'Graphical Models', 'physical_index': 379}, {'structure': '8.1', 'title': 'Bayesian Networks', 'physical_index': 380}, {'structure': '8.1.1', 'title': 'Example: Polynomial regression', 'physical_index': 382}, {'structure': '8.1.2', 'title': 'Generative models', 'physical_index': 385}, {'structure': '8.1.3', 'title': 'Discrete variables', 'physical_index': 386}, {'structure': '8.1.4', 'title': 'Linear-Gaussian models', 'physical_index': 390}, {'structure': '8.2', 'title': 'Conditional Independence', 'physical_index': 392}, {'structure': '8.2.1', 'title': 'Three example graphs', 'physical_index': 393}, {'structure': '8.2.2', 'title': 'D-separation', 'physical_index': 398}, {'structure': '8.3', 'title': 'Markov Random Fields', 'physical_index': 403}, {'structure': '8.3.1', 'title': 'Conditional independence properties', 'physical_index': 403}, {'structure': '8.3.2', 'title': 'Factorization properties', 'physical_index': 404}, {'structure': '8.3.3', 'title': 'Illustration: Image de-noising', 'physical_index': 407}, {'structure': '8.3.4', 'title': 'Relation to directed graphs', 'physical_index': 410}, {'structure': '8.4', 'title': 'Inference in Graphical Models', 'physical_index': 413}, {'structure': '8.4.1', 'title': 'Inference on a chain', 'physical_index': 414}, {'structure': '8.4.2', 'title': 'Trees', 'physical_index': 417}, {'structure': '8.4.3', 'title': 'Factor graphs', 'physical_index': 419}, {'structure': '8.4.4', 'title': 'The sum-product algorithm', 'physical_index': 422}, {'structure': '8.4.5', 'title': 'The max-sum algorithm', 'physical_index': 431}, {'structure': '8.4.6', 'title': 'Exact inference in general graphs', 'physical_index': 436}, {'structure': '8.4.7', 'title': 'Loopy belief propagation', 'physical_index': 437}, {'structure': '8.4.8', 'title': 'Learning the graph structure', 'physical_index': 438}, {'structure': '8.5', 'title': 'Exercises', 'physical_index': 438}, {'structure': '9', 'title': 'Mixture Models and EM', 'physical_index': 443}, {'structure': '9.1', 'title': 'K-means Clustering', 'physical_index': 444}, {'structure': '9.1.1', 'title': 'Image segmentation and compression', 'physical_index': 448}, {'structure': '9.2', 'title': 'Mixtures of Gaussians', 'physical_index': 450}, {'structure': '9.2.1', 'title': 'Maximum likelihood', 'physical_index': 452}, {'structure': '9.2.2', 'title': 'EM for Gaussian mixtures', 'physical_index': 455}, {'structure': '9.3', 'title': 'An Alternative View of EM', 'physical_index': 459}, {'structure': '9.3.1', 'title': 'Gaussian mixtures revisited', 'physical_index': 461}, {'structure': '9.3.2', 'title': 'Relation to K-means', 'physical_index': 463}, {'structure': '9.3.3', 'title': 'Mixtures of Bernoulli distributions', 'physical_index': 464}, {'structure': '9.3.4', 'title': 'EM for Bayesian linear regression', 'physical_index': 468}, {'structure': '9.4', 'title': 'The EM Algorithm in General', 'physical_index': 470}, {'structure': '9.5', 'title': 'Exercises', 'physical_index': 475}, {'structure': '9.6', 'title': 'Exercises', 'physical_index': 476}, {'structure': '10', 'title': 'Approximate Inference', 'physical_index': 481}, {'structure': '10.1', 'title': 'Variational Inference', 'physical_index': 482}, {'structure': '10.1.1', 'title': 'Factorized distributions', 'physical_index': 484}, {'structure': '10.1.2', 'title': 'Properties of factorized approximations', 'physical_index': 486}, {'structure': '10.1.3', 'title': 'Example: The univariate Gaussian', 'physical_index': 490}, {'structure': '10.1.4', 'title': 'Model comparison', 'physical_index': 493}, {'structure': '10.2', 'title': 'Illustration: Variational Mixture of Gaussians', 'physical_index': 494}, {'structure': '10.2.1', 'title': 'Variational distribution', 'physical_index': 495}, {'structure': '10.2.2', 'title': 'Variational lower bound', 'physical_index': 501}, {'structure': '10.2.3', 'title': 'Predictive density', 'physical_index': 502}, {'structure': '10.2.4', 'title': 'Determining the number of components', 'physical_index': 503}, {'structure': '10.2.5', 'title': 'Induced factorizations', 'physical_index': 505}, {'structure': '10.3', 'title': 'Variational Linear Regression', 'physical_index': 506}, {'structure': '10.3.1', 'title': 'Variational distribution', 'physical_index': 506}, {'structure': '10.3.2', 'title': 'Predictive distribution', 'physical_index': 508}, {'structure': '10.3.3', 'title': 'Lower bound', 'physical_index': 509}, {'structure': '10.4', 'title': 'Exponential Family Distributions', 'physical_index': 510}, {'structure': '10.4.1', 'title': 'Variational message passing', 'physical_index': 511}, {'structure': '10.5', 'title': 'Local Variational Methods', 'physical_index': 513}, {'structure': '10.6', 'title': 'Variational Logistic Regression', 'physical_index': 518}, {'structure': '10.6.1', 'title': 'Variational posterior distribution', 'physical_index': 518}, {'structure': '10.6.2', 'title': 'Optimizing the variational parameters', 'physical_index': 520}, {'structure': '10.6.3', 'title': 'Inference of hyperparameters', 'physical_index': 522}, {'structure': '10.7', 'title': 'Expectation Propagation', 'physical_index': 525}, {'structure': '10.7.1', 'title': 'Example: The clutter problem', 'physical_index': 531}, {'structure': '10.7.2', 'title': 'Expectation propagation on graphs', 'physical_index': 532}, {'structure': '10.8', 'title': 'Exercises', 'physical_index': 537}, {'structure': '11', 'title': 'Sampling Methods', 'physical_index': 543}, {'structure': '11.1', 'title': 'Basic Sampling Algorithms', 'physical_index': 546}, {'structure': '11.1.1', 'title': 'Standard distributions', 'physical_index': 546}, {'structure': '11.1.2', 'title': 'Rejection sampling', 'physical_index': 548}, {'structure': '11.1.3', 'title': 'Adaptive rejection sampling', 'physical_index': 550}, {'structure': '11.1.4', 'title': 'Importance sampling', 'physical_index': 552}, {'structure': '11.1.5', 'title': 'Sampling-importance-resampling', 'physical_index': 554}, {'structure': '11.1.6', 'title': 'Sampling and the EM algorithm', 'physical_index': 556}, {'structure': '11.2', 'title': 'Markov Chain Monte Carlo', 'physical_index': 537}, {'structure': '11.2.1', 'title': 'Markov chains', 'physical_index': 559}, {'structure': '11.2.2', 'title': 'The Metropolis-Hastings algorithm', 'physical_index': 561}, {'structure': '11.3', 'title': 'Gibbs Sampling', 'physical_index': 562}, {'structure': '11.4', 'title': 'Slice Sampling', 'physical_index': 566}, {'structure': '11.5', 'title': 'The Hybrid Monte Carlo Algorithm', 'physical_index': 568}, {'structure': '11.5.1', 'title': 'Dynamical systems', 'physical_index': 568}, {'structure': '11.5.2', 'title': 'Hybrid Monte Carlo', 'physical_index': 572}, {'structure': '11.6', 'title': 'Estimating the Partition Function', 'physical_index': 574}, {'structure': '11.7', 'title': 'Exercises', 'physical_index': 576}, {'structure': '12', 'title': 'Continuous Latent Variables', 'physical_index': 579}, {'structure': '12.1', 'title': 'Principal Component Analysis', 'physical_index': 581}, {'structure': '12.1.1', 'title': 'Maximum variance formulation', 'physical_index': 581}, {'structure': '12.1.2', 'title': 'Minimum-error formulation', 'physical_index': 583}, {'structure': '12.1.3', 'title': 'Applications of PCA', 'physical_index': 585}, {'structure': '12.1.4', 'title': 'PCA for high-dimensional data', 'physical_index': 589}, {'structure': '12.2', 'title': 'Probabilistic PCA', 'physical_index': 590}, {'structure': '12.2.1', 'title': 'Maximum likelihood PCA', 'physical_index': 594}, {'structure': '12.2.2', 'title': 'EM algorithm for PCA', 'physical_index': 597}, {'structure': '12.2.3', 'title': 'Bayesian PCA', 'physical_index': 601}, {'structure': '12.2.4', 'title': 'Factor analysis', 'physical_index': 603}, {'structure': '12.3', 'title': 'Kernel PCA', 'physical_index': 606}, {'structure': '12.4', 'title': 'Nonlinear Latent Variable Models', 'physical_index': 611}, {'structure': '12.4.1', 'title': 'Independent component analysis', 'physical_index': 611}, {'structure': '12.4.2', 'title': 'Autoassociative neural networks', 'physical_index': 612}, {'structure': '12.4.3', 'title': 'Modelling nonlinear manifolds', 'physical_index': 615}, {'structure': '13', 'title': 'Sequential Data', 'physical_index': 625}, {'structure': '13.1', 'title': 'Markov Models', 'physical_index': 627}, {'structure': '13.2', 'title': 'Hidden Markov Models', 'physical_index': 630}, {'structure': '13.2.1', 'title': 'Maximum likelihood for the HMM', 'physical_index': 635}, {'structure': '13.2.2', 'title': 'The forward-backward algorithm', 'physical_index': 638}, {'structure': '13.2.3', 'title': 'The sum-product algorithm for the HMM', 'physical_index': 645}, {'structure': '13.2.4', 'title': 'Scaling factors', 'physical_index': 647}, {'structure': '13.2.5', 'title': 'The Viterbi algorithm', 'physical_index': 649}, {'structure': '13.2.6', 'title': 'Extensions of the hidden Markov model', 'physical_index': 651}, {'structure': '13.3', 'title': 'Linear Dynamical Systems', 'physical_index': 655}, {'structure': '13.3.1', 'title': 'Inference in LDS', 'physical_index': 658}, {'structure': '13.3.2', 'title': 'Learning in LDS', 'physical_index': 662}, {'structure': '13.3.3', 'title': 'Extensions of LDS', 'physical_index': 664}, {'structure': '13.3.4', 'title': 'Particle filters', 'physical_index': 665}, {'structure': '13.7', 'title': 'Exercises', 'physical_index': 666}, {'structure': '14', 'title': 'Combining Models', 'physical_index': 673}, {'structure': '14.1', 'title': 'Bayesian Model Averaging', 'physical_index': 674}, {'structure': '14.2', 'title': 'Committees', 'physical_index': 675}, {'structure': '14.3', 'title': 'Boosting', 'physical_index': 677}, {'structure': '14.3.1', 'title': 'Minimizing exponential error', 'physical_index': 679}, {'structure': '14.3.2', 'title': 'Error functions for boosting', 'physical_index': 681}, {'structure': '14.4', 'title': 'Tree-based Models', 'physical_index': 683}, {'structure': '14.5', 'title': 'Conditional Mixture Models', 'physical_index': 686}, {'structure': '14.5.1', 'title': 'Mixtures of linear regression models', 'physical_index': 687}, {'structure': '14.5.2', 'title': 'Mixtures of logistic models', 'physical_index': 690}, {'structure': '14.5.3', 'title': 'Mixtures of experts', 'physical_index': 692}, {'structure': '14.6', 'title': 'Exercises', 'physical_index': 694}, {'structure': 'A', 'title': 'Appendix A. Data Sets', 'physical_index': 697}, {'structure': 'B', 'title': 'Appendix B. Probability Distributions', 'physical_index': 705}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 707}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 707}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 708}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 709}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 710}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 711}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 712}, {'structure': 'B', 'title': 'B. PROBABILITY DISTRIBUTIONS', 'physical_index': 713}, {'structure': 'C', 'title': 'Appendix C. Properties of Matrices', 'physical_index': 715}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': 716}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': 717}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': 718}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': 719}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': 720}, {'structure': 'C', 'title': 'C. PROPERTIES OF MATRICES', 'physical_index': 721}, {'structure': 'D', 'title': 'Appendix D. Calculus of Variations', 'physical_index': 723}, {'structure': 'D', 'title': 'D. CALCULUS OF VARIATIONS', 'physical_index': 724}, {'structure': 'D', 'title': 'D. CALCULUS OF VARIATIONS', 'physical_index': 725}, {'structure': 'E', 'title': 'Appendix E. Lagrange Multipliers', 'physical_index': 727}, {'structure': 'E', 'title': 'E. LAGRANGE MULTIPLIERS', 'physical_index': 728}, {'structure': 'E', 'title': 'E. LAGRANGE MULTIPLIERS', 'physical_index': 729}, {'structure': 'E', 'title': 'E. LAGRANGE MULTIPLIERS', 'physical_index': 730}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 731}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 737}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 738}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 739}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 740}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 741}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 742}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 743}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 744}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 745}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 746}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 747}, {'structure': ' ', 'title': 'REFERENCES', 'physical_index': 748}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 749}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 750}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 751}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 752}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 753}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 754}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 755}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 756}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 757}, {'structure': ' ', 'title': 'INDEX', 'physical_index': 758}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0.9380804953560371,
+    "incorrect_results": [
+      {
+        "list_index": 6,
+        "answer": "no",
+        "title": "The Gaussian distribution",
+        "page_number": 42
+      },
+      {
+        "list_index": 7,
+        "answer": "no",
+        "title": "Curve fitting re-visited",
+        "page_number": 44
+      },
+      {
+        "list_index": 8,
+        "answer": "no",
+        "title": "Bayesian curve fitting",
+        "page_number": 45
+      },
+      {
+        "list_index": 10,
+        "answer": "no",
+        "title": "The Curse of Dimensionality",
+        "page_number": 33
+      },
+      {
+        "list_index": 11,
+        "answer": "no",
+        "title": "Decision Theory",
+        "page_number": 38
+      },
+      {
+        "list_index": 12,
+        "answer": "no",
+        "title": "Minimizing the misclassification rate",
+        "page_number": 39
+      },
+      {
+        "list_index": 13,
+        "answer": "no",
+        "title": "Minimizing the expected loss",
+        "page_number": 41
+      },
+      {
+        "list_index": 14,
+        "answer": "no",
+        "title": "The reject option",
+        "page_number": 42
+      },
+      {
+        "list_index": 15,
+        "answer": "no",
+        "title": "Inference and decision",
+        "page_number": 42
+      },
+      {
+        "list_index": 16,
+        "answer": "no",
+        "title": "Loss functions for regression",
+        "page_number": 46
+      },
+      {
+        "list_index": 17,
+        "answer": "no",
+        "title": "Information Theory",
+        "page_number": 48
+      },
+      {
+        "list_index": 18,
+        "answer": "no",
+        "title": "Relative entropy and mutual information",
+        "page_number": 55
+      },
+      {
+        "list_index": 19,
+        "answer": "no",
+        "title": "Information Theory",
+        "page_number": 67
+      },
+      {
+        "list_index": 20,
+        "answer": "no",
+        "title": "Relative entropy and mutual information",
+        "page_number": 72
+      },
+      {
+        "list_index": 28,
+        "answer": "no",
+        "title": "Marginal Gaussian distributions",
+        "page_number": 88
+      },
+      {
+        "list_index": 43,
+        "answer": "no",
+        "title": "Exercises",
+        "page_number": 152
+      },
+      {
+        "list_index": 166,
+        "answer": "no",
+        "title": "Trees",
+        "page_number": 417
+      },
+      {
+        "list_index": 187,
+        "answer": "no",
+        "title": "Exercises",
+        "page_number": 476
+      },
+      {
+        "list_index": 213,
+        "answer": "no",
+        "title": "Expectation propagation on graphs",
+        "page_number": 532
+      },
+      {
+        "list_index": 223,
+        "answer": "no",
+        "title": "Markov Chain Monte Carlo",
+        "page_number": 537
+      }
+    ]
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 6, 'title': 'The Gaussian distribution', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 7, 'title': 'Curve fitting re-visited', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 8, 'title': 'Bayesian curve fitting', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 10, 'title': 'The Curse of Dimensionality', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 11, 'title': 'Decision Theory', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 12, 'title': 'Minimizing the misclassification rate', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 13, 'title': 'Minimizing the expected loss', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 14, 'title': 'The reject option', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 15, 'title': 'Inference and decision', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 16, 'title': 'Loss functions for regression', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 17, 'title': 'Information Theory', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 18, 'title': 'Relative entropy and mutual information', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 19, 'title': 'Information Theory', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 20, 'title': 'Relative entropy and mutual information', 'prev_correct': 31, 'next_correct': 87}, {'list_index': 28, 'title': 'Marginal Gaussian distributions', 'prev_correct': 105, 'next_correct': 110}, {'list_index': 43, 'title': 'Exercises', 'prev_correct': 144, 'next_correct': 157}, {'list_index': 166, 'title': 'Trees', 'prev_correct': 414, 'next_correct': 419}, {'list_index': 187, 'title': 'Exercises', 'prev_correct': 475, 'next_correct': 481}, {'list_index': 213, 'title': 'Expectation propagation on graphs', 'prev_correct': 531, 'next_correct': 537}, {'list_index': 223, 'title': 'Markov Chain Monte Carlo', 'prev_correct': 556, 'next_correct': 559}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 6, 'title': 'The Gaussian distribution', 'physical_index': None}, {'list_index': 7, 'title': 'Curve fitting re-visited', 'physical_index': None}, {'list_index': 8, 'title': 'Bayesian curve fitting', 'physical_index': None}, {'list_index': 11, 'title': 'Decision Theory', 'physical_index': 38}, {'list_index': 12, 'title': 'Minimizing the misclassification rate', 'physical_index': 39}, {'list_index': 13, 'title': 'Minimizing the expected loss', 'physical_index': 38}, {'list_index': 15, 'title': 'Inference and decision', 'physical_index': 38}, {'list_index': 16, 'title': 'Loss functions for regression', 'physical_index': 31}]"
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 6, 'title': 'The Gaussian distribution', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 7, 'title': 'Curve fitting re-visited', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 8, 'title': 'Bayesian curve fitting', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 11, 'title': 'Decision Theory', 'prev_correct': 53, 'next_correct': 62}, {'list_index': 12, 'title': 'Minimizing the misclassification rate', 'prev_correct': 53, 'next_correct': 62}, {'list_index': 13, 'title': 'Minimizing the expected loss', 'prev_correct': 53, 'next_correct': 62}, {'list_index': 15, 'title': 'Inference and decision', 'prev_correct': 62, 'next_correct': 68}, {'list_index': 16, 'title': 'Loss functions for regression', 'prev_correct': 62, 'next_correct': 68}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 6, 'title': 'The Gaussian distribution', 'physical_index': 4}, {'list_index': 7, 'title': 'Curve fitting re-visited', 'physical_index': 1}, {'list_index': 8, 'title': 'Bayesian curve fitting', 'physical_index': None}, {'list_index': 13, 'title': 'Minimizing the expected loss', 'physical_index': 58}]"
+  },
+  {
+    "message": "incorrect_results_and_range_logs: [{'list_index': 6, 'title': 'The Gaussian distribution', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 7, 'title': 'Curve fitting re-visited', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 8, 'title': 'Bayesian curve fitting', 'prev_correct': 41, 'next_correct': 31}, {'list_index': 13, 'title': 'Minimizing the expected loss', 'prev_correct': 59, 'next_correct': 62}]"
+  },
+  {
+    "message": "invalid_results: [{'list_index': 6, 'title': 'The Gaussian distribution', 'physical_index': 3}, {'list_index': 7, 'title': 'Curve fitting re-visited', 'physical_index': None}, {'list_index': 8, 'title': 'Bayesian curve fitting', 'physical_index': None}]"
+  },
+  {
+    "message": "Maximum fix attempts reached"
+  },
+  {
+    "message": "Checking title appearance in start concurrently"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Curve fitting re-visited\" does not appear in the given page_text. Therefore, the section cannot start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '1' followed by a newline, and then 'Introduction'. Therefore, the section 'Introduction' does not start at the very beginning of the page.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"1.2. Probability Theory 25\". The given section title is \"Bayesian curve fitting\". Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text is empty, so the section title cannot appear at the beginning.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"42 1. INTRODUCTION\", so the section \"The reject option\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Decision Theory\".\\nThe page text starts with \"38 1. INTRODUCTION\".\\nTherefore, the section title \"Decision Theory\" does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Probability densities\". The page_text starts with \"1.2. Probability Theory 17\". Therefore, the section title does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '22 1. INTRODUCTION', so the section title 'The Gaussian distribution' does not appear at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Expectations and covariances\" appears in the page_text, but it is not the first content in the page_text. There are other contents, such as \"1.2. Probability Theory 19\", before the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"4 1. INTRODUCTION\", while the section title is \"Example: Polynomial Curve Fitting\". Even after ignoring spaces, the section title is not the first content in the page_text. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"12 1. INTRODUCTION\". The section title is \"Probability Theory\". They are different. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Minimizing the expected loss\".\\n\\nI need to check if the section title appears at the beginning of the page_text. According to the given page_text, \"Minimizing the expected loss\" appears after \"1.5.2 \", so the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"1.4. The Curse of Dimensionality\". The section title is \"The Curse of Dimensionality\". Therefore, the section title starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Minimizing the misclassification rate.\" I need to check if this title appears at the beginning of the provided page text, ignoring any space inconsistencies. After checking the text, I found that \"1.5.1 Minimizing the misclassi\ufb01cation rate\" appears after some other contents. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with a section number and a title \"1.1. Example: Polynomial Curve Fitting\". The section title given is \"Model Selection\". These two titles are different. Thus, the section \"Model Selection\" does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Bayesian probabilities.\". The page text starts with \"1.2. Probability Theory 21 1.2.3 Bayesian probabilities\". After removing space inconsistency, I can see that \"Bayesian probabilities\" appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Inference and decision\". The page text starts with \"42 1. INTRODUCTION\". Therefore, the current section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"46 1. INTRODUCTION\". The section title is \"Loss functions for regression\". Therefore, the current section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"48 1. INTRODUCTION\". The section title is \"Information Theory\". Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"48 1. INTRODUCTION\". The section title is \"Information Theory.\" Since the page_text doesn\\'t start with \"Information Theory\", the section \"Information Theory\" does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '2 Probability Distributions', and the section title is 'Probability Distributions'. After removing the leading number '2 ' and ignoring the space inconsistency, the section title matches the beginning of the page text. Thus, the section starts in the beginning of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The provided page text does not start with the section title \"Relative entropy and mutual information\". Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Relative entropy and mutual information.\" The provided page_text starts with \"1.6. Information Theory 57\" and continues with other text before any mention of \"Relative entropy and mutual information\". Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"78 2. PROBABILITY DISTRIBUTIONS\". The section title \"The Gaussian Distribution\" appears later in the page, but it\\'s not at the beginning of the text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"2.1. Binary Variables\". The current section title is \"The beta distribution\". Thus, the current section title does not appear in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Binary Variables\".\\nIn the given page_text, the first few lines are:\\n\"68 2. PROBABILITY DISTRIBUTIONS\\ndamentally ill-posed, because there are in\ufb01nitely many probability distributions that...\".\\nThen I found the line \"2.1. Binary Variables\".\\nSo the section \"Binary Variables\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Multinomial Variables\". Looking at the page_text, the section \"2.2. Multinomial Variables\" appears after some text. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Marginal Gaussian distributions\". The page text starts with \"88 2. PROBABILITY DISTRIBUTIONS 2.3.2 Marginal Gaussian distributions\". Thus, the section title appears at the beginning of the page text. Note that there can be some leading numbers and section numbers before the section title.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"The Dirichlet distribution\".\\nThe page text starts with \"76 2. PROBABILITY DISTRIBUTIONS\", which is not the same as the section title. So the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"90 2. PROBABILITY DISTRIBUTIONS\", and the section title is \"Bayes\u2019 theorem for Gaussian variables\". Therefore, the section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Maximum likelihood for the Gaussian\".\\nThe page_text starts with \"2.3. The Gaussian Distribution 93 Marginal and Conditional Gaussians\".\\nSo the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"2.3. The Gaussian Distribution 85 such complex distributions is that of probabilistic graphical models, which will form the subject of Chapter 8. 2.3.1 Conditional Gaussian distributions\".\\n\\nThe section title is \"Conditional Gaussian distributions\".\\n\\nTherefore, the section title approximately matches the beginning of the page_text, after removing \"2.3. The Gaussian Distribution 85 such complex distributions is that of probabilistic graphical models, which will form the subject of Chapter 8. 2.3.1 \".', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Sequential estimation\".\\nThe page text starts with \"94 2. PROBABILITY DISTRIBUTIONS\", which is not the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"2.3. The Gaussian Distribution 97\". The section title is \"Bayesian inference for the Gaussian\". Therefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"102 2. PROBABILITY DISTRIBUTIONS\". The section title is \"Student\u2019s t-distribution\". Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"The Exponential Family\".\\nThe page_text starts with \"2.4. The Exponential Family\".\\nTherefore, the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"116 2. PROBABILITY DISTRIBUTIONS\" which is not the section title. Therefore, the section \"Maximum likelihood and sufficient statistics\" does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Periodic variables\".\\nLooking at the page text, the first content is \"2.3. The Gaussian Distribution\".\\n\"Periodic variables\" appears later in the page_text. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Mixtures of Gaussians\".\\nIn the given page_text, the first few lines are about probability distributions and some data plots. Then it talks about alternative techniques for the construction of periodic distributions. It then introduces mixtures of von Mises distributions. After that, there is \"2.3.9 Mixtures of Gaussians\".\\nSo the section \"Mixtures of Gaussians\" appears in the page_text, but it does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Noninformative priors.\" Looking at the page_text, there are several lines of text before the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Conjugate priors\". Looking at the page text, there are other contents such as section number \"2.4.2\" before the section title \"Conjugate priors\". Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '120 2. PROBABILITY DISTRIBUTIONS' and then continues with other contents. The section title 'Nonparametric Methods' appears later in the page. So, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Nearest-neighbour methods\".\\nThe page text starts with \"124 2. PROBABILITY DISTRIBUTIONS\".\\nTherefore, the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Linear Models for Regression\" appears at the very beginning of the page text, after the page number. Ignoring the page number and any whitespace differences, it is the first content.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Kernel density estimators\". After removing the space inconsistency in the page_text, I found \"Kernel density estimators\" appears in the page_text. However, there are some other contents before the section title. So, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"Exercises 127\". The section title is \"Exercises\". After removing the page number, the section title matches the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"138 3. LINEAR MODELS FOR REGRESSION\". The section title is \"Linear Basis Function Models\". After \"3.1.\", the section title is given in the page_text. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Geometry of least squares' appears in the page_text, but it is not the first content in the page_text. There are other contents such as '3.1. Linear Basis Function Models 143' before the section title. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Maximum likelihood and least squares\".\\nI need to find if this title appears at the beginning of the page_text. After carefully reading the page_text, I can see that \"3.1.1 Maximum likelihood and least squares\" appears in the page_text, but it is not at the very beginning of the page_text. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Sequential learning\". The page text starts with \"3.1. Linear Basis Function Models\". Therefore, the current section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Regularized least squares\".\\nThe page_text starts with \"144 3. LINEAR MODELS FOR REGRESSION\".\\nTherefore, the section \"Regularized least squares\" does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Multiple outputs\" appears in the page_text, but it is not the first content of the page. There are other contents before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"3.2. The Bias-Variance Decomposition\", which is same as the given section title. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Parameter distribution\".\\nThe page_text starts with \"152 3. LINEAR MODELS FOR REGRESSION\".\\nTherefore, the section title is not the first content in the page_text.\\nSo, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Evaluation of the evidence function\" appears in the page_text, but it is not the first content in the page. There are other contents such as page number, section number, and other text before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"3.5. The Evidence Approximation\", which matches the section title. So the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"3.4. Bayesian Model Comparison 161\", which is the section title with some additional information. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Equivalent kernel\" appears in the page_text, but it is not the first content in the page_text. There are other contents such as \"3.3. Bayesian Linear Regression 159\" before the section title. So the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Bayesian Linear Regression\". Looking at the page text, there are contents such as page number, chapter number and title before the section title \"Bayesian Linear Regression\". Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Predictive distribution\" appears in the page text, but it is not the first content in the page. There are other contents such as page number, section number and other text before the section title. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Effective number of parameters\".\\nI can find \"Effective number of parameters\" in the page_text, but it is not at the beginning of the page_text. There are other contents before the section title. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The given page_text starts with '168 3. LINEAR MODELS FOR REGRESSION'. The section title is 'Maximizing the evidence function'. They are different. Therefore, the section does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title is 'Discriminant Functions'. In the page_text, the content starts with '4.1. Discriminant Functions'. Thus, the section starts at the beginning of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Limitations of Fixed Basis Functions\". The page_text starts with \"172 3. LINEAR MODELS FOR REGRESSION\", then there are figures and descriptions. After that, it has the section \"3.6. Limitations of Fixed Basis Functions\". Therefore, the section \"Limitations of Fixed Basis Functions\" does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Linear Models for Classi\ufb01cation\". The page text starts with \"4\\\\nLinear\\\\nModels for\\\\nClassi\ufb01cation\". After removing the leading page number and considering space inconsistencies, the section title matches the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Exercises\".\\nI need to check if the given page_text starts with \"Exercises\".\\nBased on the given page_text, it starts with \"Exercises 173\".\\nTherefore, the section \"Exercises\" appears at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"182 4. LINEAR MODELS FOR CLASSIFICATION\", and the section title is \"Multiple classes\". Therefore, the current section title does not appear in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Two classes\".\\nI need to check if this section title appears at the beginning of the page_text. The page_text starts with \"4.1. Discriminant Functions\".\\nTherefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"184 4. LINEAR MODELS FOR CLASSIFICATION\". After some paragraphs, it contains \"4.1.3 Least squares for classi\ufb01cation\". Therefore, the section \\'Least squares for classi\ufb01cation\\' does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with some text, followed by '4.1.4 Fisher\u2019s linear discriminant'. Therefore, the section 'Fisher\u2019s linear discriminant' does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with some content before the section title 'The perceptron algorithm'. Therefore, the section does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"196 4. LINEAR MODELS FOR CLASSIFICATION\", and the current section title is \"Probabilistic Generative Models\". Thus, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"4.1. Discriminant Functions 191 4.1.6 Fisher\u2019s discriminant for multiple classes\", so the section title \"Fisher\u2019s discriminant for multiple classes\" appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"4.1. Discriminant Functions 189\". The section title is \"Relation to least squares\". These two are different. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Continuous inputs\".\\nThe page_text starts with \"198 4. LINEAR MODELS FOR CLASSIFICATION\".\\nTherefore, the section \"Continuous inputs\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"202 4. LINEAR MODELS FOR CLASSIFICATION\". The section title is \"Discrete features\". Therefore, the section title is not the first content of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"200 4. LINEAR MODELS FOR CLASSIFICATION\", which is not the section title. The section title \"Maximum likelihood solution\" appears later in the text. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Probabilistic Discriminative Models\" appears in the page_text, but it is not at the very beginning of the page_text. The text \"4.3. Probabilistic Discriminative Models\" appears at the beginning, so a fuzzy match should include this.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Fixed basis functions\".\\nThe page text starts with \"204 4. LINEAR MODELS FOR CLASSIFICATION\".\\n\"Fixed basis functions\" appears later in the page_text, but not at the beginning.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"4.3. Probabilistic Discriminative Models 207 4.3.3 Iterative reweighted least squares\", so the section title \"Iterative reweighted least squares\" appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The given page_text starts with \"4.3. Probabilistic Discriminative Models 209 4.3.4 Multiclass logistic regression\". The section title is \"Multiclass logistic regression\". Thus, the section title appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"210 4. LINEAR MODELS FOR CLASSIFICATION\", whereas the section title is \"Probit regression\". Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"4.3. Probabilistic Discriminative Models 205\". The section title is \"Logistic regression\". I need to check if the page_text starts with the section title. The page text contains \"4.3.2 Logistic regression\". \"Logistic regression\" is a substring of the page_text, however, the page_text does not start with \"Logistic regression\". Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Exponential family\".\\nI need to find the given section title in the given page_text.\\nAfter finding the section title, I need to check if the section title is the first content in the given page_text.\\nIn this case, the section title \"Exponential family\" appears in the given page_text, but it does not start at the beginning of the page_text. There are other contents before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Canonical link functions\" appears in the page_text. However, there are other contents before this section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Bayesian Logistic Regression\". The page_text starts with \"4.5. Bayesian Logistic Regression\". After fuzzy matching, I think the current section starts at the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"4.4. The Laplace Approximation\", which is a close match to the section title \"The Laplace Approximation\". Therefore, the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Exercises' appears in the page_text, but it is not the first content in the page_text. There are other contents before it. So the section does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Model comparison and BIC\" appears in the page_text, and it is the first title-like content in the page_text. Therefore, I think the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Feed-forward Network Functions\" appears at the beginning of the page text, after removing spaces and numbers.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"4.5. Bayesian Logistic Regression 217\" and the section title is \"Laplace approximation\". Therefore, the section title \"Laplace approximation\" does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"5 Neural Networks\". The section title is \"Neural Networks\". Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Predictive distribution\" appears in the page_text. I need to check if it\\'s the first content in the page_text. Based on the given page_text, there are contents like \"218 4. LINEAR MODELS FOR CLASSIFICATION\" before the section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Weight-space symmetries\". The page_text starts with \"5.1. Feed-forward Network Functions\". Therefore, the section title does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"236 5. NEURAL NETWORKS\", which is not the section title \"Parameter optimization.\". Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Network Training\" appears in the page text, but it is not at the very beginning of the text. There are other characters and content before it. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.3. Error Backpropagation\", which is a fuzzy match to the section title \"Error Backpropagation\". Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"240 5. NEURAL NETWORKS\" and the section title is \"Gradient descent optimization\". After removing the space inconsistency in the page_text, I find that the section title \"Gradient descent optimization\" appears later in the page_text, not at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.2. Network Training 239\" and continues with other text before reaching \"5.2.3 Use of gradient information\". Therefore, the section \"Use of gradient information\" does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.2. Network Training 237\" and then goes on to discuss gradient descent and error functions. The section title is \"Local quadratic approximation\". Looking at the text, the section \"5.2.2 Local quadratic approximation\" appears in the page_text, but it is not the first content of the page_text. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Evaluation of error-function derivatives\".\\nIn the page_text, I can find the line \"5.3.1 Evaluation of error-function derivatives\".\\nBefore this line, there are some other contents such as \"242 5. NEURAL NETWORKS\" and some texts. So the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"The Jacobian matrix\".\\nIn the page_text, there are contents before \"The Jacobian matrix\".\\nTherefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.4. The Hessian Matrix\", which is a variation of the section title \"The Hessian Matrix\". Therefore, the current section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Efficiency of backpropagation\".\\nThe page text starts with \"246 5. NEURAL NETWORKS\".\\nThen \"5.3.3 Ef\ufb01ciency of backpropagation\" appears in the page_text, but there are other contents before it.\\nSo the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The given page_text starts with \"5.3. Error Backpropagation 245\".\\nThe section title is \"A simple example\".\\nI need to perform a fuzzy match to check if \"A simple example\" appears at the beginning of the page_text.\\nSince the page_text starts with \"5.3. Error Backpropagation 245\", the section title \"A simple example\" does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Outer product approximation\". The page text starts with \"5.4. The Hessian Matrix 251 5.4.2 Outer product approximation\". Therefore, the section \"Outer product approximation\" appears in the page_text, but it does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Diagonal approximation\". After removing space inconsistency, the page_text starts with \"250 5. NEURAL NETWORKS\". Therefore, the section \"Diagonal approximation\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"252 5. NEURAL NETWORKS 5.4.3 Inverse Hessian\", which means that \"Inverse Hessian\" appears at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"252 5. NEURAL NETWORKS\". The section title is \"Finite differences\". Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Fast multiplication by the Hessian\". Looking at the page_text, it starts with a number of lines unrelated to the section title. Then, the line \"5.4.6 Fast multiplication by the Hessian\" appears. Therefore, the section starts within the page_text, but not at the very beginning.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Consistent Gaussian priors\".\\nThe page text starts with \"5.5. Regularization in Neural Networks\".\\nTherefore, the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The given section title is \"Regularization in Neural Networks\".\\nThe page_text starts with \"256 5. NEURAL NETWORKS\".\\nThen the section title \"Regularization in Neural Networks\" appears after some texts.\\nSo the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Exact evaluation of the Hessian\".\\nI need to check if the page_text starts with this section title.\\nBy performing fuzzy matching and ignoring space inconsistency, I can see that \"5.4.5 Exact evaluation of the Hessian\" is in the page_text, but it is not at the beginning of the page_text. There are contents before the section title. Thus the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"5.5. Regularization in Neural Networks\", and the section title is \"Early stopping\". So the current section title does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.5. Regularization in Neural Networks 261\", and the section title is \"Invariances\". Therefore the section \"Invariances\" does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Training with transformed data.\".\\n\\nIn the given page_text, the first line is \"5.5. Regularization in Neural Networks 265\".\\n\\nTherefore, the section title \"Training with transformed data.\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '5.5. Regularization in Neural Networks 263'. The section title is 'Tangent propagation'. These are different, so the section does not start at the beginning of the page text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.5. Regularization in Neural Networks\", and the section title is \"Convolutional networks\". Therefore, the current section title does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Soft weight sharing\" appears in the page_text, but it is not the first content in the page_text. There are other contents like \"5.5. Regularization in Neural Networks 269\" before the section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"272 5. NEURAL NETWORKS\", and the section title is \"Mixture Density Networks\". Therefore, the current section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"5.7. Bayesian Neural Networks\" which is the section title, after fuzzy matching, ignoring space inconsistency.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"280 5. NEURAL NETWORKS\" and some equations. The section title \"Hyperparameter optimization\" appears later in the text, after some other content. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"6 Kernel Methods\", so the section \"Kernel Methods\" appears at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '284 5. NEURAL NETWORKS' and after some paragraphs, 'Exercises' section is present. Thus, the current section does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Posterior parameter distribution' appears in the page text, but it is not the first content of the page text. There are contents such as '278 5. NEURAL NETWORKS' before the section title. Therefore, the section does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Dual Representations\". The page_text starts with \"6.1. Dual Representations\". Therefore, the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Radial Basis Function Networks\".\\nThe page text starts with \"6.3. Radial Basis Function Networks\".\\nTherefore, the section title appears at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"294 6. KERNEL METHODS\". The section title is \"Constructing Kernels\". The section title \"Constructing Kernels\" appears after some text, so the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"6.4. Gaussian Processes\". The given section title is \"Gaussian Processes\". Therefore, the section title appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"5.7. Bayesian Neural Networks 281\", and the section title is \"Bayesian neural networks for classification\". It seems the beginning of the page_text does not exactly match the section title. However, I need to check whether the section title appears at the beginning of the page_text with some fuzzy matching.\\n\\nAfter checking the provided text, the section title \"5.7.3 Bayesian neural networks for classi\ufb01cation\" appears later in the text, but it doesn\\'t start at the beginning of the page text. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"306 6. KERNEL METHODS\".\\nThe section title is \"Gaussian processes for regression\".\\nTherefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Linear regression revisited\".\\nI need to check if the given page_text starts with this section title. The page_text starts with \"304 6. KERNEL METHODS\". Thus, the section title is not the first content in the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Nadaraya-Watson model\". Looking at the page_text, it starts with \"6.3. Radial Basis Function Networks\", and the subsection 6.3.1 is \"Nadaraya-Watson model\". There are other contents such as \"6.3. Radial Basis Function Networks\" before \"Nadaraya-Watson model\". Thus, the section \"Nadaraya-Watson model\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Automatic relevance determination' appears in the page_text, but it is not the first content in the page_text. There are other contents before the section title. Therefore, the section does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Learning the hyperparameters.\" I need to check if this title appears at the beginning of the page text. After removing the space inconsistency, I found \"Learning the hyperparameters\" appears in the page_text, but it is not at the beginning of the page_text. There are other contents before that.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"6.4. Gaussian Processes 315\", and the section title is \"Laplace approximation\". Thus, the section title is not the first content of the page_text. So the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Gaussian processes for classification\" appears in the page text, but it is not the first content of the page. There is some text before this title, such as the figure description and other contents related to ARD. Thus, the section does not start in the beginning of the page.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '7' and some spaces and newlines, followed by the section title 'Sparse Kernel Machines'. Therefore, the section title appears in the beginning of the page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '6.4. Gaussian Processes 319', and the section title is 'Connection to neural networks.'. Therefore, the section title does not start at the beginning of the page text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"320 6. KERNEL METHODS\". The section title \"Exercises\" appears later in the page text, after some other text. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Multiclass SVMs\". The page_text starts with \"338 7. SPARSE KERNEL MACHINES\". So the section title is not the first content in the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"7.1. Maximum Margin Classi\ufb01ers 331\", and the section title is \"Overlapping class distributions\". After \"7.1.\", there is \"1\" which makes \"Overlapping class distributions\" a subsection of section 7.1. Thus, the section should appear in this page, but it does not start in the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"336 7. SPARSE KERNEL MACHINES\". The section title is \"Relation to logistic regression\". These are different, so the section title does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"326 7. SPARSE KERNEL MACHINES\" and the section title is \"Maximum Margin Classi\ufb01ers\". The section title appears later in the page_text. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Relevance Vector Machines\".\\nThe page text starts with \"7.2. Relevance Vector Machines\".\\nThus, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The given section title is \"SVMs for regression\".\\nThe given page_text starts with \"7.1. Maximum Margin Classi\ufb01ers 339\".\\nTherefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"7.2. Relevance Vector Machines\". The given section title is \"RVM for regression\". After \"7.2. Relevance Vector Machines\", the text proceeds to mention the regression form of RVM and then starts \"7.2.1 RVM for regression\". Therefore, the section RVM for regression starts in the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Analysis of sparsity\" appears in the page text, but it is not at the beginning of the page text. There are other contents before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '8 Graphical Models', which is very close to the section title 'Graphical Models'. Ignoring the leading number and space inconsistency, the section title appears at the beginning of the page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Computational learning theory\".\\n\\nI need to check if this section title appears at the beginning of the given page_text.\\n\\nBy comparing the section title with the page_text, I found \"Computational learning theory\" appears in the page_text, but it is not the first content in the page_text. There are other contents such as \"344 7. SPARSE KERNEL MACHINES\" before the section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"7.2. Relevance Vector Machines 353\", while the section title is \"RVM for classi\ufb01cation\". The section title is a subsection of \"Relevance Vector Machines\". Therefore, the section title does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Exercises\" appears at the beginning of the page_text, with only a number before it. Ignoring the space and number, the section title is the first content. Thus the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Generative models\" appears in the page text, but there is content before it (e.g., \"8.1. Bayesian Networks 365\", \"Figure 8.7 The polynomial regression model...\"). Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"370 8. GRAPHICAL MODELS 8.1.4 Linear-Gaussian models\". The section title is \"Linear-Gaussian models\". So the section title appears in the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Discrete variables\" appears in the page_text, but it is not at the beginning of the page_text. There are other contents such as page number and other text before the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Example: Polynomial regression\".\\nThe page_text starts with \"362 8. GRAPHICAL MODELS\".\\nTherefore, the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Bayesian Networks\".\\nIn the given page_text, there are other contents such as \"360 8. GRAPHICAL MODELS\" before \"Bayesian Networks\".\\nTherefore, the section \"Bayesian Networks\" does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Three example graphs.\". The page text starts with \"8.2. Conditional Independence 373\". Therefore, the section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Conditional independence properties.\". The page_text starts with \"8.3. Markov Random Fields\". Therefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"D-separation\". The page_text starts with \"378 8. GRAPHICAL MODELS\". Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"372 8. GRAPHICAL MODELS\". The section title is \"Conditional Independence\". These two strings are different. Therefore, the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"8.3. Markov Random Fields 383\". The given section title is \"Markov Random Fields\". Therefore, after removing the digit and space inconsistency, the section title is the first content in the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"398 8. GRAPHICAL MODELS\". The section title is \"Trees\". These two are different. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"384 8. GRAPHICAL MODELS\", and the section title is \"Factorization properties\". These are different, so the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Inference in Graphical Models\". The page text starts with \"8.4. Inference in Graphical Models\". After ignoring the numbering and space inconsistency, the section title is the first content of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Relation to directed graphs.\".\\nThe page_text starts with \"390 8. GRAPHICAL MODELS\".\\nTherefore, the current section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"394 8. GRAPHICAL MODELS\". The section title is \"Inference on a chain.\". Therefore the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"8.3. Markov Random Fields 387\". The section title is \"Illustration: Image de-noising\". These two strings are different. Therefore, the section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"8.4. Inference in Graphical Models 417...\" and the section title is \"Loopy belief propagation\". The section title does not appear at the beginning of the page_text. There are other contents before the section title. Thus, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Factor graphs.\", and the page_text starts with \"8.4.3 Factor graphs\". Therefore, the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"8.4. Inference in Graphical Models 411\". The section title is \"The max-sum algorithm.\". Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"416 8. GRAPHICAL MODELS 8.4.6 Exact inference in general graphs\", which means that the section title \"Exact inference in general graphs\" appears at the beginning of the page text, after some leading numbers and titles.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"The sum-product algorithm\". Looking at the page_text, the text starts with \"402 8. GRAPHICAL MODELS...\". The section \"The sum-product algorithm\" appears later in the text, but it\\'s not at the beginning. Therefore, the current section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"418 8. GRAPHICAL MODELS\", followed by some text, and then contains \"8.4.8 Learning the graph structure\". Therefore, the given section title \"Learning the graph structure\" does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Mixture Models and EM\". The page text starts with \"9 Mixture Models and EM\". After removing the leading \"9 \" and ignoring the space inconsistency, the page text starts with the section title. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"K-means Clustering\". In the page text, after some irrelevant contents, I found \"9.1.K-means Clustering\". So the section title appears in the page_text, but it does not appear in the beginning of the page_text. There are other contents before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"428 9. MIXTURE MODELS AND EM\", which is not the given section title \"Image segmentation and compression\". After some text, the section title appears. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"418 8. GRAPHICAL MODELS\" and includes additional text before reaching \"Exercise 8.29\". Finally, the section \"Exercises\" appears in the page_text, but it is not the first content in the page_text. Therefore, the section does not start at the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Maximum likelihood.\". The page text starts with \"432 9. MIXTURE MODELS AND EM\". Therefore, the given section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '9.3. An Alternative View of EM' which is not the same as 'Gaussian mixtures revisited'. Therefore, the section 'Gaussian mixtures revisited' does not start at the beginning of the page text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Mixtures of Gaussians\" appears in the page_text, but it is not the first content in the page_text. There are contents such as page number and other text before the section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"An Alternative View of EM\".\\nThe page_text starts with \"9.3. An Alternative View of EM\".\\nTherefore, the section title appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Relation to K-means\".\\nThe page_text starts with \"9.3. An Alternative View of EM 443\".\\nThus, the section \"Relation to K-means\" does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"Exercises\", which is the section title. So the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"EM for Bayesian linear regression\".\\nI need to check if the given page_text starts with this section title. By reading the page text, I see that \"9.3.4 EM for Bayesian linear regression\" is present, but there are other contents (page number, other text) before that. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with a page number and other contents, then it introduces \"Mixtures of Bernoulli distributions\" in section 9.3.3. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"EM for Gaussian mixtures\".\\nI will do a fuzzy matching to find the section title in the page_text.\\nI found \"EM for Gaussian mixtures\" in the page_text, but there are other contents before it, such as \"9.2.2\".\\nSo the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"The EM Algorithm in General.\".\\nIn the page text, the title \"The EM Algorithm in General\" appears after some other text. Therefore, this section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Approximate Inference\".\\nThe page text starts with \"10\\\\nApproximate\\\\nInference\".\\nTherefore, the section title \"Approximate Inference\" appears at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"466 10. APPROXIMATE INFERENCE\", which is not the given section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Exercises\" appears at the beginning of the provided page_text. Although there are some contents before \"Exercises\", the contents are not part of other sections. The page_text is also not empty, and it is not solely composed of spaces. Therefore, the section \"Exercises\" starts at the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Example: The univariate Gaussian\".\\nAfter removing space inconsistency, the page_text starts with \"470 10. APPROXIMATE INFERENCE\".\\nTherefore, the section title is not the first content in the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"462 10. APPROXIMATE INFERENCE\", and the section title is \"Variational Inference\". After some text, \"10.1. Variational Inference\" appears. So the section title doesn\\'t appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Factorized distributions.\". In the page text, after some unrelated contents, there is a section \"10.1.1 Factorized distributions\". So the given section title is in the page_text, but it doesn\\'t start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Model comparison\" appears in the page_text, but it is not the first content in the page_text. There are other contents such as page number and other section title before it. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Variational distribution\" appears in the page text, but there are other contents before it. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Predictive density.\". I need to check if \"Predictive density\" appears at the beginning of the page_text. I need to ignore any space inconsistency. The page text starts with \"482 10. APPROXIMATE INFERENCE\". Therefore, the section \"Predictive density.\" does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"474 10. APPROXIMATE INFERENCE\", and the section title is \"Illustration: Variational Mixture of Gaussians\". After \"10.2.\", the section title appears. Thus, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"488 10. APPROXIMATE INFERENCE\" and the section title is \"Predictive distribution\". Therefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Determining the number of components\" appears in the page_text, but it is not at the beginning of the page_text. There are other contents before the section title. Therefore, the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Induced factorizations\" appears in the page text. The text before the section title is \"10.2.5 \". So the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"486 10. APPROXIMATE INFERENCE\" and the section title is \"Variational distribution\". These are different, therefore the section title does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"10.3. Variational Linear Regression 489\", then a few lines of text, and then the section title \"10.3.3 Lower bound\". Therefore, the section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"10.4. Exponential Family Distributions\", and the section title is \"Variational message passing\". They are different. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Exponential Family Distributions\".\\nThe page_text starts with \"490 10. APPROXIMATE INFERENCE...\".\\nTherefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Local Variational Methods' appears at the beginning of the page text, with only a page number and section number appearing before it. Ignoring the space inconsistency, it is safe to say that the current section starts in the beginning of the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Variational Linear Regression\". I will use fuzzy matching to check if the current section title appears at the beginning of the given page text. After checking, I found that \"10.3. Variational Linear Regression\" appears in the page_text, but it is not the first content in the page_text. There are other contents such as \"486 10. APPROXIMATE INFERENCE\" before the section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Variational lower bound\".\\nIn the given page_text, the first few lines are:\\n\"10.2. Illustration: Variational Mixture of Gaussians 481\\nIndeed, these singularities are removed if we simply introduce a prior and then use a\\nMAP estimate instead of maximum likelihood. Furthermore, there is no over-\ufb01ttingif we choose a large number Kof components in the mixture, as we saw in Fig-\\nure 10.6. Finally, the variational treatment opens up the possibility of determining\\nthe optimal number of components in the mixture without resorting to techniquessuch as cross validation. Section 10.2.4\\n10.2.2 Variational lower bound\"\\nSince the section title \"Variational lower bound\" appears after other contents, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"498 10. APPROXIMATE INFERENCE\".\\nThe section title is \"Variational posterior distribution.\"\\nBecause the page text doesn\\'t start with the section title, the section doesn\\'t start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Optimizing the variational parameters\" appears in the page text, but it is not at the very beginning of the text. There are other lines and section titles before it.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Variational Logistic Regression\".\\nI need to check if the page_text starts with this section title. After carefully examining the provided page_text, I can see that the section \"10.6. Variational Logistic Regression\" appears in the page_text, but not at the beginning. There are other contents before this section. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"10.7. Expectation Propagation\". After removing space inconsistency, the given section title matches the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Inference of hyperparameters.\" The given page_text starts with \"502 10. APPROXIMATE INFERENCE\", which is not the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Exercises\".\\nThe page text starts with \"Exercises 517\", so the current section does start in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"11 Sampling Methods\". So the section title \"Sampling Methods\" starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"10.7. Expectation Propagation 511\", while the section title is \"Example: The clutter problem\". The section title appears later in the page after some contents. Thus, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"526 11. SAMPLING METHODS\", which is not the section title. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Expectation propagation on graphs\".\\nIn the page_text, I can find \"10.7.2 Expectation propagation on graphs\".\\nThere are contents before \"10.7.2 Expectation propagation on graphs\". So, the section title does not appear in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"532 11. SAMPLING METHODS\". The section title is \"Importance sampling\". Therefore, the section title is not the first content of the page text. Importance sampling appears later in the page_text, but not at the very beginning.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Adaptive rejection sampling.\". The page_text starts with \"530 11. SAMPLING METHODS\". Even after ignoring space inconsistency, the section title is not the first content in the page_text. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Rejection sampling\".\\nIn the page text, the first few lines are about other topics. Then it introduces the two techniques: rejection sampling and importance sampling. The section 11.1.2 is \"Rejection sampling\". So the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"536 11. SAMPLING METHODS\". The given section title is \"Sampling and the EM algorithm\". Therefore, the section title does not appear in the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The given page_text starts with \"11.2. Markov Chain Monte Carlo 541\", and the section title is \"The Metropolis-Hastings algorithm\". The section title does not match the beginning of the page_text. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Sampling-importance-resampling\" appears in the page text, but it is not the first content in the page text. There are other contents before the section title. Therefore, the section does not start in the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Standard distributions.\".\\nI need to find the section title in the page_text and check if it appears at the beginning of the page_text.\\nBased on the page_text, \"11.1.1 Standard distributions\" appears in the page_text, but it is not at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"11.2. Markov Chain Monte Carlo\". The section title is \"Markov chains\". Although the page text contains the words \"Markov Chain Monte Carlo\", it is not exactly the same as \"Markov chains\". Also, there are contents before the section title. Therefore, the section title does not appear at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"542 11. SAMPLING METHODS\". The section title is \"Gibbs Sampling\". Thus, the section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Slice Sampling' appears in the page text, but there are other contents before the section title. Therefore, the section does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Markov Chain Monte Carlo\". The page_text starts with \"11.2. Markov Chain Monte Carlo 537\". After removing the \"11.2.\" and \"537\" and any space inconsistency, the page_text starts with \"Markov Chain Monte Carlo\". Therefore, the current section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"552 11. SAMPLING METHODS\\\\n11.5.2 Hybrid Monte Carlo\". While there are some leading numbers and spaces, the section title \"Hybrid Monte Carlo\" appears relatively early in the page text. However, the full section title is \"11.5.2 Hybrid Monte Carlo\", so it does not start at the beginning of the page.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Dynamical systems\" appears in the page_text. However, the page_text starts with \"548 11. SAMPLING METHODS\" and other contents. Thus, the section \"Dynamical systems\" does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Estimating the Partition Function\". Looking at the page text, the line \"11.6. Estimating the Partition Function\" appears after some other text. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"556 11. SAMPLING METHODS\". The section title \"Exercises\" appears right after that with one newline character separating them. Therefore, the section title \"Exercises\" appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"548 11. SAMPLING METHODS\", the section title is \"The Hybrid Monte Carlo Algorithm\". After ignoring the space inconsistency, I can see that \"11.5. The Hybrid Monte Carlo Algorithm\" appears in the page_text, but it is not in the beginning of the page_text. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Continuous Latent Variables\". The page text starts with \"Appendix AInChapter9,wediscussed probabilistic modelshavingdiscretelatentvariables\". The section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"Exercise 12.1\". The section title is \"Minimum-error formulation\".\\nAfter fuzzy matching, I find that the section title \"Minimum-error formulation\" appears later in the page_text, but it doesn\\'t start at the beginning. There are other contents before it.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Principal Component Analysis\".\\nIn the given page_text, there are contents such as \"12.1.Principal C01n[>OM\"1 AnalJsis 561\" before the section title. So the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Maximum variance formulation\". After ignoring the space inconsistency, I can find \"Mllximllm variance lormulation\" in the page_text. However, there are contents before \"Mllximllm variance lormulation\". Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Maximum likelihood PCA\" appears in the page text, but it is not at the very beginning of the page_text. There are other contents such as page number and other text before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Probabilistic PCA\". I need to find this title in the given page_text and check if it is the first content in the page_text. From the given page_text, I can see that there are other contents before the section title \"Probabilistic peA\". Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Applications of PCA\". The page text starts with \"12.1.Principal Component Analysis 565...\", which is not \"Applications of PCA\". Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with some special characters and then a figure caption. The section title \"Bayesian PCA\" appears later in the text. Thus, the current section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"EM algorithm for PCA\". I need to check if this section title appears at the very beginning of the provided page text. After inspecting the page text, it is clear that the section title \"12.2.2EMalgorithm forpeA\" appears after some content, and also contains some differences compared to the provided section title. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"PCA for high-dimensional data.\" I will perform a fuzzy search for this title within the page_text. The section title appears after some other content (page numbers, titles, and figures descriptions). Thus, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"Section4.4 Section3.5.312.2.Probabilistic peA 583\". The section title \"Factor analysis\" appears later in the text. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Kernel PCA\".\\nThe page text starts with \"586 12.CONTINUOUS LATENT VARIABLES\", which is not the same as the section title. Therefore, the section does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"592 12.CONTINUOUS LATENT VARIABLES\". Therefore, the section title \"Autoassociative neural networks\" does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Nonlinear Latent Variable Models\" appears at the beginning of the provided page text, although with slight variations in spacing and the presence of a section number (12.4.). The presence of \"12.4.Nonlinear LatentVariable Models\" at the very beginning indicates that the section likely starts at the beginning of the page.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Independent component analysis\" appears in the page text, but it is not the first content in the page. There are other contents, like page number and other section title, before it. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Modelling nonlinear manifolds\" appears in the page text. However, it is not at the very beginning of the text. There are other content before the section title, for example, \"12.4.Nonlinear LatentVariable Models 595\".', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '13\\\\nSequential\\\\nData'. The section title is 'Sequential Data'. Therefore, the current section starts in the beginning of the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Scaling factors\" appears in the page text, but it is not at the very beginning. There are other contents before the section title.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Markov Models\" appears in the page text, but it is preceded by \"13.1.\". Therefore, the section \"Markov Models\" does not start at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"The forward-backward algorithm.\". In the given page_text, the title \"13.2.2 The forward-backward algorithm\" appears after some text contents. Therefore, the current section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"13.2. Hidden Markov Models\" while the section title is \"Maximum likelihood for the HMM\". The section title appears later in the page text under section 13.2.1, which means that the section does not start at the beginning of the given page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"13.2. Hidden Markov Models 625\". The section title is \"The sum-product algorithm for the HMM.\". \"The sum-product algorithm for the HMM.\" appears after \"13.2. Hidden Markov Models 625\". Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"13.2. Hidden Markov Models 629\". Then it continues with other contents. The section title \"The Viterbi algorithm\" appears later in the page_text, but not at the beginning. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Hidden Markov Models\".\\nI need to check if the section title \"Hidden Markov Models\" appears at the beginning of the page text.\\nAfter carefully reading the page_text, I can see that the section title \"Hidden Markov Models\" appears in the middle of the page_text, not at the beginning.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Linear Dynamical Systems\".\\nThe page text starts with \"13.3. Linear Dynamical Systems 635\", which is a fuzzy match to the section title. Thus, the section title starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Extensions of LDS\" appears in the provided page_text, but it is not the first content. There are other contents before the section title. Therefore, the current section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Extensions of the hidden Markov model\".\\nIn the given page_text, the line \"13.2.6 Extensions of the hidden Markov model\" appears. Considering the possible space inconsistency, I think the current section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"642 13. SEQUENTIAL DATA 13.3.2 Learning in LDS\", which contains the section title \"Learning in LDS\". Thus, the section title appears at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"638 13. SEQUENTIAL DATA 13.3.1 Inference in LDS\". After removing the leading number, the title of the section \"Inference in LDS\" appears at the beginning of the page text. Therefore, the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '13.3. Linear Dynamical Systems 645\\n13.3.4 Particle \ufb01lters', which indicates that 'Particle filters' is a subsection of 13.3. Therefore, the section 'Particle filters' does not start at the beginning of the page_text. There are other contents before the section title.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"14\\\\nCombining\\\\nModels\". The section title is \"Combining Models\". After removing \"14\\\\n\" and ignoring the newline characters, the page text starts with the section title. Therefore, the current section starts at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"646 13. SEQUENTIAL DATA\", and the section title is \"Exercises\". Thus, the section title is not the first content in the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Bayesian Model Averaging\".\\n\\nI need to check if the current section starts in the beginning of the given page_text.\\n\\nBy observing the page_text, I can see that it starts with \"654 14. COMBINING MODELS\" which is not \"Bayesian Model Averaging\".\\n\\nTherefore, the current section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '666 14. COMBINING MODELS' which is not the same as 'Conditional Mixture Models'. Therefore, the section 'Conditional Mixture Models' does not start in the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Committees\" appears in the page_text, but it is not the first content. There is some text before \"Committees\". Also, there are numbers and other section titles (14.2) appearing before \"Committees\". Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"14.4. Tree-based Models 663\". After fuzzy matching and ignoring the \"663\", \"14.4. Tree-based Models\" is considered the section title. Therefore, the section appears or starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Error functions for boosting\".\\nLooking at the page_text, the first few words are \"14.3. Boosting\".\\nTherefore, the current section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"14.3. Boosting\". After removing space inconsistency, the section title \"Boosting\" appears at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"672 14. COMBINING MODELS\". The section title is \"Mixtures of experts\". They are obviously different. So the section title does not appear at the beginning of the page text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Minimizing exponential error.\" Looking at the page_text, the text starts with \"14.3. Boosting 659\", not the section title. Also, there are some contents before the target section title. Therefore, the current section does not start at the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Mixtures of logistic models\".\\nThe page text starts with \"670 14. COMBINING MODELS...\", which doesn\\'t match the section title.\\nTherefore, the section does not start in the beginning of the page_text, even considering space inconsistencies.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"Appendix B. Probability Distributions\" which is exactly the section title. Therefore, the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"B. PROBABILITY DISTRIBUTIONS\" which is the section title. There are no characters before the section title, so the section starts in the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"674 14. COMBINING MODELS\". The section title \"Exercises\" appears later in the page. Thus, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'Appendix A. Data Sets.' appears at the very beginning of the page text, with no leading characters or sentences.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"B. PROBABILITY DISTRIBUTIONS\", which is exactly the given section title. Therefore, the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The section title 'B. PROBABILITY DISTRIBUTIONS' appears at the very beginning of the page text, with some space inconsistency, but that is fine according to the prompt. Therefore, the section starts at the beginning of the page text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"688 B. PROBABILITY DISTRIBUTIONS\". Ignoring the page number 688 and space inconsistency, the current section title \"B. PROBABILITY DISTRIBUTIONS\" appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '690 B. PROBABILITY DISTRIBUTIONS' which matches the section title 'B. PROBABILITY DISTRIBUTIONS' after removing the page number.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"Mixtures of linear regression models.\"\\n\\nLooking at the text, the beginning part is \"14.5. Conditional Mixture Models 667logistic regression models (Section 14.5.2). In the simplest case, the mixing coef\ufb01-cients are independent of the input variables. If we make a further generalization toallow the mixing coef\ufb01cients also to depend on the inputs then we obtain a mixtureof experts model. Finally, if we allow each component in the mixture model to beitself a mixture of experts model, then we obtain a hierarchical mixture of experts.14.5.1 Mixtures of linear regression models\".\\n\\nSo, the title \"Mixtures of linear regression models\" appears in the page_text, but it is not at the beginning of the page_text. Therefore, the section does not start at the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"B. PROBABILITY DISTRIBUTIONS\", which is exactly the section title. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"B. PROBABILITY DISTRIBUTIONS\", which is the given section title. Therefore, the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"Appendix C. Properties of Matrices\" appears at the very beginning of the provided page_text. Even with potential space inconsistencies accounted for through fuzzy matching, it is clear that the section starts right at the beginning of the text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"692 B. PROBABILITY DISTRIBUTIONS\", which is very similar to the section title \"B. PROBABILITY DISTRIBUTIONS.\". Ignoring the leading page number and performing fuzzy matching, it is highly likely that the section starts in the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"C. PROPERTIES OF MATRICES 701\", which is very close to the section title \"C. PROPERTIES OF MATRICES.\". Ignoring the space inconsistency and the trailing page number, the section title is indeed the first content in the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"696 C. PROPERTIES OF MATRICES\". Ignoring the leading page number \"696\", the rest of the string is \"C. PROPERTIES OF MATRICES\", which exactly matches the section title. Therefore, the section title starts at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with 'Appendix D. Calculus of Variations' which is the given section title. Therefore, the section starts in the beginning of the page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"C. PROPERTIES OF MATRICES\", which is the given section title. Therefore, the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"C. PROPERTIES OF MATRICES\" appears at the beginning of the provided page text, with only a possible space inconsistency. Thus, the section starts at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"C. PROPERTIES OF MATRICES 697\", which matches the section title \"C. PROPERTIES OF MATRICES\" except for the page number at the end, so the section title is the first content in the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"698 C. PROPERTIES OF MATRICES\", so the section title \\'C. PROPERTIES OF MATRICES\\' appears at the beginning of the page text. Even though there is \\'698\\' before the section title, it can be ignored by fuzzy matching.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"D. CALCULUS OF VARIATIONS\" appears at the beginning of the page text after the page number \"704\". Even though there is a page number, the section title is still the first meaningful content on the page. Also, ignoring space inconsistency, the section titles are matched.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"D. CALCULUS OF VARIATIONS\" appears at the very beginning of the page text, even with the extra space in \"V ARIATIONS\". Therefore, the section starts at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"Appendix E. Lagrange Multipliers\" which is exactly the section title. Therefore, the section starts in the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"710 E. LAGRANGE MULTIPLIERS\", which, after removing the page number \"710\", is \"E. LAGRANGE MULTIPLIERS\". This exactly matches the section title.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"E. LAGRANGE MULTIPLIERS\" appears exactly at the beginning of the given page_text. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"REFERENCES\" appears at the very beginning of the page_text, even though there are some other characters before it (e.g., \"REFERENCES 711\"). Therefore, the section starts at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"REFERENCES 717\", which is the section title \"REFERENCES\" followed by other characters. Therefore, the section title appears at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"708 E. LAGRANGE MULTIPLIERS\", which is a fuzzy match to the section title \"E. LAGRANGE MULTIPLIERS.\" The number 708 can be seen as page number, thus \"E. LAGRANGE MULTIPLIERS\" is the first content in the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"718 REFERENCES\", which is a number followed by the section title. Therefore, the section title almost appears at the beginning of the page text, with only a number preceding it. Ignoring space inconsistency and the number, it is safe to say that the section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"REFERENCES\" followed by some numbers and then actual content. Thus, the section title appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"REFERENCES\" followed by some numbers and spaces. Therefore, the section title \"REFERENCES\" appears at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"REFERENCES 721\", which is the section title followed by some other content. Therefore, the section title is the first content in the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"722 REFERENCES\" while the section title is \"REFERENCES\". There are characters before the section title. Therefore, the section does not start in the beginning of the page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"REFERENCES 725\". After removing the space, it matches the given section title \"REFERENCES\". Therefore, the section title starts at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"720 REFERENCES\", while the section title is \"REFERENCES\". After removing the leading number \"720\" in the page_text, the section title is the first content in the page_text. Therefore, the section starts in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"REFERENCES 727\". After removing the space, it matches the given section title, \"REFERENCES\". Therefore, the section starts in the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is \"REFERENCES\". The page text starts with \"724 REFERENCES\". After removing the leading \"724 \" from the page_text, the remaining string matches the section title. Therefore, the section appears at the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"726 REFERENCES\", so the section title \"REFERENCES\" appears at the beginning of the page_text, after some characters (726 and a space).', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"728 REFERENCES\", so the section title \"REFERENCES\" does not start at the beginning of the page text. There is \"728\" before \"REFERENCES\".', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page_text starts with \"732 INDEX\", which means that \"INDEX\" is not the first content in the page_text. Therefore, the current section does not start in the beginning of the given page_text.', 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with '730 INDEX', which means that there are other characters before the section title 'INDEX'. Therefore, the section 'INDEX' does not start at the beginning of the page_text.\", 'start_begin': 'no'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"INDEX\" appears at the very beginning of the page text. There are no other characters or content before it.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page_text starts with the section title 'INDEX' followed by other contents. Therefore, the current section starts in the beginning of the given page_text.\", 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"INDEX\" appears at the beginning of the page text, with only a page number and the word \"Index\" preceding it. Ignoring the space inconsistency, I consider that the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"734 INDEX\". After removing the leading page number \"734 \", the remaining text starts with \"INDEX\". So the section title \"INDEX\" appears in the beginning of the page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title \"INDEX\" appears at the very beginning of the page text. There are no other characters or words before it. Therefore, the section starts at the beginning of the page text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The page text starts with \"INDEX 737\", which is very close to the section title \"INDEX\". Ignoring the space and the number, it\\'s likely that the section starts at the beginning of the page.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': 'The section title is INDEX. The page text starts with \"736 INDEX\". After removing the page number \"736 \" at the beginning of the page_text, the page_text starts with the section title. Therefore, the current section starts in the beginning of the given page_text.', 'start_begin': 'yes'}"
+  },
+  {
+    "message": "Response: {'thinking': \"The page text starts with '738 INDEX'. Although there is a number before 'INDEX', it is likely a page number and does not prevent the section from starting at the beginning of the page.\", 'start_begin': 'yes'}"
+  }
+]

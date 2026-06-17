@@ -1,0 +1,89 @@
+{
+  "doc_name": "Untitled",
+  "structure": [
+    {
+      "title": "Preface",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 4,
+      "summary": "This is the 110th Annual Report of the Board of Governors of the Federal Reserve System for 2023. The report covers several key areas: an overview of the Federal Reserve, monetary policy and economic developments (summarizing meetings from March and June 2023), financial stability (including monitoring vulnerabilities and international cooperation), supervision and regulation of financial institutions, payment systems and Federal Reserve Bank oversight (including financial statements for priced services), consumer and community affairs (covering compliance, regulations, research, and community development). The report also includes appendixes detailing the Federal Reserve System organization, minutes of Federal Open Market Committee meetings, Federal Reserve System audits, budgets, policy actions of the Board of Governors, litigation, and statistical tables.\n"
+    },
+    {
+      "title": "About the F ederal Reser ve",
+      "node_id": "0001",
+      "start_index": 5,
+      "end_index": 6,
+      "summary": "This document provides a brief overview of the Federal Reserve, including its creation by Congress on December 23, 1913, and its purpose to provide a safer, more flexible, and stable monetary and financial system. It also mentions the division of the US into 12 districts, each with a Reserve Bank. It provides links to the Federal Reserve Board website and annual reports for more information.\n"
+    },
+    {
+      "title": "Overview",
+      "node_id": "0002",
+      "start_index": 7,
+      "end_index": 8,
+      "summary": "This report covers the Federal Reserve's operations and activities for 2023, categorized into five key functional areas: monetary policy and economic monitoring, financial system stability, supervision and regulation of financial institutions, payment and settlement system safety and efficiency, and consumer protection and community development. It also includes appendices with information on Federal Reserve leadership, FOMC meeting minutes, financial statements, budgets, policy actions, litigation, and statistical data. The report highlights the Federal Reserve System's structure, consisting of 12 Reserve Banks and a Board of Governors.\n"
+    },
+    {
+      "title": "Monetar y Policy and Economic De velopments",
+      "node_id": "0003",
+      "start_index": 9,
+      "end_index": 9,
+      "summary": "This section reviews U.S. monetary policy and economic developments in 2023, based on excerpts from the Monetary Policy Reports published in March 2024 and June 2023. The March 2024 summary indicates that while inflation remains above the FOMC's 2% objective, it has eased substantially without a significant increase in unemployment. The labor market is tight, and GDP growth has been strong. The FOMC has maintained the federal funds rate at 5.25% to 5.5% since July 2023 and views it as likely at its peak. The FOMC is committed to returning inflation to 2% and will carefully assess incoming data before making any adjustments to the target range.\n"
+    },
+    {
+      "title": "March 2024 Summar y",
+      "node_id": "0004",
+      "start_index": 9,
+      "end_index": 14,
+      "summary": "This section reviews U.S. monetary policy and economic developments in 2023, drawing from the Monetary Policy Report published in March 2024 and June 2023. It covers topics such as inflation, the labor market, economic activity, and financial conditions. Specific discussions include the FOMC's assessment of inflation risks, the state of the labor market, GDP growth, and conditions in financial markets including interest rates and lending. It also touches on financial stability, international economic developments, and the Federal Reserve's balance sheet policy. Special topics include employment and earnings disparities across different demographic groups, recent developments in the housing market, the Federal Reserve's balance sheet and money markets, and the guidance provided by monetary policy rules.\n"
+    },
+    {
+      "title": "June 2023 Summar y",
+      "node_id": "0005",
+      "start_index": 15,
+      "end_index": 20,
+      "summary": "This document is a summary of economic and monetary policy developments as of June 2023. It covers the following main points:\n\n*   **Inflation:** While inflation has moderated since mid-2022, it remains above the FOMC's 2% objective. The report discusses consumer price inflation, core PCE price inflation, and factors affecting both, including supply chain issues, housing services, and labor market conditions. Longer-term inflation expectations remain broadly consistent with the FOMC's 2% objective.\n\n*   **Labor Market:** The labor market remains tight with robust job gains and a low unemployment rate. Wage growth has shown some signs of easing, and job vacancies have declined. The report also notes improvements in labor supply due to increased immigration and participation.\n\n*   **Economic Activity:** Economic growth was modest in the first quarter of 2023. Consumer spending grew but appears to be moderating. Business fixed investment slowed, and the housing sector continued to contract.\n\n*   **Financial Conditions:** Financial conditions have tightened since January, with the FOMC raising the federal funds rate. Business loan growth has slowed, and mortgage originations remain weak.\n\n*   **Financial Stability:** The banking system remains sound and resilient despite concerns about profitability at some banks. Valuation pressures in commercial and residential real estate markets continue to be elevated.\n\n*   **International Developments:** Foreign activity rebounded in early 2023, driven by growth in China and resilience in Europe. Foreign headline inflation has fallen, but food and core inflation remain elevated. Several major foreign central banks have continued tightening monetary policies.\n\n*   **Monetary Policy:** The FOMC continued to increase the target range for the federal funds rate and reduce its securities holdings. The FOMC slowed the pace of policy tightening.\n\n*   **Special Topics:**\n    *   Employment and earnings disparities across demographic groups have narrowed due to strong labor demand, but significant disparities remain.\n    *   Bank lending conditions have tightened, and bank loan growth has slowed, potentially impacting economic activity.\n    *   The Federal Reserve's balance sheet has decreased since January, but total assets have increased since March due to lending through the BTFP and the discount window.\n    *   Simple monetary policy rules suggest elevated levels of the federal funds rate due to high inflation and tight labor market conditions.\n"
+    },
+    {
+      "title": "Financial Stability",
+      "node_id": "0006",
+      "start_index": 21,
+      "end_index": 21,
+      "summary": "This section of the document focuses on the Federal Reserve's financial stability activities in 2023. It highlights the Fed's role in monitoring financial system risks, both domestically and internationally, to support a healthy economy. Key activities include monitoring vulnerabilities, promoting effective supervision and regulation of large financial institutions to account for potential spillover effects, and engaging in domestic and international cooperation. It also notes the relationship to other sections of the annual report, specifically those concerning monetary policy and economic developments, and the supervision and regulation of systemically important financial institutions.\n"
+    },
+    {
+      "title": "Monitoring F inancial V ulnerabilities",
+      "node_id": "0007",
+      "start_index": 22,
+      "end_index": 28,
+      "summary": "This document section focuses on the Federal Reserve's monitoring of financial vulnerabilities in 2023. It highlights the interconnectedness of financial institutions, households, and businesses and how the Federal Reserve aims to understand these linkages to promote economic stability. It identifies four key vulnerabilities monitored quarterly: leverage in the financial sector, funding risk, borrowing by businesses and households, and asset valuations. The document discusses asset valuation pressures, noting high equity and real estate prices. It examines borrowing by households and businesses, indicating that while total debt declined relative to GDP, gross leverage of large businesses remained elevated. It also addresses leverage in the financial system, highlighting the banking sector's overall soundness but also noting fair value losses and potential risks associated with commercial real estate lending. Finally, it touches on funding risk, noting ample liquidity positions in banks, and discusses the role and vulnerabilities of money market funds and stablecoins. The section concludes with a discussion of domestic and international cooperation and coordination, highlighting the role of the Financial Stability Oversight Council (FSOC) and its priority areas.\n"
+    },
+    {
+      "title": "Domestic and Inter national Cooperation and Coordination",
+      "node_id": "0008",
+      "start_index": 28,
+      "end_index": 31,
+      "summary": "This document excerpt discusses financial stability, focusing on corporate bonds, stablecoins, and the activities of the Federal Reserve, the Financial Stability Oversight Council (FSOC), and the Financial Stability Board (FSB). It highlights the FSOC's priorities, including non-bank financial intermediation, Treasury market resilience, climate-related financial risk, and digital assets. It also covers the Federal Reserve's supervisory and regulatory responsibilities, including overseeing financial institutions and monitoring banking sector trends. The document further mentions international cooperation through the FSB and the FSOC's efforts to enhance financial stability risk identification and assessment.\n"
+    },
+    {
+      "title": "Super vision and Regulation",
+      "node_id": "0009",
+      "start_index": 31,
+      "end_index": 31,
+      "summary": "The Federal Reserve promotes a safe and stable financial system by supervising financial institutions, developing regulatory policies, and monitoring banking sector trends through data collection and analysis. It oversees a range of financial entities, including bank holding companies, state member banks, savings and loan holding companies, and foreign banks operating in the U.S. Information on banking sector conditions is available in the semiannual Supervision and Regulation Report.\n"
+    },
+    {
+      "title": "Super vised and Regulated Institutions",
+      "node_id": "0010",
+      "start_index": 32,
+      "end_index": 35,
+      "summary": "The document provides an overview of supervised and regulated institutions by the Federal Reserve, categorizing them by size and entity type. It details the number of state member banks, their branches, and their share of commercial banking assets. A summary table (Table 4.1) breaks down supervised institutions into portfolios like LISCC, large and foreign banking organizations (LFBOs), regional banking organizations (RBOs), and community banking organizations (CBOs), including state member banks within each category and their total assets. The document then discusses bank holding companies (BHCs) and financial holding companies (FHCs), including their number, control over insured commercial banks, and asset distribution. It also covers savings and loan holding companies (SLHCs), their primary activities, and asset concentration. The supervision of insurance activities within SLHCs and the related supervisory framework are also mentioned. Furthermore, the document describes the role of the Federal Reserve in supervising financial market utilities (FMUs), particularly those designated as systemically important. International activities, including foreign operations of U.S. banking organizations and U.S. activities of foreign banks, are outlined. Finally, it touches on supervisory developments, including the Federal Reserve's examination and inspection activities, supervisory priorities, and the response to the failure of Silicon Valley Bank (SVB).\n"
+    },
+    {
+      "title": "Super visory Developments",
+      "node_id": "0011",
+      "start_index": 35,
+      "end_index": 50,
+      "summary": "The document provides an overview of the Federal Reserve's supervisory activities and regulatory initiatives. It details the examinations and inspections conducted on various financial institutions, including foreign banks, state member banks, bank holding companies, and savings and loan holding companies. A significant portion is dedicated to the failure of Silicon Valley Bank (SVB) and the Federal Reserve\u2019s response, including a review of the factors contributing to the failure and subsequent actions to improve supervision.\n\nThe document also covers specialized examinations in areas such as capital planning and stress testing, information technology, fiduciary activities, transfer agent activities, government and municipal securities dealing, and cybersecurity. It highlights the Federal Reserve's role in stress testing large banking firms and setting capital requirements.\n\nFurther sections address operational resilience, information technology, and cybersecurity, including interagency guidance on third-party relationships. It introduces the Novel Activities Supervision Program, focusing on crypto-assets, distributed ledger technology, and complex partnerships with nonbanks. The document also outlines the Federal Reserve's stance on crypto-related activities and its supervisory nonobjection process for state member banks engaging with dollar tokens.\n\nThe document discusses the Federal Reserve\u2019s approach to climate-related financial risks, including a pilot climate scenario analysis and principles for managing exposures to these risks. It also details enforcement actions taken by the Federal Reserve, including civil money penalties.\n\nFinally, the document describes the Federal Reserve\u2019s international training and technical assistance, efforts to support minority-owned depository institutions, and participation in international bodies such as the Financial Stability Board (FSB), the Basel Committee on Banking Supervision (BCBS), the Committee on Payments and Market Infrastructures (CPMI), and the International Association of Insurance Supervisors (IAIS). It also covers the Shared National Credit Program and the Federal Reserve's role in Bank Secrecy Act (BSA) and anti-money laundering (AML) compliance, as well as international coordination on sanctions and counter-terrorism financing.\n"
+    }
+  ]
+}

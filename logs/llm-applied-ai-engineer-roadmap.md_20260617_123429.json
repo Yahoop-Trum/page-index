@@ -1,0 +1,194 @@
+[
+  {
+    "total_page_number": 7
+  },
+  {
+    "total_token": 2408
+  },
+  {
+    "toc_content": "LLM / Applied AI Engineer \u2014 Roadmap\nA career-focused roadmap for becoming an Applied AI / LLM Engineer \u2014 the person\ncompanies hire to build products on top of foundation models. This is currently the most in-\ndemand AI role and the most accessible entry point into the \ufb01eld.\nRealistic timeline from a strong software engineering background: 4\u20136 months. From a\njunior or career-switcher background: 8\u201312 months.\nWhat this role actually is\nYou are a software engineer who specializes in building with LLMs. You ship features and\nproducts. You do not train foundation models.\nYou DO You usually DON'T\nBuild RAG systems, agents, AI features Train models from scratch\nDesign prompts, evals, and tool integrations Implement papers in PyTorch\nIntegrate LLM APIs into existing products Optimize CUDA kernels\nMake LLMs reliable, fast, and cheap in production Need a PhD or deep math\nEvaluate model quality on real tasks Publish research\nWork with PMs, designers, and end users Live in Jupyter notebooks\nIf you want to train models or do research, this is the wrong roadmap \u2014 look at ML Engineer or\nResearch Engineer paths. If you want to ship AI products that real users touch, this is the role.\nCommon job titles to search for: AI Engineer, LLM Engineer, Applied AI Engineer, Forward\nDeployed Engineer, AI Solutions Engineer, GenAI Engineer, AI Product Engineer.\nThe skill stack\nIn rough priority order. The \ufb01rst three are what most candidates underestimate.\n1. Software engineering excellence (the actual bottleneck)\nThis separates hireable applied AI engineers from \"prompt enthusiasts.\" Companies want\nengineers who can also do AI, not AI hobbyists who can sort of code.\nProduction Python: typing, async, packaging, testing, debugging\nAPI design \u2014 REST, JSON Schema, PydanticDatabases \u2014 Postgres especially. SQL is non-negotiable. pgvector for embeddings.\nConcurrency, caching, queues, retries, idempotency\nGit, code review, CI/CD\nSystem design \u2014 how a real backend is structured\n2. LLM API mastery\nMultiple providers: Claude, GPT, Gemini, plus an open model (Llama, Qwen, Mistral)\nStreaming, function calling, structured output (JSON mode, Pydantic + instructor)\nPrompt caching, batching, rate-limit handling\nMulti-turn conversation state management\nReasoning / extended thinking modes \u2014 when worth the cost\nToken economics: counting, trimming, why context length matters\n3. Evaluation\nThe skill that separates seniors from juniors in this role.\nBuilding eval sets from real or synthetic data\nLLM-as-judge: when it works, when it lies, pairwise > absolute\nRegression testing on every prompt change\nProduction observability \u2014 Langfuse, LangSmith, Helicone, Braintrust\nClosing the loop: production traces \u2192 eval set \u2192 improvements\n4. RAG architectures\nEmbedding models, vector DBs (start with pgvector)\nChunking strategies \u2014 the part most people get wrong\nHybrid search (dense + BM25), reranking\nQuery transformation, metadata \ufb01ltering\nCitations and grounding\n5. Agents and tool use\nFunction calling fundamentals\nReAct, planning, control \ufb02ow\nMCP (Model Context Protocol)\nWhen not to build an agent \u2014 usually a deterministic pipeline is better6. Production concerns\nCost engineering: model routing, caching, prompt compression\nLatency: streaming, speculative decoding, time-to-\ufb01rst-token\nSafety: prompt injection defense, output moderation, PII handling\nDeployment: Docker, FastAPI, a cloud (AWS/GCP/Azure), serverless\nSelf-hosting basics: vLLM, Ollama, when to bring inference in-house\n7. Just enough ML literacy\nWhat pretraining, post-training, \ufb01ne-tuning, and RLHF/DPO mean\nTokenization, embeddings, transformers at intuition level\nFine-tuning with LoRA when prompting hits its ceiling\nKnowing what's possible \u2014 you'll be the AI subject expert on your team\n8. Product and communication\nOften the actual di\ufb00erentiator at hiring time.\nTranslating fuzzy product requirements into evaluable specs\nExplaining capabilities and limits to non-technical stakeholders\nKnowing when LLMs are not the right tool\nThe learning path\nMonths 1\u20132: Foundations\nSolidify Python and backend engineering. Build a non-AI CRUD app with FastAPI,\nPostgres, tests, Docker. This is your baseline.\nLLM fundamentals: tokens, embeddings, transformers (intuition, not math). Karpathy's\nLet's build GPT once.\nGet \ufb02uent with one frontier API end-to-end (recommend Claude or GPT). Streaming, tools,\nstructured output, error handling.\nProject: A useful CLI or web tool you'd actually use. Code reviewer, meeting summarizer,\ndocument Q&A \u2014 something concrete.\nMonths 2\u20134: RAG and agents\nBuild a real RAG system. Use pgvector. Implement chunking, hybrid search, reranking,\ncitations. Build the eval set \ufb01rst.",
+    "toc_page_list": [
+      0,
+      1,
+      2
+    ],
+    "page_index_given_in_toc": "no"
+  },
+  {
+    "message": "len(group_texts): 1"
+  },
+  {
+    "message": "generate_toc: [{'structure': '1', 'title': 'What this role actually is', 'physical_index': '<physical_index_1>'}, {'structure': '2', 'title': 'The skill stack', 'physical_index': '<physical_index_1>'}, {'structure': '2.1', 'title': 'Software engineering excellence (the actual bottleneck)', 'physical_index': '<physical_index_1>'}, {'structure': '2.2', 'title': 'LLM API mastery', 'physical_index': '<physical_index_2>'}, {'structure': '2.3', 'title': 'Evaluation', 'physical_index': '<physical_index_2>'}, {'structure': '2.4', 'title': 'RAG architectures', 'physical_index': '<physical_index_2>'}, {'structure': '2.5', 'title': 'Agents and tool use', 'physical_index': '<physical_index_2>'}, {'structure': '2.6', 'title': 'Production concerns', 'physical_index': '<physical_index_3>'}, {'structure': '2.7', 'title': 'Just enough ML literacy', 'physical_index': '<physical_index_3>'}, {'structure': '2.8', 'title': 'Product and communication', 'physical_index': '<physical_index_3>'}, {'structure': '3', 'title': 'The learning path', 'physical_index': '<physical_index_3>'}, {'structure': '3.1', 'title': 'Months 1\u20132: Foundations', 'physical_index': '<physical_index_3>'}, {'structure': '3.2', 'title': 'Months 2\u20134: RAG and agents', 'physical_index': '<physical_index_3>'}, {'structure': '3.3', 'title': 'Months 4\u20135: Production and depth', 'physical_index': '<physical_index_4>'}, {'structure': '3.4', 'title': 'Month 6+: Polish, specialize, apply', 'physical_index': '<physical_index_4>'}, {'structure': '4', 'title': 'What to build (ranked by hireability impact)', 'physical_index': '<physical_index_4>'}, {'structure': '4.1', 'title': 'One deeply-built, production-deployed AI app with public access, real users (even just five), an eval suite, and a written architecture post. This single project beats ten half-finished ones.', 'physical_index': '<physical_index_4>'}, {'structure': '4.2', 'title': 'A technical blog post explaining a non-obvious decision you made \u2014 chunking strategy, eval design, prompt iteration. Shows you think, not just code.', 'physical_index': '<physical_index_4>'}, {'structure': '4.3', 'title': \"A RAG system with rigorous evaluation \u2014 recall@k numbers, retrieval ablations, before/after comparisons. Most candidates can't do this; doing it puts you in the top tier.\", 'physical_index': '<physical_index_4>'}, {'structure': '4.4', 'title': 'An agent that does something genuinely useful and reliable, with failure handling. Reliability is the real bar.', 'physical_index': '<physical_index_4>'}, {'structure': '4.5', 'title': 'Open source contributions to a framework or tool in the space (LangGraph, LlamaIndex, vLLM, Instructor, etc.).', 'physical_index': '<physical_index_5>'}, {'structure': '5', 'title': 'How interviews actually go', 'physical_index': '<physical_index_5>'}, {'structure': '6', 'title': 'Day-to-day reality', 'physical_index': '<physical_index_5>'}, {'structure': '7', 'title': 'Common failure modes for people pursuing this role', 'physical_index': '<physical_index_6>'}, {'structure': '8', 'title': 'Recommended people to learn from', 'physical_index': '<physical_index_6>'}, {'structure': '9', 'title': 'Suggested 6-month sprint', 'physical_index': '<physical_index_6>'}, {'structure': '10', 'title': 'The single most important thing', 'physical_index': '<physical_index_7>'}]"
+  },
+  {
+    "message": "convert_physical_index_to_int: [{'structure': '1', 'title': 'What this role actually is', 'physical_index': 1}, {'structure': '2', 'title': 'The skill stack', 'physical_index': 1}, {'structure': '2.1', 'title': 'Software engineering excellence (the actual bottleneck)', 'physical_index': 1}, {'structure': '2.2', 'title': 'LLM API mastery', 'physical_index': 2}, {'structure': '2.3', 'title': 'Evaluation', 'physical_index': 2}, {'structure': '2.4', 'title': 'RAG architectures', 'physical_index': 2}, {'structure': '2.5', 'title': 'Agents and tool use', 'physical_index': 2}, {'structure': '2.6', 'title': 'Production concerns', 'physical_index': 3}, {'structure': '2.7', 'title': 'Just enough ML literacy', 'physical_index': 3}, {'structure': '2.8', 'title': 'Product and communication', 'physical_index': 3}, {'structure': '3', 'title': 'The learning path', 'physical_index': 3}, {'structure': '3.1', 'title': 'Months 1\u20132: Foundations', 'physical_index': 3}, {'structure': '3.2', 'title': 'Months 2\u20134: RAG and agents', 'physical_index': 3}, {'structure': '3.3', 'title': 'Months 4\u20135: Production and depth', 'physical_index': 4}, {'structure': '3.4', 'title': 'Month 6+: Polish, specialize, apply', 'physical_index': 4}, {'structure': '4', 'title': 'What to build (ranked by hireability impact)', 'physical_index': 4}, {'structure': '4.1', 'title': 'One deeply-built, production-deployed AI app with public access, real users (even just five), an eval suite, and a written architecture post. This single project beats ten half-finished ones.', 'physical_index': 4}, {'structure': '4.2', 'title': 'A technical blog post explaining a non-obvious decision you made \u2014 chunking strategy, eval design, prompt iteration. Shows you think, not just code.', 'physical_index': 4}, {'structure': '4.3', 'title': \"A RAG system with rigorous evaluation \u2014 recall@k numbers, retrieval ablations, before/after comparisons. Most candidates can't do this; doing it puts you in the top tier.\", 'physical_index': 4}, {'structure': '4.4', 'title': 'An agent that does something genuinely useful and reliable, with failure handling. Reliability is the real bar.', 'physical_index': 4}, {'structure': '4.5', 'title': 'Open source contributions to a framework or tool in the space (LangGraph, LlamaIndex, vLLM, Instructor, etc.).', 'physical_index': 5}, {'structure': '5', 'title': 'How interviews actually go', 'physical_index': 5}, {'structure': '6', 'title': 'Day-to-day reality', 'physical_index': 5}, {'structure': '7', 'title': 'Common failure modes for people pursuing this role', 'physical_index': 6}, {'structure': '8', 'title': 'Recommended people to learn from', 'physical_index': 6}, {'structure': '9', 'title': 'Suggested 6-month sprint', 'physical_index': 6}, {'structure': '10', 'title': 'The single most important thing', 'physical_index': 7}]"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0.0,
+    "incorrect_results": [
+      {
+        "list_index": 0,
+        "answer": "no",
+        "title": "What this role actually is",
+        "page_number": 1
+      },
+      {
+        "list_index": 1,
+        "answer": "no",
+        "title": "The skill stack",
+        "page_number": 1
+      },
+      {
+        "list_index": 2,
+        "answer": "no",
+        "title": "Software engineering excellence (the actual bottleneck)",
+        "page_number": 1
+      },
+      {
+        "list_index": 3,
+        "answer": "no",
+        "title": "LLM API mastery",
+        "page_number": 2
+      },
+      {
+        "list_index": 4,
+        "answer": "no",
+        "title": "Evaluation",
+        "page_number": 2
+      },
+      {
+        "list_index": 5,
+        "answer": "no",
+        "title": "RAG architectures",
+        "page_number": 2
+      },
+      {
+        "list_index": 6,
+        "answer": "no",
+        "title": "Agents and tool use",
+        "page_number": 2
+      },
+      {
+        "list_index": 7,
+        "answer": "no",
+        "title": "Production concerns",
+        "page_number": 3
+      },
+      {
+        "list_index": 8,
+        "answer": "no",
+        "title": "Just enough ML literacy",
+        "page_number": 3
+      },
+      {
+        "list_index": 9,
+        "answer": "no",
+        "title": "Product and communication",
+        "page_number": 3
+      },
+      {
+        "list_index": 10,
+        "answer": "no",
+        "title": "The learning path",
+        "page_number": 3
+      },
+      {
+        "list_index": 11,
+        "answer": "no",
+        "title": "Months 1\u20132: Foundations",
+        "page_number": 3
+      },
+      {
+        "list_index": 12,
+        "answer": "no",
+        "title": "Months 2\u20134: RAG and agents",
+        "page_number": 3
+      },
+      {
+        "list_index": 13,
+        "answer": "no",
+        "title": "Months 4\u20135: Production and depth",
+        "page_number": 4
+      },
+      {
+        "list_index": 14,
+        "answer": "no",
+        "title": "Month 6+: Polish, specialize, apply",
+        "page_number": 4
+      },
+      {
+        "list_index": 15,
+        "answer": "no",
+        "title": "What to build (ranked by hireability impact)",
+        "page_number": 4
+      },
+      {
+        "list_index": 16,
+        "answer": "no",
+        "title": "One deeply-built, production-deployed AI app with public access, real users (even just five), an eval suite, and a written architecture post. This single project beats ten half-finished ones.",
+        "page_number": 4
+      },
+      {
+        "list_index": 17,
+        "answer": "no",
+        "title": "A technical blog post explaining a non-obvious decision you made \u2014 chunking strategy, eval design, prompt iteration. Shows you think, not just code.",
+        "page_number": 4
+      },
+      {
+        "list_index": 18,
+        "answer": "no",
+        "title": "A RAG system with rigorous evaluation \u2014 recall@k numbers, retrieval ablations, before/after comparisons. Most candidates can't do this; doing it puts you in the top tier.",
+        "page_number": 4
+      },
+      {
+        "list_index": 19,
+        "answer": "no",
+        "title": "An agent that does something genuinely useful and reliable, with failure handling. Reliability is the real bar.",
+        "page_number": 4
+      },
+      {
+        "list_index": 20,
+        "answer": "no",
+        "title": "Open source contributions to a framework or tool in the space (LangGraph, LlamaIndex, vLLM, Instructor, etc.).",
+        "page_number": 5
+      },
+      {
+        "list_index": 21,
+        "answer": "no",
+        "title": "How interviews actually go",
+        "page_number": 5
+      },
+      {
+        "list_index": 22,
+        "answer": "no",
+        "title": "Day-to-day reality",
+        "page_number": 5
+      },
+      {
+        "list_index": 23,
+        "answer": "no",
+        "title": "Common failure modes for people pursuing this role",
+        "page_number": 6
+      },
+      {
+        "list_index": 24,
+        "answer": "no",
+        "title": "Recommended people to learn from",
+        "page_number": 6
+      },
+      {
+        "list_index": 25,
+        "answer": "no",
+        "title": "Suggested 6-month sprint",
+        "page_number": 6
+      },
+      {
+        "list_index": 26,
+        "answer": "no",
+        "title": "The single most important thing",
+        "page_number": 7
+      }
+    ]
+  }
+]

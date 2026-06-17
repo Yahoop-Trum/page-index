@@ -1,0 +1,232 @@
+{
+  "doc_name": "llm-genai-roadmap.md",
+  "structure": [
+    {
+      "title": "Prerequisites (skip if you have them)",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "This partial document outlines a roadmap for engineers to become proficient in building with and on top of Large Language Models (LLMs) and Generative AI. It targets engineers already fluent in Python, suggesting a realistic timeline of 4-6 months, emphasizing a balance of durable concepts (30%) and hands-on building (70%).\n\nThe document details essential prerequisites, including advanced Python skills, basic ML literacy, linear algebra intuition, familiarity with HTTP/JSON/REST APIs, and Git/Linux command line.\n\nIt then delves into \"Phase 1: How LLMs actually work\" (estimated 2-3 weeks), focusing on internalizing fundamental concepts such as tokenization, embeddings, the transformer architecture (attention, context windows, KV cache), pretraining vs. post-training methods (e.g., RLHF, DPO), sampling techniques (temperature, top-p, top-k), and the distinction between reasoning and standard models. Key resources like Andrej Karpathy's \"Let's build GPT\" YouTube series are also recommended."
+    },
+    {
+      "title": "Phase 1 \u2014 How LLMs actually work (2\u20133 weeks)",
+      "node_id": "0001",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "This document outlines a roadmap for engineers to become productive in building with and on top of Large Language Models (LLMs) and Generative AI. It assumes strong Python knowledge and suggests a realistic timeline of 4-6 months, emphasizing a balance of durable concepts (30%) and hands-on building (70%).\n\nThe roadmap details essential prerequisites, including advanced Python skills, basic ML literacy, linear algebra intuition, API knowledge (HTTP, JSON, REST), Git, and Linux command line proficiency. It then delves into \"Phase 1: How LLMs actually work\" (2-3 weeks), focusing on fundamental concepts necessary for deep understanding, such as:\n*   Tokenization\n*   Embeddings\n*   The Transformer architecture (attention, context windows, KV cache)\n*   Pretraining vs. post-training techniques (instruction tuning, RLHF, DPO, RLAIF)\n*   Sampling methods (temperature, top-p, top-k)\n*   Context windows, positional encoding, and the cost of long contexts\n*   Distinction between reasoning and standard models.\n\nRecommended resources for this phase include Andrej Karpathy's \"Let's build GPT\" and \"Let's build the GPT Tokenizer\" YouTube series.",
+      "nodes": [
+        {
+          "title": "Concepts to internalize:",
+          "node_id": "0002",
+          "start_index": 1,
+          "end_index": 1,
+          "summary": "This document outlines a roadmap for engineers to become productive with Large Language Models (LLMs) and Generative AI, emphasizing a practical, building-focused approach over 4-6 months. It details essential prerequisites including strong Python skills, basic ML literacy, linear algebra intuition, and API/Git familiarity. The first phase, lasting 2-3 weeks, is dedicated to understanding the core mechanics of LLMs, covering concepts like tokenization, embeddings, the transformer architecture, pretraining vs. post-training techniques (RLHF, DPO), sampling methods, and context windows, with specific recommendations for learning resources."
+        },
+        {
+          "title": "Best resources:",
+          "node_id": "0003",
+          "start_index": 1,
+          "end_index": 2,
+          "summary": "This partial document outlines a roadmap for engineers aiming to build with and on top of Large Language Models (LLMs) and Generative AI. It targets engineers proficient in Python, suggesting a realistic timeline of 4-6 months, emphasizing a balance between understanding durable concepts (30%) and hands-on building (70%).\n\nThe roadmap details essential prerequisites including advanced Python, basic ML literacy, linear algebra intuition, API knowledge (HTTP, JSON, REST), Git, and Linux command-line skills.\n\nIt is structured into distinct phases:\n1.  **Phase 1: How LLMs Actually Work (2-3 weeks)**: Focuses on internalizing fundamental concepts like tokenization, embeddings, the transformer architecture (attention, context windows), pre-training vs. post-training (RLHF, DPO), and sampling methods. It recommends key resources (e.g., Andrej Karpathy, Jay Alammar) and includes a practical project to build a character-level transformer.\n2.  **Phase 2: Working with LLM APIs (3-4 weeks)**: Covers practical, real-world LLM engineering. This phase emphasizes hands-on experience with multiple LLM providers (Claude, GPT, Gemini, open models) and developing core skills such as prompt engineering (system prompts, few-shot, chain-of-thought), structured output, function calling, streaming responses, prompt caching, cost management, handling rate limits, multi-turn conversations, and token/context management. It also introduces common patterns like prompt chaining, routing, self-critique, and parallelization, recommending official documentation and guides."
+        },
+        {
+          "title": "Project: Build a tiny character-level transformer in PyTorch following Karpathy's nanoGPT. Don't skip this \u2014 touching the math once makes everything else click.",
+          "node_id": "0004",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This partial document outlines a multi-phase learning path for Large Language Model (LLM) engineering. It begins by recommending resources for understanding Transformer models and GPT-2, along with a practical project to build a character-level transformer to solidify mathematical understanding. The document then details \"Phase 2,\" which focuses heavily on real-world LLM API engineering. This phase covers hands-on experience with major LLM providers (Anthropic, OpenAI, Google, open models), emphasizing key skills like prompt engineering (system prompts, few-shot, chain-of-thought), structured output (JSON mode, schema-constrained generation), function calling, streaming responses, cost management, error handling, multi-turn conversation, and context management. It also lists advanced patterns to learn, such as prompt chaining, routing, self-critique loops, and parallelization, concluding with a list of best resources for prompt engineering."
+        }
+      ]
+    },
+    {
+      "title": "Phase 2 \u2014 Working with LLM APIs (3\u20134 weeks)",
+      "node_id": "0005",
+      "start_index": 2,
+      "end_index": 2,
+      "summary": "This partial document outlines a learning and development path for understanding and working with Large Language Models (LLMs). It recommends foundational resources for grasping transformer architecture and attention mechanisms, including specific papers, videos, and a practical project to build a small transformer in PyTorch. The document then details \"Phase 2,\" a crucial stage focused on real-world LLM API engineering, covering an estimated 3-4 weeks. This phase emphasizes hands-on experience with multiple LLM providers (Claude, GPT, Gemini, and open models) and lists core skills to acquire, such as prompt engineering techniques, generating structured output, function calling, managing streaming responses, prompt caching, cost management, handling API limitations, reasoning modes, multi-turn conversations, and token/context management. It also highlights advanced patterns to learn, like prompt chaining, routing, self-critique, and parallelization, concluding with a list of best resources for prompt engineering.",
+      "nodes": [
+        {
+          "title": "Core skills:",
+          "node_id": "0006",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This document outlines a learning path for Large Language Models (LLMs), starting with foundational understanding and moving into practical application. It initially suggests resources for learning about transformer architecture and attention mechanisms, including Jay Alammar's guides, 3Blue1Brown videos, and the \"Attention Is All You Need\" paper, along with a project to build a character-level transformer (nanoGPT) to grasp the underlying math.\n\nThe bulk of the document details \"Phase 2 \u2014 Working with LLM APIs,\" focusing on real-world LLM engineering over 3-4 weeks. This phase emphasizes hands-on experience with multiple LLM providers (Claude, GPT, Gemini, and various open models). It lists core skills such as prompt engineering (system prompts, few-shot, chain-of-thought), structured output (JSON mode, schema-constrained generation), function calling/tool use, streaming responses, prompt caching, batching, cost management, handling rate limits, multi-turn conversation, and token/context management. Key patterns to learn include prompt chaining, routing, self-critique loops, and parallelization. The section concludes with recommended resources like Anthropic and OpenAI cookbooks and the Prompt Engineering Guide."
+        },
+        {
+          "title": "Patterns to learn:",
+          "node_id": "0007",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This partial document outlines a learning path for understanding and working with Large Language Models (LLMs). It initially suggests resources for grasping Transformer architecture fundamentals and building a basic model. The main focus, designated as \"Phase 2,\" details practical LLM engineering skills for working with various API providers (Claude, GPT, Gemini, open models). This includes core competencies like prompt engineering, structured output, function calling, streaming, cost management, error handling, and multi-turn conversation. It also highlights advanced patterns such as prompt chaining, routing, self-critique, and parallelization, concluding with recommended resources for further learning."
+        },
+        {
+          "title": "Best resources:",
+          "node_id": "0008",
+          "start_index": 2,
+          "end_index": 3,
+          "summary": "This partial document outlines a multi-phase curriculum or roadmap for learning and applying LLM engineering. It covers foundational understanding of transformer architectures (referencing key resources and a nanoGPT project), practical skills for working with LLM APIs (including prompt engineering, structured output, function calling, cost management, and various patterns, with a project to build a useful CLI tool), and then delves into Retrieval-Augmented Generation (RAG) systems (covering embedding models, vector databases, chunking strategies, hybrid search, reranking, and critical evaluation metrics, with a project to build RAG over a real corpus). The document concludes by introducing \"Agents and tool use\" as the next advanced phase."
+        },
+        {
+          "title": "Project: Build a CLI tool that does something genuinely useful for you \u2014 a code reviewer for your own commits, a meeting-notes summarizer, a research assistant. Not a chatbot. Something you'll actually use.",
+          "node_id": "0009",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "This partial document, from Hamel Husain's blog on LLM evaluation and engineering, outlines practical projects and key phases in building and deploying LLM applications. It initially suggests building a genuinely useful CLI tool. The document then extensively covers \"Phase 3: Retrieval-Augmented Generation (RAG),\" detailing its foundations (embedding models, vector databases, similarity metrics), crucial practical components (chunking strategies, hybrid search, reranking, query transformation, metadata filtering, and citation), and critical evaluation metrics and tools for both retrieval and generation. It emphasizes building evaluation sets before optimization. Finally, it introduces \"Phase 4: Agents and tool use\" as the frontier of applied LLM engineering."
+        }
+      ]
+    },
+    {
+      "title": "Phase 3 \u2014 Retrieval-Augmented Generation (RAG) (4\u20136 weeks)",
+      "node_id": "0010",
+      "start_index": 3,
+      "end_index": 3,
+      "summary": "This partial document outlines a curriculum or roadmap for LLM evaluation and engineering, originating from Hamel Husain's blog. It proposes building genuinely useful CLI tools rather than just chatbots.\n\nThe core of the document focuses on:\n*   **Retrieval-Augmented Generation (RAG)**: Detailing its foundations (embedding models, vector databases, similarity metrics, ANN algorithms), advanced optimization strategies (chunking, hybrid search, reranking, query transformation, metadata filtering, citation), and critical evaluation metrics for both retrieval and generation (recall@k, MRR, NDCG, faithfulness, answer relevance). It emphasizes building custom evaluation sets early.\n*   **Project Ideas**: Suggesting a RAG project over a real-world corpus.\n*   **Agents and Tool Use**: Briefly introducing this as the next frontier in applied LLM engineering.",
+      "nodes": [
+        {
+          "title": "Foundations:",
+          "node_id": "0011",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "This partial document outlines key phases and components in LLM evaluation and engineering, based on Hamel Husain's blog. It proposes practical project ideas, such as building useful CLI tools. A significant portion is dedicated to **Retrieval-Augmented Generation (RAG)**, covering its foundations (embedding models, vector databases, similarity metrics), critical practical aspects (chunking strategies, hybrid search, reranking, query transformation, metadata filtering, citation), and a strong emphasis on **evaluation** with specific retrieval and generation metrics and tools. The document stresses the importance of building evaluation sets first for any RAG project. It concludes by introducing **Agents and tool use** as the next frontier in applied LLM engineering."
+        },
+        {
+          "title": "The unsexy parts that actually matter:",
+          "node_id": "0012",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "This partial document, from Hamel Husain's blog on LLM evaluation and engineering, outlines practical project ideas and key phases in building LLM applications. It initially suggests building a genuinely useful CLI tool, such as a code reviewer or summarizer, emphasizing utility over being a chatbot.\n\nThe main focus is on **Phase 3: Retrieval-Augmented Generation (RAG)**. This section details the foundational components of RAG, including various embedding models, vector databases (e.g., pgvector, Chroma), similarity metrics, and ANN algorithms. It then delves into crucial, often overlooked, \"unsexy parts\" that significantly impact retrieval quality, such as chunking strategies, hybrid search, reranking, query transformation, metadata filtering, and citation grounding. A critical part of the RAG discussion is dedicated to **evaluation**, covering specific retrieval metrics (recall@k, MRR, NDCG) and generation metrics (faithfulness, answer relevance, context precision), along with tools like Ragas and the importance of building custom evaluation sets first. The document also suggests a RAG project over a real corpus with an emphasis on iterative improvement based on evaluation.\n\nFinally, it briefly introduces **Phase 4: Agents and tool use** as the \"frontier of applied LLM engineering,\" noting its challenges in production."
+        },
+        {
+          "title": "Evaluation (critical):",
+          "node_id": "0013",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "This partial document outlines key aspects of LLM evaluation and engineering, originating from Hamel Husain's blog. It proposes building genuinely useful CLI tools beyond chatbots. The main focus is on \"Phase 3 \u2014 Retrieval-Augmented Generation (RAG),\" detailing its foundations (embedding models, vector databases, similarity metrics, ANN algorithms), critical \"unsexy parts\" that ensure quality (chunking, hybrid search, reranking, query transformation, metadata filtering, citation), and comprehensive evaluation methods (retrieval and generation metrics, tools like Ragas). It suggests a RAG project over a real corpus with an emphasis on building evaluation sets first. The document briefly introduces \"Phase 4 \u2014 Agents and tool use\" as the frontier of applied LLM engineering."
+        },
+        {
+          "title": "Project: RAG over a real corpus you care about \u2014 your notes, a textbook, company docs, a podcast archive. Build the eval set \ufb01rst. Iterate on retrieval until your numbers actually improve.",
+          "node_id": "0014",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "This partial document, originating from Hamel Husain's blog on LLM evaluation and engineering, outlines key phases and practical considerations for developing useful LLM-powered applications.\n\nThe main points covered are:\n1.  **General Project Idea:** Building genuinely useful CLI tools (e.g., code reviewer, summarizer, research assistant) rather than just chatbots.\n2.  **Phase 3: Retrieval-Augmented Generation (RAG):** This is a heavily detailed section focusing on a common but challenging production pattern. It covers:\n    *   **Foundations:** Embedding models (e.g., OpenAI, Cohere), vector databases (e.g., pgvector, Chroma), similarity metrics (cosine, dot product), and ANN algorithms.\n    *   **Critical \"Unsexy Parts\":** Strategies for chunking, hybrid search, reranking, query transformation, metadata filtering, and citation/grounding, all crucial for retrieval quality.\n    *   **Evaluation:** Emphasizes the importance of evaluation with specific retrieval metrics (recall@k, MRR, NDCG) and generation metrics (faithfulness, answer relevance), recommending tools like Ragas and the practice of building custom evaluation sets before optimization.\n    *   **RAG Project:** A suggestion to build RAG over a real corpus, prioritizing evaluation set creation and iterative improvement.\n3.  **Phase 4: Agents and Tool Use:** Briefly introduced as the frontier of applied LLM engineering, noting its challenges in production."
+        }
+      ]
+    },
+    {
+      "title": "Phase 4 \u2014 Agents and tool use (4\u20136 weeks)",
+      "node_id": "0015",
+      "start_index": 3,
+      "end_index": 3,
+      "summary": "This partial document, from Hamel Husain's blog on LLM evaluation and engineering, outlines a structured approach to building practical applications using large language models. It proposes an initial project to develop a genuinely useful CLI tool, rather than a chatbot.\n\nThe document then delves into two key phases of LLM engineering:\n\n1.  **Phase 3: Retrieval-Augmented Generation (RAG)** (4-6 weeks)\n    *   Covers foundational elements like embedding models (OpenAI, Cohere, BGE, etc.), vector databases (pgvector, Chroma, Pinecone, etc.), similarity metrics, and ANN algorithms.\n    *   Emphasizes \"unsexy but critical\" aspects such as various chunking strategies, hybrid search, reranking techniques, query transformation, metadata filtering, and citation/grounding.\n    *   Highlights the crucial importance of evaluation, detailing retrieval metrics (recall@k, MRR, NDCG) and generation metrics (faithfulness, answer relevance, context precision), along with tools like Ragas and the necessity of building custom evaluation sets.\n    *   Suggests a project involving RAG over a real corpus with a strong focus on iterative improvement based on evaluation.\n\n2.  **Phase 4: Agents and tool use** (4-6 weeks)\n    *   Introduces this as the frontier of applied LLM engineering, noting its complexity and potential for production failures. The document cuts off just as it begins to list concepts for this phase.",
+      "nodes": [
+        {
+          "title": "Concepts:",
+          "node_id": "0016",
+          "start_index": 3,
+          "end_index": 4,
+          "summary": "This partial document from Hamel Husain's blog outlines a structured approach to LLM evaluation and engineering, detailing key phases and concepts for building advanced LLM applications.\n\nIt covers:\n1.  **Retrieval-Augmented Generation (RAG)**: This section delves into the most common production pattern, discussing foundational components like embedding models (OpenAI, Cohere, BGE), vector databases (pgvector, Chroma, Pinecone), similarity metrics, and ANN algorithms. It emphasizes practical aspects such as chunking strategies, hybrid search, reranking, query transformation, metadata filtering, and citation/grounding. Crucially, it highlights the importance of RAG evaluation, mentioning metrics (recall@k, MRR, NDCG, faithfulness) and tools (Ragas).\n2.  **Agents and Tool Use**: This section explores the frontier of applied LLM engineering, detailing concepts like tool/function calling, the ReAct pattern, planning vs. reactive agents, different types of memory (short-term, long-term, episodic), multi-agent systems, and human-in-the-loop processes. It also lists specific topics like MCP (Model Context Protocol), browser agents, code execution, and cost control, along with frameworks like LangGraph, LlamaIndex, and Pydantic AI.\n3.  **Evaluation**: Emphasized as a critical skill throughout all phases, this section stresses the importance of building evaluation sets early, understanding LLM-as-judge techniques (especially pairwise comparisons), differentiating between reference-based and reference-free evaluation, and implementing regression testing for every prompt change.\n\nEach phase includes a project idea to reinforce learning, focusing on building genuinely useful and robust tools."
+        },
+        {
+          "title": "Speci\ufb01c topics worth learning:",
+          "node_id": "0017",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This partial document outlines key concepts and best practices for building robust AI agents. It covers fundamental agent patterns like ReAct, memory types (short-term, long-term, episodic), and architectural considerations such as multi-agent systems and human-in-the-loop integration. The text also highlights specific technical topics including tool/function calling standards (MCP), browser agents, safe code execution, cost/latency control, and loop management. It discusses popular frameworks like LangGraph, LlamaIndex, and Pydantic AI, while also advocating for plain Python. Finally, a significant portion is dedicated to the critical aspect of evaluation, emphasizing early eval set creation, LLM-as-judge techniques, reference-based vs. reference-free evaluation, and regression testing."
+        },
+        {
+          "title": "Frameworks (use sparingly):",
+          "node_id": "0018",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This partial document outlines key concepts and practical considerations for building and evaluating LLM-powered agents. It covers the foundation of agents (tool/function calling, ReAct pattern), different agent architectures (planning vs. reactive, memory types, multi-agent systems, human-in-the-loop), and specific technical topics like the Model Context Protocol (MCP), browser agents, safe code execution, and cost control. The text also discusses popular frameworks (LangGraph, LlamaIndex, Pydantic AI) and emphasizes the value of plain Python. Finally, it delves into the critical importance of agent evaluation, detailing methods like building early eval sets, using LLM-as-a-judge, pairwise comparisons, and regression testing."
+        },
+        {
+          "title": "Project: Build an agent that does something genuinely multi-step and useful \u2014 a code-modi\ufb01cation agent, a research agent that produces cited reports, a personal automation agent. Make it robust to failure.",
+          "node_id": "0019",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "The partial document outlines key concepts and best practices for building robust and effective AI agents. It covers foundational elements like tool/function calling, the ReAct pattern, different types of agent memory (short-term, long-term, episodic), and the distinction between planning and reactive agents. It also discusses the application and potential pitfalls of multi-agent systems and the importance of human-in-the-loop processes.\n\nSpecific technical topics highlighted include the Model Context Protocol (MCP) for tool integration, browser/computer use agents, safe code execution, cost/latency control for multi-step agents, and loop detection. The document evaluates various frameworks (LangGraph, LlamaIndex, Pydantic AI) but emphasizes that plain Python and direct API calls are often sufficient, cautioning against unnecessary complexity.\n\nFinally, a significant portion is dedicated to the critical skill of evaluation, stressing its importance throughout the development process. It covers building early evaluation sets, using LLM-as-judge (with caveats), reference-based vs. reference-free evaluation, and regression testing for prompt changes. The document also suggests a practical project: building a robust, multi-step agent."
+        }
+      ]
+    },
+    {
+      "title": "Phase 5 \u2014 Evaluation (do this throughout, not after)",
+      "node_id": "0020",
+      "start_index": 4,
+      "end_index": 5,
+      "summary": "The document describes advanced stages in building and deploying Large Language Model (LLM) applications, covering agent development, evaluation, fine-tuning, and production considerations. It details core concepts for agents, including tool/function calling, the ReAct pattern, memory types, multi-agent systems, and human-in-the-loop strategies, along with specific frameworks and emerging standards. The text then emphasizes the critical role of evaluation, discussing building eval sets, LLM-as-judge techniques, regression testing, production observability, and online evaluations. It proceeds to cover fine-tuning and post-training, outlining when and how to fine-tune using PEFT methods, instruction tuning, preference optimization (DPO), synthetic data, and quantization. Finally, the document addresses production, inference, and deployment, including inference servers, local deployment, hosted options, serving patterns, cost engineering, latency optimization, safety measures, and privacy concerns."
+    },
+    {
+      "title": "Phase 6 \u2014 Fine-tuning and post-training (3\u20134 weeks)",
+      "node_id": "0021",
+      "start_index": 5,
+      "end_index": 5,
+      "summary": "This partial document outlines key considerations and tools across several stages of large language model (LLM) development and deployment. It covers production observability tools (Langfuse, LangSmith, Helicone), methods for online evaluations, and extensively details \"Phase 6 \u2014 Fine-tuning and post-training.\" For fine-tuning, it discusses when to fine-tune, specific PEFT methods (LoRA, QLoRA), relevant libraries, different tuning approaches (instruction tuning, preference optimization like DPO), synthetic data generation, model distillation, and quantization techniques for inference. It also specifies scenarios where fine-tuning is necessary, such as for style, domain language, cost reduction, or privacy. \"Phase 7 \u2014 Production, inference, and deployment\" is also detailed, listing various inference servers (vLLM, TGI), local and hosted inference options, serving patterns (streaming, batching), cost engineering strategies, latency optimization, and critical aspects of safety and privacy in production.",
+      "nodes": [
+        {
+          "title": "When to \ufb01ne-tune:",
+          "node_id": "0022",
+          "start_index": 5,
+          "end_index": 5,
+          "summary": "The partial document outlines key aspects of developing and deploying large language models, specifically focusing on post-training optimization and production. It covers tools and concepts for production observability and online evaluations. A significant portion details \"Phase 6: Fine-tuning and post-training,\" including when to fine-tune, various PEFT methods (LoRA, QLoRA), instruction tuning, preference optimization techniques (DPO, KTO, ORPO, IPO), synthetic data generation, distillation, and quantization for inference. It also lists practical scenarios for fine-tuning. \"Phase 7: Production, inference, and deployment\" covers inference servers (vLLM, TGI), local/edge and hosted inference options, serving patterns (streaming, speculative decoding), cost engineering strategies, latency considerations, and crucial aspects of safety (input filtering, prompt injection defense) and privacy (PII handling, data retention)."
+        },
+        {
+          "title": "Project: Fine-tune a small open model (Qwen, Llama, Mistral, Gemma in the 3\u20138B range) on a focused task using LoRA. Compare to a well-prompted frontier model with proper evals.",
+          "node_id": "0023",
+          "start_index": 5,
+          "end_index": 5,
+          "summary": "The document outlines key aspects of developing and deploying large language models, covering production observability, evaluation strategies, fine-tuning techniques, and production inference/deployment.\n\nIt details tools for **production observability** (Langfuse, LangSmith, Helicone) and methods for **online evaluations**, referencing canonical resources.\n\n**Phase 6 focuses on fine-tuning and post-training**, advising it only after exhausting prompting and RAG. It covers PEFT methods like LoRA/QLoRA, relevant libraries (Hugging Face transformers), different tuning approaches (instruction tuning, continued pretraining, preference optimization like DPO/KTO/ORPO/IPO), synthetic data generation, model distillation, and quantization for inference (GPTQ, AWQ, GGUF, FP8). Specific scenarios when fine-tuning is necessary are highlighted, such as achieving unique style, mastering domain language, reducing cost/latency via distillation, or meeting privacy requirements. A project example involves fine-tuning a small open model (Qwen, Llama, Mistral, Gemma) using LoRA and comparing it with a well-prompted frontier model.\n\n**Phase 7 addresses production, inference, and deployment**, discussing various inference servers (vLLM, TGI, SGLang, TensorRT-LLM), local/edge deployment options (Ollama, llama.cpp, MLX), and hosted inference providers (Together, Fireworks, Groq, major LLM APIs). It also describes serving patterns (streaming, speculative decoding, prefix caching, batching), cost engineering strategies (prompt caching, model routing, context trimming), latency considerations (time to first token, streaming UX), and crucial safety and privacy aspects (input filtering, output moderation, prompt injection defense, PII handling, data retention, deployment decisions)."
+        }
+      ]
+    },
+    {
+      "title": "Phase 7 \u2014 Production, inference, and deployment (3\u20134 weeks)",
+      "node_id": "0024",
+      "start_index": 5,
+      "end_index": 5,
+      "summary": "The partial document outlines key considerations and techniques for advanced stages of LLM development, specifically focusing on \"Phase 6 \u2014 Fine-tuning and post-training\" and \"Phase 7 \u2014 Production, inference, and deployment.\"\n\nIt covers:\n*   **Production Observability and Online Evals:** Lists tools for monitoring LLM performance in production and defines online evaluations, referencing key resources.\n*   **Fine-tuning Strategies:** Details when to fine-tune (after exhausting prompting/RAG), modern PEFT methods (LoRA, QLoRA), various fine-tuning approaches (instruction tuning, continued pretraining, preference optimization like DPO), synthetic data generation, model distillation, and quantization for inference. It also provides specific use cases for fine-tuning (style, domain language, cost/latency, privacy) and a practical project example.\n*   **Production, Inference, and Deployment:** Discusses different inference servers (vLLM, TGI), options for local/edge and hosted inference, common serving patterns (streaming, speculative decoding), cost engineering strategies, latency optimization, and critical considerations for safety (input filtering, prompt injection defense) and privacy (PII handling, data retention)."
+    },
+    {
+      "title": "Phase 8 \u2014 Multimodal and frontier topics (ongoing)",
+      "node_id": "0025",
+      "start_index": 6,
+      "end_index": 6,
+      "summary": "This document outlines \"Phase 8\" of AI development, focusing on multimodal and frontier topics such as vision-language models, audio processing, video understanding, image generation, reasoning models, long context windows, mixture of experts, and agentic coding. It also provides actionable advice on \"Habits that compound,\" including selective paper reading, following practitioners, documenting work, shipping to real users, and regularly re-evaluating technology stacks. Finally, it lists \"What to avoid,\" highlighting pitfalls like framework-first thinking, skipping evaluations, confusing demo with production quality, over-engineering solutions (fine-tuning or agents when simpler methods suffice), and chasing every new model release."
+    },
+    {
+      "title": "Habits that compound",
+      "node_id": "0026",
+      "start_index": 6,
+      "end_index": 6,
+      "summary": "The partial document outlines \"Phase 8\" of an AI/ML journey, focusing on multimodal and frontier topics such as vision-language models, audio processing, video understanding, image generation, reasoning models, long context windows, mixture of experts, and agentic coding. It then provides advice on \"Habits that compound\" for practitioners, including selective paper reading, following key practitioners, documenting projects, shipping to real users, and regularly re-evaluating technology stacks. Finally, it lists \"What to avoid,\" warning against pitfalls like framework-first thinking, skipping evaluations, confusing demo with production quality, unnecessary fine-tuning or agent building, and constantly chasing new model releases."
+    },
+    {
+      "title": "What to avoid",
+      "node_id": "0027",
+      "start_index": 6,
+      "end_index": 6,
+      "summary": "The partial document outlines advanced and emerging topics in AI (\"Phase 8 \u2014 Multimodal and frontier topics\") such as vision-language models, audio processing, video understanding, image generation, reasoning models, long context windows, mixture of experts, and agentic coding. It also provides actionable advice on \"Habits that compound\" for professional growth, including selective paper reading, following practitioners, documenting work, shipping projects, and regularly re-evaluating technology stacks. Finally, it lists common pitfalls and \"What to avoid,\" such as framework-first thinking, skipping evaluations, confusing demo with production quality, unnecessary fine-tuning or agent building, and constantly chasing new model releases."
+    },
+    {
+      "title": "Suggested project sequence",
+      "node_id": "0028",
+      "start_index": 7,
+      "end_index": 7,
+      "summary": "This document outlines a structured learning path for AI/LLM development, presenting a sequence of six practical projects that progressively build skills from Transformer fundamentals to API usage, Retrieval Augmented Generation (RAG), multi-step agents, model fine-tuning, and production deployment. It also provides a detailed timeline summary across eight phases, specifying focus areas and estimated durations (e.g., LLM fundamentals, RAG, agents, fine-tuning, production). A key takeaway emphasizes building real projects, honest evaluation, and documenting learnings in each phase, with an explicit goal of being ready for job applications or shipping a product by project four."
+    },
+    {
+      "title": "Timeline summary",
+      "node_id": "0029",
+      "start_index": 7,
+      "end_index": 7,
+      "summary": "This partial document outlines a structured learning path and project sequence for mastering LLM (Large Language Model) engineering. It details a series of six progressively challenging projects, each designed to develop specific skills from Transformer fundamentals and API usage to RAG, multi-step agents, fine-tuning, and deployment. The document also provides a phased timeline summary, allocating timeframes for different areas of focus like LLM fundamentals, API-level engineering, RAG, agents, evaluation, fine-tuning, and production. A key piece of advice emphasizes building real projects in each phase, evaluating them honestly, and documenting the learning process, with a stated goal of being ready for job applications or shipping products by project four."
+    },
+    {
+      "title": "The single highest-leverage habit: build something real every phase, evaluate it honestly, and write about what you learned.",
+      "node_id": "0030",
+      "start_index": 7,
+      "end_index": 7,
+      "summary": "This partial document outlines a structured learning path for developing expertise in Large Language Models (LLMs) and related applications. It details a six-project sequence, each designed to exercise specific skills, progressing from fundamental Transformer concepts and nanoGPT cloning to advanced topics like API usage, Retrieval Augmented Generation (RAG), multi-step agents, fine-tuning open models, and production deployment with monitoring. Accompanying this is a timeline summary divided into eight phases, indicating the focus areas and estimated time commitment for each, covering LLM fundamentals, API-level engineering, RAG, agents, evaluation, fine-tuning, and production. The document emphasizes practical application, suggesting readiness for job applications or shipping real products by project four, and advocates for a continuous habit of building, evaluating, and documenting learning experiences."
+    }
+  ]
+}

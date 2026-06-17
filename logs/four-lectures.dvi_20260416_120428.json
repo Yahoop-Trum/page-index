@@ -1,0 +1,41 @@
+[
+  {
+    "total_page_number": 53
+  },
+  {
+    "total_token": 30719
+  },
+  {
+    "toc_content": "Mads T ofte/, Marc h /1/, /1/9/8/9Lab oratory for F oundations of Computer ScienceDepartmen t of Computer ScienceEdin burgh Univ ersit yF our Lectures on Standard MLThe follo wing notes giv e an o v erview of Standard ML with emphasis placedon the Mo dules part of the language/.The notes are/, to the b est of m y kno wledge/, faithful to /\\The De/\fnition ofStandard ML/, V ersion /2/\"/[/1/]/, as regards syn tax/, seman tics and terminology /.They ha v e b een written so as to b e indep enden t of an y particular implemen/-tation/. The exercises in the /\frst /3 lectures can b e tac kled without the useof a mac hine/, although ha ving access to an implemen tation will no doubt b eb ene/\fcial/. The pro ject in Lecture /4 presupp oses access to an implemen tationof the full language/, including mo dules/. /(A t presen t/, the Edin burgh compilerdo es not fall in to this category/; the author used the New Jersey Standard MLcompiler/./)L e ctur e /1 giv es an in tro duction to ML aimed at the reader who is familiar with someprogramming language but do es not kno w ML/. Both the Core Language and the Mo dulesare co v ered b y w a y of example/.L e ctur e /2 discusses the use of ML mo dules in the dev elopmen t of large programs/. Auseful metho dology for programming with functors/, signatures and structures is presen ted/.L e ctur e /3 giv es a fairly detailed accoun t of the static seman tics of ML mo dules/, forthose who really w an t to understand the crucial notions of sharing and signature matc hing/.L e ctur e /4 presen ts a one da y pro ject in tended to giv e the studen t an opp ortunit y ofmo difying a non/-trivial piece of soft w are using functors/, signatures and structures/./[/1/] R/. Harp er/, R/. Milner and M/. T ofte/: /\\The De/\fnition of Standard ML/, V ersion /2/\"/,/(ECS/{LF CS/{/8/8/{/6/2/) Labroatory for F oundations of Computer Science/, Dept/. of ComputerScience/, Univ ersit y of Edin burgh/.",
+    "toc_page_list": [
+      0
+    ],
+    "page_index_given_in_toc": "yes"
+  },
+  {
+    "message": "toc_with_page_number: []"
+  },
+  {
+    "message": "toc_with_physical_index: {}"
+  },
+  {
+    "message": "toc_with_physical_index: {}"
+  },
+  {
+    "message": "matching_pairs: []"
+  },
+  {
+    "message": "offset: None"
+  },
+  {
+    "message": "toc_with_page_number: []"
+  },
+  {
+    "message": "toc_with_page_number: []"
+  },
+  {
+    "mode": "process_toc_with_page_numbers",
+    "accuracy": 0,
+    "incorrect_results": []
+  }
+]

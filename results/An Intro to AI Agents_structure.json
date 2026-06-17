@@ -1,0 +1,54 @@
+{
+  "doc_name": "Untitled",
+  "structure": [
+    {
+      "title": "Preface",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "The provided partial document text is empty. Therefore, no main points can be identified or described."
+    },
+    {
+      "title": "Why DevRev | Our Journey",
+      "node_id": "0001",
+      "start_index": 2,
+      "end_index": 15,
+      "summary": "The partial document primarily outlines the strengths and achievements of a company, likely DevRev, under the heading \"Why DevRev | Our Journey.\" It details the experienced background of its founders (from Nutanix with a significant IPO and high NPS), its substantial funding ($100M raised, $1B+ valuation), and its industry-leading customers who benefit from an AI-native platform. Key investors (Khosla Ventures, Mayfield Fund) and the leadership team (CEO & President) are identified, alongside the company's global presence (500+ employees, 8 offices). Additionally, the document includes various programming and web-related keywords and snippets (e.g., HTML, JavaScript functions, CSS), information on the cost per million tokens ($50 for 2024, $0.11 today), and core value propositions such as \"Discovering knowledge already within the enterprise\" and \"Team Intelligence.\""
+    },
+    {
+      "title": "Team Intelligence",
+      "node_id": "0002",
+      "start_index": 15,
+      "end_index": 15,
+      "summary": "This partial document focuses on the concept of discovering and leveraging existing knowledge within an enterprise, likely through the application of team intelligence or collective intelligence."
+    },
+    {
+      "title": "DevRev Airdrop",
+      "node_id": "0003",
+      "start_index": 16,
+      "end_index": 18,
+      "summary": "This partial document describes the \"DevRev Airdrop\" platform, highlighting its core functionalities such as managing, creating, improving workflows, searching, and analyzing. It leverages foundational services like an AI Knowledge Graph and Business Ontology Graph. The platform supports 2-way synchronization and integrates with apps and AI agents, enabling a sequence of actions including search, answer, reason, action, resolve, and communicate."
+    },
+    {
+      "title": "AI Agents Team Intelligence with",
+      "node_id": "0004",
+      "start_index": 19,
+      "end_index": 25,
+      "summary": "This partial document describes the numerous benefits and return on investment (ROI) associated with implementing AI Agents. Key points covered include substantial increases in employee and support agent productivity (up to 4x and 150% ROI), significant reductions in costs such as license spend (50%), total cost of ownership (50%), and support costs (50%). It also emphasizes improved customer support metrics, including faster resolution times (5x faster across L1-L4 tickets), a high percentage of automatically deflected (60%) and resolved tickets (80%), and a reduction in ticket escalations (40%). Furthermore, the document notes benefits related to customer lifetime value (LTV) and lists specific DevRev products like SupportApp, BuildApp, and EnterpriseSearch that leverage these AI Agents."
+    },
+    {
+      "title": "DevRev customers are seeing benefits such as:",
+      "node_id": "0005",
+      "start_index": 25,
+      "end_index": 26,
+      "summary": "This partial document outlines significant benefits and quantifiable improvements achieved by DevRev customers. It highlights a 150% average ROI from increased employee productivity, substantial reductions in license spend (50%), total cost of ownership (50%), and support costs (50%). The document also emphasizes dramatic improvements in support operations, including 5x faster resolution times across L1-L4 tickets, 60% automatic ticket deflection, 80% of tickets automatically resolved with AI, a 15% decline in new tickets created, and a 4x increase in support agent productivity. Other benefits mentioned include 25% average time saved per employee, 4x reduction of MTTR, 40% reduction of ticket escalations, and a 2x increase in customer Lifetime Value (LTV). It concludes by listing key DevRev offerings such as AI Agent, SupportApp, BuildApp, and EnterpriseSearch."
+    },
+    {
+      "title": "Thank You",
+      "node_id": "0006",
+      "start_index": 26,
+      "end_index": 26,
+      "summary": "The partial document includes a reference to \"devrev.ai\" and a concluding \"Thank You\" message."
+    }
+  ]
+}

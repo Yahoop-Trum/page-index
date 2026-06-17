@@ -1,0 +1,119 @@
+{
+  "doc_name": "four-lectures.dvi",
+  "structure": [
+    {
+      "title": "Preface",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 24,
+      "summary": "The document provides an overview of Standard ML, focusing on the Modules part of the language. It is based on \"The Definition of Standard ML, Version 2\" and aims to be implementation-independent. The document consists of four lectures. Lecture 1 introduces ML, covering both the Core Language and Modules through examples. Lecture 2 discusses the use of ML modules in developing large programs, presenting a methodology for programming with functors, signatures, and structures. Lecture 3 gives an account of the static semantics of ML modules, focusing on sharing and signature matching. Lecture 4 presents a project intended to give the student an opportunity to modify a piece of software using functors, signatures and structures. The document then goes on to give an overview of ML in comparison to other languages like COBOL, PASCAL, LISP, and ADA. It then introduces ML sessions and implementing heaps, covering types, values, recursive functions, exceptions, structures, signatures, Coercive Signature Matching, Functor Declaration and Application, and Summary. The document later discusses programming with ML Modules, including introduction, signatures, structures, functors, substructures, sharing, and building the system, separate compilation, good and bad style. Finally, the document discusses the static semantics of modules, including elaboration, names, decorating structures and signatures, signature instantiation, and signature matching.\n"
+    },
+    {
+      "title": "Signature Matching",
+      "node_id": "0001",
+      "start_index": 24,
+      "end_index": 25,
+      "summary": "The document discusses signature matching in the context of structures and signatures. It covers signature instantiation, ignoring information in structures not required by the signature, and how structures can be cut down to match signatures by forgetting components and polymorphism. Examples are given to illustrate these concepts, including structures `Stackn`, `OddStrn`, `Treen`, and `Sym`, along with their corresponding signatures. The document also explains signature constraints and how they affect the resulting view of a structure, including their ability to remove components and polymorphism while preserving existing sharing. Exercises are included to test the reader's understanding.\n"
+    },
+    {
+      "title": "Signature Constraints",
+      "node_id": "0002",
+      "start_index": 25,
+      "end_index": 26,
+      "summary": "The document discusses signature constraints in structures, focusing on how they affect the resulting view of the structure, hiding components and polymorphism, but not affecting existing sharing. It provides examples of structure declarations with explicit signature constraints and exercises related to completing declarations and declaring different structures with shared types. Furthermore, it covers decorating functors dynamically, explaining generative names and how they are replaced with fresh names upon functor application, and how this affects sharing between structures created by different applications of the same functor. It also touches upon external sharing, where identifiers declared outside the functor are referenced within the functor body.\n"
+    },
+    {
+      "title": "Decorating Functors",
+      "node_id": "0003",
+      "start_index": 26,
+      "end_index": 26,
+      "summary": "The document discusses decorating functors dynamically, focusing on how the body of a functor is evaluated only when the functor is applied. It uses the `StackFct` functor as an example to illustrate the creation of distinct references with each application. The document introduces the concept of \"generative names\" for functors, which are placeholders for fresh names chosen during functor application. It explains how these names are handled in nullary functors and highlights how decorations show the top-most structure name. It also touches upon the idea of external sharing, where identifiers declared outside the functor's body can be referenced within it.\n"
+    },
+    {
+      "title": "External Sharing",
+      "node_id": "0004",
+      "start_index": 26,
+      "end_index": 27,
+      "summary": "The document discusses decorating functors dynamically, focusing on generative names and external sharing. It explains how functors are evaluated, how fresh names are recorded and used upon application, and how external identifiers are handled within a functor's body. It also covers functors with arguments and how to decorate their bodies, assuming a structure that matches the parameter signature. Exercises are included to test understanding of the concepts. Examples include `StackFct` and `SymDir` functors.\n"
+    },
+    {
+      "title": "Functors with Arguments",
+      "node_id": "0005",
+      "start_index": 27,
+      "end_index": 28,
+      "summary": "The document discusses functors, specifically focusing on how to decorate them, especially when they have arguments and result signatures. Key points include: naming conventions during functor application, matching actual arguments to formal parameter signatures, sharing between arguments and the functor body, and the use of explicit result signatures to control the visibility of components and polymorphism in the result. Several exercises are included to illustrate these concepts.\n"
+    },
+    {
+      "title": "Sharing Between Argument and Result",
+      "node_id": "0006",
+      "start_index": 28,
+      "end_index": 28,
+      "summary": "The document discusses the process of decorating the result of applying a functor, focusing on name sharing between the argument and result. It covers matching actual arguments against formal parameter signatures, applying realisations to the functor body's decoration, and substituting fresh names. The document also explains how explicit result signatures in functor declarations are handled, where the decorated result signature is used as a formal result if an instance can be obtained from the decorated body. Finally, there are exercises related to completing the decoration of results and determining the legality of expressions using different definitions.\n"
+    },
+    {
+      "title": "Explicit Result Signatures",
+      "node_id": "0007",
+      "start_index": 28,
+      "end_index": 29,
+      "summary": "The document discusses the decoration of functor applications, focusing on how sharing between arguments and results is handled. It covers topics such as matching actual arguments against formal parameter signatures, applying realisations to functor bodies, and substituting fresh names for generative names. It also addresses explicit result signatures, where the result signature is decorated and compared to the decorated body to determine the formal result. Several exercises are included, challenging the reader to complete decorations, analyze the legality of expressions, and understand the equivalence of different functor declarations.\n"
+    },
+    {
+      "title": "Implementing an Interpreter in ML",
+      "node_id": "0008",
+      "start_index": 30,
+      "end_index": 31,
+      "summary": "The document describes the implementation of a small ML system called Mini ML using ML modules. It focuses on building an interpreter with a type checker and an evaluator. The interpreter will handle basic arithmetic, if-then-else expressions, lists, higher-order functions, and recursion. The document provides a parse functor to convert Mini ML source code into abstract syntax trees and explains how to extend the type checker to handle polymorphic lists, variables, and let expressions. The development of the type checker and evaluator can be done independently, and the document provides information on how to run the system and access the source code. It also includes exercises related to finding specific signatures, functors, and their types within the code.\n",
+      "nodes": [
+        {
+          "title": "VERSION 1: The bare Typechecker (Appendix A)",
+          "node_id": "0009",
+          "start_index": 32,
+          "end_index": 32,
+          "summary": "The document describes a basic type checker (version 1) that can handle integer constants and addition. It uses an abstract type system with functions to build and decompose types, hiding implementation details. The type checker depends on abstract syntax and a Type structure, but only knows about the implementation of types as specified by the TYPE signature, allowing for experimentation with type implementations. The exercise suggests modifying the type checker to handle booleans (true, false) and integer multiplication. The document also provides the structure declarations to build the system, importing the parser and defining structures for Expression, Parser, Value, Evaluator, Type, TypeChecker, and Interpreter.\n"
+        },
+        {
+          "title": "VERSION 2: Adding lists and polymorphism",
+          "node_id": "0010",
+          "start_index": 33,
+          "end_index": 37,
+          "summary": "The document discusses adding lists and polymorphism to a type checker, focusing on the type checking of lists. It explains the concept of unification, where the type of an expression depends on its context. It provides examples of how unification works with lists, including well-typed and ill-typed expressions. The document then delves into the implementation details, introducing signatures for TYPE and UNIFY, and a functor for the TypeChecker. It also describes extending the Type functor and presents an exercise to extend the version to handle equality. Finally, it briefly mentions an alternative implementation of types using references instead of substitutions.\n"
+        },
+        {
+          "title": "VERSION 3: A different implementation of types",
+          "node_id": "0011",
+          "start_index": 37,
+          "end_index": 39,
+          "summary": "The document describes different versions of a type checker implementation. Version 3 replaces the Type functor with a different implementation using references for type variables and direct assignments for substitutions. It introduces the `withtype` keyword for local type abbreviation within datatype declarations. It also includes exercises comparing the efficiency of functional and imperative versions, noting that the functional version can be faster in some cases, and discussing the trade-offs between the two. The document emphasizes the importance of overall system structure and avoiding premature focus on performance. Version 4 extends Version 3 to handle type checking of let expressions and identifiers, introducing type environments and type schemes. It explains how type variables are handled in the type environment during let expression type checking through instantiation with fresh type variables.\n"
+        },
+        {
+          "title": "VERSION 4: Introducing variables and let",
+          "node_id": "0012",
+          "start_index": 39,
+          "end_index": 43,
+          "summary": "The document discusses type checking in Mini ML, specifically focusing on extending a previous version to include let expressions and identifiers. It introduces type environments, which map variables to type schemes, and explains how type variables are handled during type checking. The document also covers polymorphism, type schemes, and provides the implementation details of variables and the 'let' construct, including extending the TYPE signature and modifying the TypeChecker functor. Additionally, it presents exercises to extend the system with conditional expressions and lambda abstractions/application, highlighting the need for arrow types, modified type closing, and substitution composition.\n"
+        },
+        {
+          "title": "Acknowledgement",
+          "node_id": "0013",
+          "start_index": 43,
+          "end_index": 43,
+          "summary": "The document discusses the re-building of a system (as in Version 2) that requires providing and linking an Environment functor. It then presents several exercises: extending Version 4 with \"if...then...else\", and extending Version 4 to handle lambda abstraction and application. The latter involves introducing arrow types, modifying the 'close' function, changing the type checker, and handling type schemes with free type variables in the environment. The document mentions the need to extend the TYPE signature (and the Type functor) with composition of substitutions and the unification algorithm to handle arrow types. Finally, it acknowledges Nick Rothwell for the parser, evaluator, and related signatures.\n"
+        }
+      ]
+    },
+    {
+      "title": "Appendix A: The bare Interpreter",
+      "node_id": "0014",
+      "start_index": 44,
+      "end_index": 52,
+      "summary": "The document presents the code for a bare interpreter, including signatures and functors for various components: INTERPRETER, EXPRESSION, PARSER, ENVIRONMENT, VALUE, EVALUATOR, TYPE, and TYPECHECKER. It details the syntax of expressions, parsing, environments, value representation, evaluation, and type checking. Specifically, it covers:\n\n- **Interpreter signature and functor:** Defines the main `interpret` function which parses, type-checks, and evaluates code, with toggles for evaluation and type checking.  Error handling is included.\n- **Expression signature:** Defines the `Expression` datatype, encompassing various expression forms like SUM, DIFF, PROD, BOOL, EQ, COND, CONS, LIST, DECL, RECDECL, IDENT, LAMBDA, APPL, and NUMBER.\n- **Parser signature:** Defines the `parse` function to convert a string to an `Expression`. Includes lexical and syntax exceptions.\n- **Environment signature:** Defines an `Environment` type for storing variable bindings with functions for declaration and retrieval.\n- **Value signature:** Defines the `Value` datatype, representing runtime values (Number, Bool, Nil, Cons), along with functions for creation, deconstruction, equality comparison, and printing.\n- **Evaluator signature and functor:** Defines the `evaluate` function to evaluate an `Expression` to a `Value`. Includes exception handling for unimplemented features. Covers evaluation rules for basic arithmetic operations and boolean expressions. Several expression types raise the \"Unimplemented\" exception.\n- **Type signature:** Defines the `Type` datatype (Int, Bool) and functions for creating, deconstructing, and printing types.\n- **TypeChecker signature and functor:** Defines the `typecheck` function to infer the type of an `Expression`. Includes exception handling for unimplemented features and type errors. Covers type checking rules for integer and boolean expressions. Several expression types raise the \"NotImplemented\" exception.\n- **Basic functors:** Defines `Type`, `Expression`, and `Value` functors, providing basic implementations of these signatures.  The `Value` functor also includes printing functions for different value types.\n"
+    },
+    {
+      "title": "Appendix B: Files",
+      "node_id": "0015",
+      "start_index": 53,
+      "end_index": 53,
+      "summary": "The document describes the files available in the directory `/usr/cheops/mads/course/interp/1/`. It lists several `.sml` files, including versions of `interp`, `build`, and `parser`. It provides instructions on how to build version 3, by using the `interp/3/.sml`, `parser/.sml`, and `build/3/.sml` files. It also mentions that the parser functor only needs to be included once per session.\n"
+    }
+  ]
+}

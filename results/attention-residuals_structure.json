@@ -1,0 +1,199 @@
+{
+  "doc_name": "Attention Residuals",
+  "structure": [
+    {
+      "title": "ABSTRACT",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "The document introduces Attention Residuals (AttnRes), a novel approach to replace standard residual connections in LLMs. AttnRes uses softmax attention over preceding layer outputs to allow selective aggregation of earlier representations. To address memory overhead, Block AttnRes is introduced, partitioning layers into blocks and attending over block-level representations. Experiments show AttnRes mitigates PreNorm dilution, improves output magnitudes and gradient distribution, and enhances downstream performance, especially when integrated into the Kimi Linear architecture. The document also includes a figure illustrating standard residuals, full AttnRes, and Block AttnRes.\n"
+    },
+    {
+      "title": "1 Introduction",
+      "node_id": "0001",
+      "start_index": 2,
+      "end_index": 2,
+      "summary": "The document introduces Attention Residuals (AttnRes), a novel approach that replaces fixed residual connections in Large Language Models (LLMs) with learned softmax attention over depth. It addresses the limitations of standard residual connections, particularly the issue of hidden-state magnitude growth and information dilution in PreNorm architectures. The document proposes a scalable variant, Block AttnRes, to reduce memory and communication costs. It highlights the duality between depth-wise accumulation and sequential recurrence in RNNs, and shows that standard residuals perform depth-wise linear attention, while AttnRes generalizes this to softmax attention. The document details infrastructure optimizations for efficient scaling of Block AttnRes, including cross-stage caching and a two-phase inference strategy. The approach is validated through scaling law experiments, component ablations, and downstream benchmarks, demonstrating consistent improvements and mitigation of PreNorm dilution.\n"
+    },
+    {
+      "title": "2 Motivation",
+      "node_id": "0002",
+      "start_index": 3,
+      "end_index": 3,
+      "summary": "The document introduces the concept of Attention Residuals as a method to improve deep network training by addressing the limitations of traditional residual connections. It begins by explaining the motivation behind residual learning and how it enables gradient flow in deep networks. It then discusses Highway networks as a generalization of residuals using learned gates. The document highlights the limitations of both fixed and gated residual connections, specifically their inability to selectively access individual layer outputs, leading to information loss and potential training instability. To overcome these limitations, the document proposes Attention Residuals, drawing an analogy to the improvements that Transformers brought to sequence modeling by replacing recurrence with attention. Attention Residuals allow each layer to selectively aggregate information from all preceding layers using layer-specific attention weights.\n",
+      "nodes": [
+        {
+          "title": "2.1 Training Deep Networks via Residuals",
+          "node_id": "0003",
+          "start_index": 3,
+          "end_index": 2,
+          "summary": "The document is incomplete and provides no content for me to describe.\n"
+        }
+      ]
+    },
+    {
+      "title": "3 Attention Residuals: A Unified View of Time and Depth",
+      "node_id": "0004",
+      "start_index": 3,
+      "end_index": 4,
+      "summary": "The document introduces Attention Residuals (AttnRes) as a novel approach to training deep networks, drawing inspiration from the success of attention mechanisms in sequence modeling. It starts by explaining the motivation behind residual connections and their limitations, such as the uniform treatment of layer contributions and the irreversible loss of information. AttnRes addresses these limitations by allowing each layer to selectively aggregate information from all preceding layers, analogous to how Transformers use attention over sequence positions. The document details two variants of AttnRes: Full Attention Residuals, which applies attention over all individual layer outputs, and Block Attention Residuals, which reduces memory and communication overhead by partitioning layers into blocks and applying attention over block-level representations. It explains the computations and overheads involved in both, and highlights the advantages and potential future improvements for each approach.\n",
+      "nodes": [
+        {
+          "title": "3.1 Full Attention Residuals",
+          "node_id": "0005",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "The document introduces two attention residual variants: Full Attention Residuals and Block Attention Residuals. Full Attention Residuals calculate attention weights based on a kernel function and layer-specific learnable vectors, summing the layer outputs weighted by attention. While it has modest arithmetic cost, it introduces memory and communication overhead in scaled settings with activation recomputation and pipeline parallelism. To address this, Block Attention Residuals partitions layers into blocks, reduces each block to a single representation via summation, and applies full attention only to these block-level representations, reducing memory and communication overhead. The document details the mathematical formulation of both methods, including the use of RMSNorm to prevent magnitude differences from biasing attention weights. It also discusses the potential for blockwise optimization in Full AttnRes and the trade-offs between memory I/O and cross-stage communication costs in distributed training regimes.\n"
+        },
+        {
+          "title": "3.2 Block Attention Residuals",
+          "node_id": "0006",
+          "start_index": 4,
+          "end_index": 5,
+          "summary": "The document introduces and details two attention residual mechanisms: Full Attention Residuals and Block Attention Residuals. Full Attention Residuals compute attention weights based on query and key vectors, with the input to each layer being a weighted sum of previous layer outputs. While it has a modest arithmetic cost, it can introduce memory and communication overhead at scale. Block Attention Residuals address this by partitioning layers into blocks and reducing layer outputs within each block to a single representation via summation. Then, attention is applied across these block-level representations, reducing both memory and communication overhead. The document also provides a PyTorch-style pseudocode implementation of Block Attention Residuals and discusses the efficiency gains and system challenges associated with its implementation.\n"
+        }
+      ]
+    },
+    {
+      "title": "4 Infrastructure Design",
+      "node_id": "0007",
+      "start_index": 5,
+      "end_index": 6,
+      "summary": "This document describes Block Attention Residuals, a technique to improve the efficiency of attention mechanisms in deep learning models. The main points covered are:\n\n1.  **Block Attention Residuals:** Introduces the concept of attending over block representations instead of individual layer outputs to reduce memory and computation costs.\n2.  **`block_attn_res` Function:** Describes the computation of softmax attention over block representations using a learned pseudo-query.\n3.  **`forward` Function:** Explains how a single layer pass maintains the intra-block residual (`partial_block`) and inter-block history (`blocks`).\n4.  **Efficiency:** Explains the reduction in memory usage from O(L) to O(N) and computation from O(L^2) to O(N^2) by using block representations, where N is the number of blocks and L is the number of layers.\n5.  **Infrastructure Design:** Addresses the system challenges introduced by Block AttnRes, particularly in large-scale distributed training with pipeline parallelism. It introduces cross-stage caching to reduce communication overhead by transmitting only incremental blocks between pipeline stages.\n6.  **Training Optimizations:** Explains how cross-stage caching optimizes communication costs in pipeline parallelism by caching blocks locally and only transmitting incremental updates.\n",
+      "nodes": [
+        {
+          "title": "4.1 Training",
+          "node_id": "0008",
+          "start_index": 6,
+          "end_index": 7,
+          "summary": "This document discusses Attention Residuals (AttnRes), a technique to improve efficiency in large language models, specifically addressing challenges related to memory cost and latency. It introduces Block AttnRes, which transmits only a subset of layer outputs across stages to reduce communication overhead. The document details optimizations for pipeline communication during distributed training, including cross-stage caching, which reduces redundant data transmission by caching blocks locally. It also describes a two-phase computation strategy for inference that amortizes memory access costs and a sequence-sharded prefilling scheme for long-context inputs. The two phases consists of a Phase 1 that computes inter-block attention and a Phase 2 that computes intra-block attention. The document provides algorithm details and analyzes memory overhead, showing that Block AttnRes adds negligible training overhead and maintains a similar per-layer activation footprint to standard architectures.\n"
+        },
+        {
+          "title": "4.2 Inference",
+          "node_id": "0009",
+          "start_index": 7,
+          "end_index": 8,
+          "summary": "This document presents an algorithm for Attention Residuals (AttnRes), focusing on a two-phase computation strategy for both training and inference, particularly with Block AttnRes. It details the memory overhead and time efficiency of the algorithm, highlighting the negligible training overhead and low inference latency. The document also discusses a sequence-sharded prefilling scheme to reduce memory footprint during inference. Furthermore, it explains the architecture details, particularly the initialization of pseudo-query vectors, and presents scaling laws, comparing AttnRes (both Full and Block variants) with a PreNorm baseline across different model sizes. The results show that AttnRes consistently achieves lower loss across the entire compute range.\n"
+        }
+      ]
+    },
+    {
+      "title": "5 Experiments",
+      "node_id": "0010",
+      "start_index": 8,
+      "end_index": 8,
+      "summary": "This partial document focuses on the Attention Residuals (AttnRes) technique and its performance. It details the memory access costs of AttnRes compared to other residual generalizations like mHC, showing AttnRes has lower I/O costs. It also describes a memory-efficient prefilling method using tensor-parallelism to reduce memory footprint during prefilling. The document outlines the architecture used for experiments, which is based on the Kimi Linear model with modifications including the addition of AttnRes. Finally, it discusses scaling laws, comparing the performance of PreNorm baseline, Full AttnRes, and Block AttnRes across different model sizes. The results show AttnRes consistently achieves lower loss compared to the baseline across the compute range.\n",
+      "nodes": [
+        {
+          "title": "5.1 Scaling Laws",
+          "node_id": "0011",
+          "start_index": 8,
+          "end_index": 9,
+          "summary": "This document section primarily discusses the memory access cost and performance of Attention Residuals (AttnRes) compared to standard residuals and other residual generalizations like mHC. It details a two-phase inference schedule designed to reduce memory overhead, including memory-efficient prefilling techniques such as sharding and chunking. The section then presents experimental results, comparing PreNorm baseline, Full AttnRes, and Block AttnRes across different model sizes, focusing on scaling laws and validation loss. It highlights that AttnRes consistently achieves lower loss with similar scaling behavior and outperforms or matches mHC with lower memory I/O. Finally, the section describes the training recipe used for the largest models, including data, optimizer, learning rate schedule, and context extension techniques.\n"
+        },
+        {
+          "title": "5.2 Main Results",
+          "node_id": "0012",
+          "start_index": 9,
+          "end_index": 11,
+          "summary": "The document provides a technical report focusing on Attention Residuals (AttnRes). It compares Baseline models with Block AttnRes, Full AttnRes, and mHC(-lite) regarding model configurations, hyperparameters, and validation loss. Key results include:\n\n1.  **Performance Comparison:** Full and Block AttnRes consistently outperform the baseline across various scales, with Block AttnRes closely tracking Full AttnRes. At larger scales, the gap between Full and Block AttnRes narrows.\n2.  **Training Dynamics:** AttnRes achieves consistently lower validation loss during training. The Baseline suffers from the PreNorm dilution problem, which Block AttnRes addresses by confining hidden-state growth within each block. Block AttnRes also results in a more uniform gradient distribution.\n3.  **Downstream Performance:** AttnRes matches or outperforms the baseline on language understanding, reasoning, code, and math benchmarks, particularly on multi-step reasoning tasks.\n4.  **Ablation Study:** The document includes ablation studies to validate key design choices in AttnRes, comparing it against DenseFormer and mHC. Full AttnRes achieves the lowest loss, and Block AttnRes offers a trade-off between performance and memory cost. The effect of varying block sizes on validation loss is also analyzed.\n"
+        },
+        {
+          "title": "5.3 Ablation Study",
+          "node_id": "0013",
+          "start_index": 11,
+          "end_index": 12,
+          "summary": "The document presents an ablation study of the AttnRes model, focusing on the impact of key components and architectural choices on performance. It compares AttnRes against a PreNorm baseline and other methods like DenseFormer and mHC, highlighting the importance of input-dependent weighting and content-dependent selection via softmax attention. The study also investigates the granularity of cross-layer access (Full AttnRes, SWA, Block AttnRes), the effects of input-dependent queries, input-independent mixing, softmax vs. sigmoid, multihead attention, and RMSNorm. Furthermore, the document analyzes the optimal architecture of AttnRes under fixed compute and parameter budgets, exploring the trade-offs between depth, width, and attention, and demonstrating that AttnRes favors deeper models compared to conventional Transformer designs. The document also evaluates Block AttnRes on various language understanding, reasoning, and code generation benchmarks, demonstrating its improved performance, especially on multi-step reasoning tasks.\n"
+        },
+        {
+          "title": "5.4 Analysis",
+          "node_id": "0014",
+          "start_index": 12,
+          "end_index": 12,
+          "summary": "The document section focuses on analyzing Attention Residuals (AttnRes) and their impact on optimal Transformer architecture. It investigates the trade-offs between depth, width, and attention mechanisms under a fixed computational budget. The study involves a controlled capacity reallocation experiment, enumerating various configurations of `dmodel/Lb` and `H/Lb` (where `Lb` is the number of Transformer blocks and `H` is the number of attention heads) to determine the optimal architecture. The results, presented in Figure 7, compare AttnRes against a baseline Transformer. Furthermore, the section ablates individual components of the attention mechanism, such as the input-dependent query, input-independent mixing, softmax vs. sigmoid, multihead attention, and RMSNorm on keys, to understand their contribution to performance. The key finding is that AttnRes allows for deeper models compared to conventional Transformer designs and outperforms the baseline across various configurations.\n",
+          "nodes": [
+            {
+              "title": "5.4.1 Optimal Architecture",
+              "node_id": "0015",
+              "start_index": 12,
+              "end_index": 13,
+              "summary": "The document discusses the \"Attention Residuals\" technique and its impact on neural network architecture. It analyzes the optimal architecture by performing a controlled capacity reallocation study under fixed compute and parameter budgets to see if AttnRes favors deeper models compared to conventional Transformers. The document presents results from experiments with different configurations of model depth, width and attention, showing that AttnRes achieves lower loss and shifts the optimum towards deeper, narrower networks. It further analyzes the learned attention patterns of AttnRes, visualizing the weights and highlighting preserved locality, layer specialization, and the structure preservation in Block AttnRes. It also ablates individual components of the attention mechanism, such as input-dependent query, input-independent mixing, softmax vs. sigmoid, multihead attention and RMSNorm on keys.\n"
+            },
+            {
+              "title": "5.4.2 Analyzing Learned AttnRes Patterns",
+              "node_id": "0016",
+              "start_index": 13,
+              "end_index": 14,
+              "summary": "The document analyzes \"Attention Residuals\" (AttnRes) in neural networks, focusing on how they learn and how they compare to other residual connection methods. It visualizes the learned weights of AttnRes models, highlighting preserved locality, layer specialization, and the structure-preserving properties of Block AttnRes. The document also discusses the duality between sequence depth and residual connections, drawing parallels between recurrent neural networks and residual networks. It formalizes different residual variants as weighted aggregations over previous layer outputs, represented by a depth mixing matrix. Finally, it compares AttnRes with other methods based on update rules, weight mechanisms, and source access.\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "6 Discussions",
+      "node_id": "0017",
+      "start_index": 14,
+      "end_index": 14,
+      "summary": "The document compares different residual update mechanisms, categorizing them by how they weight and source information from previous layers. It covers single-state recurrence methods like Residual, ReZero, LayerScale, Highway, DeepNorm, and KEEL. It also discusses multi-state recurrence methods such as SiameseNorm, HC/mHC, and DDL. Furthermore, it examines cross-layer access methods including DenseNet, DenseFormer, MRLA, and AttnRes. The document then explores the duality between sequence depth and recurrence, drawing parallels between residual connections and recurrent neural networks, and how different residual variants correspond to sequence-based mechanisms. Finally, it frames residual connections as structured matrices, specifically depth mixing matrices, and discusses how different methods vary in terms of weight generation and rank.\n",
+      "nodes": [
+        {
+          "title": "6.1 Sequence-Depth Duality",
+          "node_id": "0018",
+          "start_index": 14,
+          "end_index": 14,
+          "summary": "The document presents a comparison of different residual update mechanisms used in deep learning architectures, focusing on how they propagate information over depth. It categorizes these mechanisms based on the weighting of mixing coefficients (fixed, learned-static, or input-dependent) and the source of information they access (previous layers). The document then discusses the concept of sequence-depth duality, drawing parallels between residual connections and recurrent neural networks. It also introduces the idea of viewing residual variants as weighted aggregations over previous layer outputs, formalized through a depth mixing matrix.\n"
+        },
+        {
+          "title": "6.2 Residual Connections as Structured Matrices",
+          "node_id": "0019",
+          "start_index": 14,
+          "end_index": 15,
+          "summary": "The document compares different residual update mechanisms, focusing on their weight (fixed, learned-static, or input-dependent) and source (which earlier layers can be accessed). It presents a table outlining several methods, including Single-state recurrence (Residual, ReZero, LayerScale, Highway, DeepNorm, KEEL), Multi-state recurrence (SiameseNorm, HC/mHC, DDL), and Cross-layer access (DenseNet, DenseFormer, MRLA, Full AttnRes, Block AttnRes). The document further discusses the sequence-depth duality, relating residual connections to recurrent neural networks and highlighting connections between data-dependent gates and Highway networks, delta rule and DDL, and MRLA and GLA. It also formalizes residual variants as weighted aggregations using a depth mixing matrix M, visualizing M for Highway, (m)HC, Full AttnRes, and Block AttnRes, and explaining how the matrix structure arises in each case. The structured-matrix perspective enables analytical insights and informs new designs.\n"
+        },
+        {
+          "title": "6.3 Prior Residuals as Depth-Wise Linear Attention",
+          "node_id": "0020",
+          "start_index": 16,
+          "end_index": 16,
+          "summary": "This document introduces AttnRes, a novel approach that replaces fixed residual accumulation with learned, input-dependent depth-wise attention, drawing inspiration from the sequence-depth duality. It explains how existing residual variants can be interpreted as linear attention over the depth axis. The document discusses the challenges of normalization, scaling, and depth stability in standard residual updates, and how AttnRes avoids these issues. It also relates AttnRes to multi-state recurrence methods and cross-layer connectivity approaches, highlighting its unique features. Finally, it addresses the memory footprint of AttnRes and introduces Block AttnRes as a practical solution for large-scale models, validating its performance through experiments.\n"
+        }
+      ]
+    },
+    {
+      "title": "7 Related Work",
+      "node_id": "0021",
+      "start_index": 16,
+      "end_index": 16,
+      "summary": "The document discusses Attention Residuals (AttnRes), a method that replaces fixed residual accumulation with learned, input-dependent depth-wise attention. It relates existing residual variants to linear attention over the depth axis, showing how methods like Hyper-Connections act as depth-wise linear attention. The document addresses the tension between normalization placement and gradient propagation in standard residual updates, highlighting how AttnRes avoids issues like magnitude growth and gradient vanishing. It also discusses multi-state recurrence methods and cross-layer connectivity techniques, positioning AttnRes as a method that provides selective access to individual earlier-layer outputs. Finally, it introduces Block AttnRes, a practical implementation that partitions layers into blocks to reduce the memory footprint of cross-layer aggregation, making it scalable with minimal overhead. The document concludes by validating AttnRes through ablation studies and scaling law experiments.\n"
+    },
+    {
+      "title": "8 Conclusion",
+      "node_id": "0022",
+      "start_index": 16,
+      "end_index": 17,
+      "summary": "The document introduces AttnRes, a method that replaces fixed residual accumulation with learned, input-dependent depth-wise attention, drawing inspiration from the duality between sequence and depth. It explores the connection between structured matrices and sequence-depth duality, showing how residual variants can be seen as linear attention over the depth axis. The document discusses the challenges of normalization, scaling, and depth stability in standard residual updates, and how AttnRes avoids these issues. It also compares AttnRes with multi-state recurrence methods and cross-layer connectivity approaches, highlighting its unique selective access to earlier-layer outputs. The document then introduces Block AttnRes, which partitions layers into blocks to address the memory footprint issue of Full AttnRes, making it practical for large-scale models. The document concludes by validating the method through ablation studies and scaling law experiments. Finally, a list of references is provided.\n"
+    },
+    {
+      "title": "References",
+      "node_id": "0023",
+      "start_index": 17,
+      "end_index": 20,
+      "summary": "The document is a technical report about Attention Residuals and includes a list of references. The references cover a range of topics related to large language models, transformers, attention mechanisms, and neural networks. The document also lists the contributions of the authors involved in the project, with an indication of equal contribution for some authors and project leadership roles for others.\n"
+    },
+    {
+      "title": "A Contributions",
+      "node_id": "0024",
+      "start_index": 20,
+      "end_index": 20,
+      "summary": "The document lists the authors in order of their contribution to the project, with project leaders listed last. It also indicates that Guangyu Chen, Yu Zhang, and Jianlin Su made equal contributions.\n"
+    },
+    {
+      "title": "B Optimized Inference I/O for Full Attention Residuals",
+      "node_id": "0025",
+      "start_index": 21,
+      "end_index": 21,
+      "summary": "The document describes an optimized inference I/O method for full attention residuals (Full AttnRes). It addresses the high memory traffic of a naive implementation by batching inter-block accesses across layers in a two-phase schedule. The method partitions the model into contiguous blocks and computes inter-block attention jointly for all layers in a block (Phase 1) before processing intra-block dependencies sequentially (Phase 2). The analysis provides equations to quantify the read and write costs for each phase, demonstrating that this approach reduces the per-layer I/O complexity from O(L) to O(S+N), where L is the number of layers, N is the number of blocks, and S is the block size.\n"
+    }
+  ]
+}

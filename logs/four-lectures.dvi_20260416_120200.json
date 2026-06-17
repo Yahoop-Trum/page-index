@@ -1,0 +1,18 @@
+[
+  {
+    "total_page_number": 53
+  },
+  {
+    "total_token": 30719
+  },
+  {
+    "toc_content": "the follo wing shorter declaration of HEAP /.signature HEAP /=sigtype itemval le q /: item /* item /-/> b o oltype tr e eval top /: tr e e /-/> itemexception InitHe apval initHe ap /: int /-/> tr e eval r eplac e /: item /* tr e e /-/> item /* tr e eend/; /(/* HEAP /*/)This is a m uc h cleaner in terface/, so whenev erw e refer to HEAP in the follo wing/, w e meanthis v ersion/.In practice/, one should write do wn a sig/-nature b efor e one attempts to write do wn astructure whic h matc hes it/. In this w a y onecan decide what t yp es and op erations areneeded without ha ving to think ab out algo/-rithms at the same time/. So let us assumethat w e started out b y declaring the HEAPsignature/. W e then imprin t the view pro videdb y HEAP on the declaration of the structureHe ap b y a signa ture constraint /:structure He ap /: HEAP /=structtype item /= int /;/. /. /.end/; /(/* He ap /*/)/? He ap /: tHe ap /: r eplac e /(/7/, He ap /: initHe ap /3/)/;After this declaration of He ap /, w e cannotwrite He ap /: t /, since t is not men tioned in\nHEAP /. Ho w ev er/, w e can write He ap /: r eplac eas r eplac e is sp eci/\fed/. Moreo v er/, althoughHEAP do es not sp ecify that item should b eint /, the ML system disco v ers that item isin fact int in He ap and that is wh y /7 willb e accepted as an item in the applicationHe ap /: r eplac e /(/7/, He ap /: initHe ap /3/) /. Th us asignature constrain t ma y hide comp onen ts ofa structure/, but it do es not hide the true iden/-tit y of the t yp es declared in the structure/, ex/-cept that one can hide the constructors of adatatype b y sp ecifying it as a type /./1/./8 F unctor DeclarationAlmost all of what w e did for heaps con tain/-ing in teger items w ould w ork for a heap whoseitems are of a di/\u000beren t t yp e/. More precisely /,giv en an y t yp e item /, an y binary function le qon items and an y initial item/, the signatureHEAP is satis/\fed b y the declarations w e ha v ealready written/. Let us sp ecify the generalrequiremen ts of a He ap structure/.signature ITEM /=sigtype itemval le q /: item /* item /-/> b o olval initial /: itemend/;What w e are after is a structure whic h isparameterised on an y structure/, Item /, sa y /,whic h matc hes ITEM /. In ML/, a parame/-terised structure is called a functor /. Thefollo wing table con tains the complete functordeclaration/; the new bits are in b old face/./6",
+    "toc_page_list": [
+      6
+    ],
+    "page_index_given_in_toc": "yes"
+  },
+  {
+    "message": "toc_transformer failed, falling back to no-page-number mode: name 'get_json_content' is not defined"
+  }
+]

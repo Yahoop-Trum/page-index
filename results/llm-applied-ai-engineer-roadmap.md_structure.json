@@ -1,0 +1,209 @@
+{
+  "doc_name": "llm-applied-ai-engineer-roadmap.md",
+  "structure": [
+    {
+      "title": "What this role actually is",
+      "node_id": "0000",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "This partial document outlines a career roadmap for becoming an LLM / Applied AI Engineer, defining it as a software engineering role focused on building products on top of foundation models rather than training them. It details realistic timelines for entry based on prior experience, explicitly lists the responsibilities (e.g., building RAG systems, designing prompts, integrating LLM APIs) and non-responsibilities (e.g., training models from scratch, deep research, optimizing CUDA kernels) of the role, and provides common job titles. The document also begins to describe the essential skill stack, prioritizing software engineering excellence\u2014specifically production Python and API design\u2014as the most critical and often underestimated skill."
+    },
+    {
+      "title": "The skill stack",
+      "node_id": "0001",
+      "start_index": 1,
+      "end_index": 1,
+      "summary": "This partial document outlines a career roadmap for becoming an Applied AI / LLM Engineer, identifying it as the most in-demand and accessible entry point into the AI field. It provides realistic timelines based on an individual's software engineering background. The text clearly defines the role, emphasizing that these engineers build products on top of foundation models, focusing on tasks like building RAG systems, designing prompts, and integrating LLM APIs, rather than training models from scratch or conducting deep research. It also lists common job titles and highlights \"software engineering excellence\" as the top and most underestimated skill, detailing specific areas like Production Python and API design.",
+      "nodes": [
+        {
+          "title": "Software engineering excellence (the actual bottleneck)",
+          "node_id": "0002",
+          "start_index": 1,
+          "end_index": 2,
+          "summary": "This partial document outlines a career roadmap for becoming an LLM / Applied AI Engineer, defining it as a software engineering role focused on building products and features using foundation models, rather than training models or doing research. It highlights this as a highly in-demand and accessible entry point into the AI field, providing realistic timelines based on an individual's background. The document details what the role entails, common job titles, and, most significantly, a prioritized skill stack. Key skills emphasized include strong software engineering excellence (seen as the primary bottleneck), mastery of LLM APIs, robust evaluation techniques, understanding RAG (Retrieval Augmented Generation) architectures, and practical knowledge of agents and tool use."
+        },
+        {
+          "title": "LLM API mastery",
+          "node_id": "0003",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This partial document outlines key skill areas and topics essential for a backend or AI engineering role, focusing on:\n\n1.  **Backend Fundamentals:** Profound knowledge of databases (especially Postgres, SQL, pgvector), system design, concurrency, caching, queues, Git, and CI/CD.\n2.  **LLM API Mastery:** Expertise in using various large language model providers, advanced API techniques like streaming and function calling, structured output, prompt optimization (caching, batching, rate-limiting), managing multi-turn conversations, understanding reasoning modes, and token economics.\n3.  **Evaluation:** The ability to build robust evaluation sets, utilize LLM-as-judge effectively, implement regression testing for prompts, leverage production observability tools, and establish a feedback loop for continuous improvement.\n4.  **RAG Architectures:** Deep understanding of Retrieval Augmented Generation, including embedding models, vector databases (pgvector), chunking strategies, hybrid search, reranking, query transformation, metadata filtering, citations, and grounding.\n5.  **Agents and Tool Use:** Proficiency in function calling, agentic frameworks like ReAct, planning, control flow, the Model Context Protocol (MCP), and discerning when deterministic pipelines are more suitable than agents."
+        },
+        {
+          "title": "Evaluation",
+          "node_id": "0004",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This partial document outlines key skill areas and technical competencies, heavily focused on developing and deploying applications involving Large Language Models (LLMs).\n\nThe main points covered include:\n\n*   **Core Backend Development:** Essential skills like database management (Postgres, SQL, pgvector), concurrency, caching, queues, Git, CI/CD, and system design principles.\n*   **LLM API Mastery:** In-depth knowledge of using various LLM providers (Claude, GPT, Gemini, open models), API features (streaming, function calling, structured output), performance optimization (prompt caching, batching, rate-limit handling), multi-turn conversation management, reasoning strategies, and token economics.\n*   **Evaluation:** The critical skill of building evaluation sets, using LLM-as-judge, regression testing, leveraging production observability tools (Langfuse, LangSmith), and creating a feedback loop for continuous improvement.\n*   **RAG Architectures:** Components and strategies for Retrieval-Augmented Generation, including embedding models, vector databases (pgvector), chunking techniques, hybrid search, reranking, query transformation, metadata filtering, and citations.\n*   **Agents and Tool Use:** Fundamentals of function calling, advanced agent patterns like ReAct and planning, the Model Context Protocol (MCP), and practical advice on when to implement agents versus deterministic pipelines."
+        },
+        {
+          "title": "RAG architectures",
+          "node_id": "0005",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This partial document outlines key technical skills and architectural components required for developing advanced AI/LLM applications. It covers foundational backend development, including databases (Postgres, SQL, pgvector), concurrency, caching, and system design, along with Git and CI/CD. A significant portion details LLM API mastery, encompassing working with multiple providers, advanced API techniques like streaming and function calling, prompt optimization, conversation state management, and understanding token economics. Further sections emphasize the critical skill of evaluation, including building eval sets, using LLM-as-judge, regression testing, and production observability. It also delves into RAG architectures, covering embedding models, vector databases, chunking strategies, hybrid search, and query optimization. Finally, the document addresses agents and tool use, explaining function calling, agentic patterns like ReAct, and when to apply or avoid agent-based solutions."
+        },
+        {
+          "title": "Agents and tool use",
+          "node_id": "0006",
+          "start_index": 2,
+          "end_index": 2,
+          "summary": "This document outlines key technical skills and knowledge areas, primarily focused on building and deploying applications involving Large Language Models (LLMs). It covers essential backend and system design fundamentals (databases, concurrency, CI/CD), comprehensive LLM API mastery (multiple providers, streaming, structured output, prompt optimization, token economics), critical evaluation techniques (building eval sets, LLM-as-judge, observability, regression testing), RAG (Retrieval Augmented Generation) architectures (embedding models, vector DBs, chunking, hybrid search), and agents and tool use (function calling, planning, and considerations for agent design)."
+        },
+        {
+          "title": "Production concerns",
+          "node_id": "0007",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "The partial document outlines key considerations for developing and deploying AI/LLM applications, a necessary level of machine learning literacy, and crucial product and communication skills. It details production concerns such as cost engineering, latency optimization, safety measures (prompt injection defense, output moderation, PII handling), deployment strategies (Docker, FastAPI, cloud platforms, serverless, self-hosting with tools like vLLM/Ollama). For ML literacy, it covers understanding pretraining, fine-tuning (including LoRA), tokenization, embeddings, and transformers at an intuitive level, along with knowing LLM capabilities. Product and communication emphasizes translating requirements, explaining LLM limits to non-technical stakeholders, and identifying appropriate use cases. Finally, it provides a structured learning path, starting with foundational Python and backend engineering skills, LLM fundamentals, and API fluency (Months 1-2), progressing to building real RAG (Retrieval Augmented Generation) systems with advanced features like chunking, hybrid search, and reranking (Months 2-4)."
+        },
+        {
+          "title": "Just enough ML literacy",
+          "node_id": "0008",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "The partial document outlines essential skills and knowledge areas for an AI/LLM engineer, categorized into three main sections: \"Production concerns\" covering cost engineering, latency, safety, deployment strategies, and self-hosting basics; \"Just enough ML literacy\" detailing core AI/ML concepts like pretraining, fine-tuning, tokenization, embeddings, and transformers; and \"Product and communication\" emphasizing soft skills like translating requirements, explaining capabilities, and identifying appropriate use cases for LLMs. Additionally, it provides a structured \"learning path\" spanning several months, starting with foundational Python and backend engineering, introducing LLM fundamentals, and progressing to practical projects, frontier API fluency, and building real-world RAG systems and agents."
+        },
+        {
+          "title": "Product and communication",
+          "node_id": "0009",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "The partial document outlines key areas of knowledge and a learning path for individuals working with large language models (LLMs). It covers practical \"production concerns\" such as cost engineering, latency, safety (prompt injection, PII), deployment tools (Docker, FastAPI, cloud platforms), and self-hosting options (vLLM, Ollama). It also emphasizes \"just enough ML literacy,\" detailing LLM training concepts (pretraining, fine-tuning, RLHF), core components (tokenization, embeddings, transformers), and specific techniques like LoRA. Furthermore, the document highlights crucial \"product and communication\" skills, including translating requirements, explaining capabilities to non-technical stakeholders, and knowing when LLMs are appropriate. Finally, it provides a structured \"learning path\" spanning several months, starting with foundational Python and backend engineering, moving to LLM fundamentals and API fluency, and then progressing to advanced topics like building real RAG (Retrieval Augmented Generation) systems."
+        }
+      ]
+    },
+    {
+      "title": "The learning path",
+      "node_id": "0010",
+      "start_index": 3,
+      "end_index": 3,
+      "summary": "The partial document outlines key areas of knowledge and a structured learning path for someone working with Large Language Models (LLMs). It covers essential \"Production concerns\" such as cost engineering, latency optimization, safety measures (prompt injection, PII), deployment strategies (Docker, cloud, serverless), and self-hosting options. It also details the necessary \"Just enough ML literacy,\" including an intuitive understanding of pretraining, fine-tuning, RLHF, tokenization, embeddings, and transformers, along with practical fine-tuning techniques like LoRA. Furthermore, the document emphasizes the importance of \"Product and communication\" skills, such as translating requirements, explaining capabilities and limitations, and identifying appropriate use cases for LLMs. Finally, it presents \"The learning path\" broken into phases: Months 1-2 focus on \"Foundations\" (Python, backend, LLM fundamentals, API fluency, and a practical project), while Months 2-4 delve into building \"RAG and agents,\" specifically developing a real RAG system with features like chunking, hybrid search, and reranking.",
+      "nodes": [
+        {
+          "title": "Months 1\u20132: Foundations",
+          "node_id": "0011",
+          "start_index": 3,
+          "end_index": 3,
+          "summary": "The partial document outlines critical areas for AI/LLM practitioners, covering production concerns like cost engineering, latency, safety, deployment, and self-hosting. It also details essential ML literacy, including core LLM concepts, training methodologies, and fine-tuning. Furthermore, it emphasizes the importance of product sense and communication skills, such as translating requirements and explaining LLM capabilities and limitations. Finally, it presents a structured learning path, starting with foundational Python and backend engineering alongside LLM basics in the first two months, then progressing to building RAG systems and working with agents in months two through four."
+        },
+        {
+          "title": "Months 2\u20134: RAG and agents",
+          "node_id": "0012",
+          "start_index": 3,
+          "end_index": 4,
+          "summary": "This document outlines the essential skills and a structured learning path for becoming an AI engineer, emphasizing practical application and hireability. It covers critical production concerns (cost, latency, safety, deployment), necessary ML literacy (foundational concepts, fine-tuning), and crucial product and communication skills. The text then details a month-by-month learning roadmap, progressing from core Python and LLM fundamentals to building sophisticated RAG systems and agents, and finally to productionizing applications, specializing, and preparing for job applications. It concludes with a ranked list of high-impact projects designed to showcase capabilities and maximize hireability, stressing the importance of deployed, evaluated, and well-documented work."
+        },
+        {
+          "title": "Months 4\u20135: Production and depth",
+          "node_id": "0013",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This partial document outlines a structured learning path and project recommendations for building robust, production-ready AI applications, particularly focusing on agents and Retrieval-Augmented Generation (RAG) systems. It emphasizes building multi-step agents with tools, ensuring robustness, and implementing observability through tools like Langfuse or LangSmith. The document details project phases, including deploying applications to real cloud environments, learning fine-tuning workflows, and adding prompt injection defenses and safety filtering. It concludes with advice on specialization, contributing to open source, blogging, and a ranked list of projects with the highest impact on hireability, prioritizing deeply-built, production-deployed AI apps with public access and rigorous evaluation."
+        },
+        {
+          "title": "Month 6+: Polish, specialize, apply",
+          "node_id": "0014",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This partial document outlines a structured, multi-month guide for building AI applications, focusing on practical skills and project development. It emphasizes learning to build robust, multi-step agents using tools, implementing observability (Langfuse/LangSmith), and understanding agent design principles (e.g., Anthropic's guide).\n\nKey phases include:\n- **Foundational Project Work:** Building RAG systems with real evaluation sets and agents that automate personal workflows.\n- **Production and Depth:** Deploying projects to the cloud, monitoring costs, learning fine-tuning (LoRA), and adding security features like prompt injection defenses and output validation. The goal is to productionize a core project for a portfolio.\n- **Specialization and Application:** Picking a sub-specialty (e.g., agents, RAG-at-scale, AI for code), contributing to open source, blogging, and preparing for job applications with a strong public portfolio.\n\nThe document also ranks projects by their impact on hireability, prioritizing a deeply-built, production-deployed AI app with real users and detailed architecture, followed by technical blog posts, rigorously evaluated RAG systems, and reliable agents with robust failure handling."
+        }
+      ]
+    },
+    {
+      "title": "What to build (ranked by hireability impact)",
+      "node_id": "0015",
+      "start_index": 4,
+      "end_index": 4,
+      "summary": "This document outlines a structured learning and project roadmap for an aspiring AI engineer, focusing on practical skills and hireability. It details a multi-month progression, starting with building robust, multi-step agents with tools and learning observability. Subsequent phases emphasize deploying projects to production environments, learning fine-tuning, and implementing security and safety measures. The guide stresses the importance of deep specialization in a sub-area like agents or RAG-at-scale, contributing to open source, and creating a strong public portfolio. It concludes with a ranked list of projects that significantly boost hireability, prioritizing deeply-built, production-deployed AI applications with real users, rigorous evaluation, and detailed architectural documentation, as well as technical blog posts and reliable agent systems.",
+      "nodes": [
+        {
+          "title": "One deeply-built, production-deployed AI app with public access, real users (even just \ufb01ve), an eval suite, and a written architecture post.",
+          "node_id": "0016",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This partial document outlines a structured, project-based learning and development plan for building AI applications, particularly focusing on agents and RAG systems. It details stages like \"Months 4-5: Production and depth\" and \"Month 6+: Polish, specialize, apply,\" emphasizing practical skills such as observability (Langfuse/LangSmith), fine-tuning (LoRA), and implementing robust defenses (prompt injection, output validation, safety filtering). The document stresses the importance of deploying production-grade projects with real monitoring and cost tracking. It also provides a ranked list of projects and activities (e.g., a deeply-built AI app with public access, a technical blog post, a rigorous RAG system, a reliable agent) that significantly impact hireability and demonstrate deep understanding beyond basic coding."
+        },
+        {
+          "title": "A technical blog post explaining a non-obvious decision you made \u2014 chunking strategy, eval design, prompt iteration.",
+          "node_id": "0017",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This document outlines a structured plan for learning and building AI applications, focusing on practical skills and portfolio development over several months. It covers building robust, multi-step agents with tools, emphasizing observability tools like Langfuse/LangSmith, and learning patterns from effective agent design. Key project recommendations include developing RAG systems with rigorous evaluation, automating real workflows, and productionizing projects with cloud deployment, monitoring, and cost management. The plan also includes learning fine-tuning workflows, implementing prompt injection defenses, output validation, and safety filtering. It encourages specialization in areas like agents or RAG-at-scale, and provides guidance on creating a strong public portfolio through open-source contributions, technical blog posts, and deeply-built, production-deployed AI applications with real users and detailed architecture documentation, ranking these by their impact on hireability."
+        },
+        {
+          "title": "A RAG system with rigorous evaluation \u2014 recall@k numbers, retrieval ablations, before/after comparisons.",
+          "node_id": "0018",
+          "start_index": 4,
+          "end_index": 4,
+          "summary": "This partial document outlines a structured, project-based learning roadmap for individuals aiming to develop advanced AI engineering skills, particularly in building agents and RAG systems. It details a multi-month plan focusing on:\n\n1.  **Core Skills Development:** Emphasizes building robust, multi-step agents with tools, learning observability (Langfuse/LangSmith), and understanding effective agent patterns.\n2.  **Practical Projects:** Suggests specific projects such as RAG systems with rigorous evaluation, agents automating real workflows, and productionizing a project with real cloud deployment, monitoring, and cost dashboards.\n3.  **Advanced Concepts:** Covers fine-tuning workflows (LoRA) and implementing safety features like prompt injection defenses, output validation, and safety filtering.\n4.  **Specialization and Professional Development:** Encourages picking a sub-specialty, contributing to open source, writing technical blog posts, building a public portfolio, and applying for jobs.\n5.  **Hireability Impact:** Ranks the most impactful projects and activities for securing a job, prioritizing deeply-built, production-deployed AI applications with real users, technical blog posts explaining design decisions, rigorously evaluated RAG systems, and reliable, useful agents with failure handling.\n\nThe document serves as a practical guide for self-study and portfolio building in AI development, with a strong focus on production readiness, demonstrable skills, and career preparation."
+        },
+        {
+          "title": "An agent that does something genuinely useful and reliable, with failure handling.",
+          "node_id": "0019",
+          "start_index": 4,
+          "end_index": 5,
+          "summary": "This partial document outlines a practical roadmap for aspiring AI/LLM engineers, focusing on skill development, project building, interview preparation, and the reality of the job. It provides a phased learning plan, from building robust multi-step agents and RAG systems to deploying projects in production, learning fine-tuning, and specializing in areas like agents or RAG-at-scale. The text also ranks project types by their impact on hireability, emphasizing deeply-built, production-deployed applications with rigorous evaluation over superficial efforts. Furthermore, it details what to expect in interviews, covering standard software engineering, AI system design, hands-on prompt and evaluation tasks, and behavioral questions, alongside specific preparation recommendations. Finally, it describes the day-to-day reality of an AI engineer's role, highlighting a significant emphasis on software engineering alongside prompt engineering, evaluation, and model debugging."
+        },
+        {
+          "title": "Open source contributions to a framework or tool in the space (LangGraph, LlamaIndex, vLLM, Instructor, etc.).",
+          "node_id": "0020",
+          "start_index": 5,
+          "end_index": 5,
+          "summary": "This partial document outlines key expectations and realities for an AI engineering role. It specifies what kind of open-source contributions are valued (frameworks/tools like LangGraph, LlamaIndex) versus what is not (ChatGPT clones, prompt experiments without evaluation). The document then details the typical interview process, which includes standard software engineering (coding, system design), AI system design, hands-on prompt and evaluation tasks, discussions of trade-offs, and behavioral questions, emphasizing that software engineering fundamentals are crucial. It also provides interview preparation recommendations. Finally, it describes the day-to-day reality of the job, highlighting that a significant portion involves writing application code, alongside prompt engineering, evaluation, debugging, meetings, and staying current with new technologies, essentially framing it as 80% software engineering and 20% AI-specific tasks."
+        }
+      ]
+    },
+    {
+      "title": "How interviews actually go",
+      "node_id": "0021",
+      "start_index": 5,
+      "end_index": 5,
+      "summary": "This partial document outlines expectations for individuals in an AI-related role, covering what types of contributions and projects are valued (e.g., open source tools like LangGraph, LlamaIndex, vLLM, not just ChatGPT clones or prompt experiments without evaluation). It details the typical interview process, which includes standard software engineering (coding, system design), AI system design, hands-on prompt and evaluation tasks, discussions of trade-offs, and behavioral questions. Recommendations for interview preparation are provided, such as reading specific articles, practicing AI system design, and being able to explain portfolio decisions. Finally, it describes the day-to-day reality of the job, highlighting that a significant portion involves writing application code and software engineering tasks, alongside prompt engineering, evaluation, debugging, meetings, and staying current with new models and tools.",
+      "nodes": [
+        {
+          "title": "Strongly recommended interview prep:",
+          "node_id": "0022",
+          "start_index": 5,
+          "end_index": 5,
+          "summary": "This partial document outlines expectations for individuals in an AI role, covering what types of contributions are valued (e.g., open-source contributions to specific AI frameworks) versus those that are not (e.g., basic ChatGPT clones lacking evaluation). It details the typical interview process, which is a mix of standard software engineering skills (coding, system design) and AI-specific competencies (AI system design, hands-on prompt and evaluation tasks, trade-off discussions, behavioral aspects). The document also provides strong recommendations for interview preparation and describes the day-to-day reality of the job, emphasizing that it involves a significant amount of software engineering (application code, data pipelines) alongside prompt engineering, evaluation, debugging, and stakeholder meetings."
+        }
+      ]
+    },
+    {
+      "title": "Day-to-day reality",
+      "node_id": "0023",
+      "start_index": 5,
+      "end_index": 5,
+      "summary": "The partial document outlines expectations for AI-related roles, detailing what impresses and what does not, a breakdown of the typical interview process, recommended preparation strategies, and the day-to-day realities of the job. It emphasizes the importance of open-source contributions to AI frameworks, robust evaluation, and production thinking. The interview process covers standard software engineering, AI system design, hands-on prompt and evaluation tasks, trade-off discussions, and behavioral questions. The document highlights that the job heavily involves software engineering (application code, data pipelines) alongside prompt engineering, evaluation, debugging, and staying current with AI advancements."
+    },
+    {
+      "title": "Common failure modes for people pursuing this role",
+      "node_id": "0024",
+      "start_index": 6,
+      "end_index": 6,
+      "summary": "This partial document provides guidance for individuals pursuing a specific engineering role, likely related to AI or LLM development. It outlines common failure modes to avoid, such as not treating it as real engineering, over-relying on frameworks, lack of evaluation, and poor communication. The document also recommends key people and resources to learn from, noting their areas of expertise (e.g., evals, RAG, production patterns). Finally, it suggests a structured 6-month sprint plan, detailing monthly focus areas, expected outputs, and a progression from backend fundamentals to advanced LLM concepts, deployment, and portfolio development."
+    },
+    {
+      "title": "Recommended people to learn from",
+      "node_id": "0025",
+      "start_index": 6,
+      "end_index": 6,
+      "summary": "This partial document provides guidance for individuals pursuing a role, likely in LLM or AI engineering. It outlines common failure modes to avoid, such as treating it as \"not-real-engineering,\" over-relying on frameworks, neglecting evaluation or deployment, chasing every new release, and underinvesting in writing. It also recommends key people and resources to learn from in areas like LLM evals, RAG, production patterns, and fundamentals. Finally, it suggests a detailed 6-month learning and project sprint, covering topics like backend fundamentals, LLM API basics, prompts, structured output, RAG, agents, productionization, specialization, and portfolio building."
+    },
+    {
+      "title": "Suggested 6-month sprint",
+      "node_id": "0026",
+      "start_index": 6,
+      "end_index": 7,
+      "summary": "This partial document provides guidance for individuals pursuing a specific engineering role, likely in LLM/AI development. It outlines common failure modes to avoid, such as treating it as not-real-engineering, over-relying on frameworks, and not deploying projects. The text recommends key experts and resources to learn from, covering topics like LLM evaluation, RAG, and production patterns. It also details a suggested 6-month learning and building sprint, progressing from fundamentals to productionizing projects. Finally, the document emphasizes the single most important factor for success: deeply building, shipping, evaluating, and documenting one project with real users."
+    },
+    {
+      "title": "The single most important thing",
+      "node_id": "0027",
+      "start_index": 7,
+      "end_index": 7,
+      "summary": "The document emphasizes the importance of starting job applications early (by month 4), highlighting that interviews accelerate learning more than tutorials. Its main point is that building one thing deeply, shipping it to real users, and then honestly evaluating and documenting the learnings from that project is the single most important factor for success. This practical, user-focused artifact, demonstrating the ability to take an idea (like an LLM) to production reliability, is presented as far more valuable to hiring managers than any credential, course, or certification."
+    }
+  ]
+}
